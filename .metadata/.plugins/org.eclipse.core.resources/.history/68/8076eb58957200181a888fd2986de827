@@ -1,0 +1,20 @@
+
+public class TryAndError {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		String name = "高橋";
+		System.out.println(name);
+
+		float a1 = (float)10/3;
+		System.out.println(a1);
+
+		String b = "山田";
+
+		if(b.equals("山田")){
+			System.out.println(b + "さん");
+
+		}
+	}
+
+}
