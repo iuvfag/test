@@ -14,6 +14,24 @@ public class Test {
 		taro.walk();
 		taro.run();
 
+
+		Person jiro = new Person("木村次郎",18);
+		System.out.println(jiro.name);
+		System.out.println(jiro.age);
+
+		Person saburo = new Person("saburo");
+		System.out.println(saburo.name);
+		System.out.println(saburo.age);
+
+		Person nobody = new Person(25);
+		System.out.println(nobody.name);
+		System.out.println(nobody.age);
+
+		Person hanako = new Person(16,"鈴木花子");
+		System.out.println(hanako.name);
+		System.out.println(hanako.age);
+
+
 		Robot aibo = new Robot();
 		aibo.name = "aibo";
 		aibo.talk();
