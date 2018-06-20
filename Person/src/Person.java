@@ -1,18 +1,27 @@
-
+//原本
 public class Person {
 
 	public String name = null;
+	//String型の変数nameを用意、初期値としてnullを代入
 	public int age = 0;
+	//int型の変数ageを用意、初期値として0を代入
 	public String phoneNumber = null;
 	public String address = null;
 
 	public Person(){
 
 	}
+	/*ほかにコンストラクタを定義する場合は、
+	 * この「デフォルトコンストラクタ」を書いておく！
+	 */
 
 	public Person(String name, int age){
 		this.name = name;
 		this.age = age;
+		/*最初に宣言したnameとageに新しくnameとageの代入
+		 * このnameとageはtestクラスから渡される
+		 *
+		 */
 	}
 
 	public Person(String name){
