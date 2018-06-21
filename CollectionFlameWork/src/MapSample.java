@@ -1,12 +1,12 @@
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 public class MapSample {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		Map<String,String> map = new HashMap<String,String>();
+		Map<String,String> map = new TreeMap<String,String>();
 
 
 		//値のセットはputメソッドを利用
