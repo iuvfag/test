@@ -27,7 +27,6 @@ public class TestUserDAO {
 			 * PreparedStatementとは「準備済み命令文」のこと
 			 * 処理が早くなる上、検索条件などをパラメータかして使いまわすことができる
 			 * 今回は「user_name」と「password」がそれにあたる
-			 *
 			 */
 			ps.setString(1, name);
 			ps.setString(2, password);
@@ -59,25 +58,34 @@ public class TestUserDAO {
 				/**
 				 * 今回、得られる結果はString型であるため
 				 * getStringを使用する
-				 * ()内はデータベースと一致させる
+				 * ()内の名前はデータベースと一致させる
 				 */
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
-			//この時点でエラーがおきた場合は表示
+			/** prepareStatement、executeQueryに対応するエラー文
+			 * この時点でエラーがおきた場合は表示
+			 */
 		}
 	try{
 		con.close();
 		//接続をきるためのメソッド
 		}catch(SQLException e){
 		e.printStackTrace();
-		//切断においてエラーが起きれば表示
+		//close()に対応する。切断においてエラーが起きれば表示
 		}
 	}
 	/**
 	 * 全体としては
-	 * 外部クラスのDBConnector内のgetConnectionメソッドに加えて
-	 * JavaのConnectionクラスのメソッドも重ねて使ってくというイメージ
+	 * 外部クラスのDBConnector内のgetConnectionメソッドを呼び出して
+	 * データベースに接続、JavaのConnectionクラスのメソッドも重ねて使用していくイメージ
+	 *
+	 * ①SQL文を書く、②SQL文のプリコンパイル、
+	 * ③SQL文のパラメータへの任意の値の代入
+	 * ④用途に合わせたクエリの実行とその結果に対する処理
+	 * ⑤例外への対応処理
+	 * ⑥接続のクローズと、それ例外への処理
+	 *
 	 */
 
 

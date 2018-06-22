@@ -38,7 +38,7 @@ public class DBConnector {
 		 * 後に出てくるgetConnectionとは異なる
 		 */
 		Connection con = null;
-		//接続を変数として宣言
+		//接続を表すconnectionオブジェクトを初期化
 		try{
 			Class.forName(driverName);
 			/**
@@ -53,13 +53,14 @@ public class DBConnector {
 
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-			//指定されたクラスに接続できなかった場合はエラーを表示
+			//forNameに対応する文。指定されたクラスに接続できなかった場合はエラーを表示
 
 		}catch(SQLException e){
 			e.printStackTrace();
-			//SQLデータベースにアクセスできなかった場合はエラーを表示
+			//getConnectionに対応する文。SQLデータベースにアクセスできなかった場合はエラーを表示
 		}
 		return con;
+		//接続の結果(URLへの接続)を戻す
 	}
 
 
