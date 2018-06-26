@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configulation 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3dtd">
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<package name="com.internousdev.login.action" extends="struts-default">
+
+	<action name="LoginAction" class="com.internousdev.login.action.LoginAction"
+	method="execute">
+	<!-- まず、クラスを「com.internousdev.login.action」パッケージの中の「LoginAction」クラスに設定
+		 methodを設定して「LoginAction」クラスの中の「execute」メソッドが最初に呼び出されるようにする
+	 -->
+		<result name="success">loginSuccess.jsp</result>
+		<result name="error">loginError.jsp</result>
+		<!-- executeメソッドの処理結果に応じてフロントに送るJSPファイルを設定 -->
+	</action>
+
+	</package>
+</struts>

@@ -1,0 +1,7 @@
+package com.internousdev.webproj.action;
+
+public class InquiryAction extends ActionSupport{
+
+	public String SUCCESS;
+
+}

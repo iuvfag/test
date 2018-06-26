@@ -1,0 +1,21 @@
+package com.internousdev.login.dao;
+
+import com.mysql.jdbc.PreparedStatement;
+
+public class LoginDAO {
+	public LoginDTO select(String name, String password)throws SQLExeption{
+		LoginDTO dto = new LoginDTO();
+		DBConnector db = new DBConnector();
+		Connection con = de.getConnection();
+
+		String sql = "select * from uset where user name = ? and password = ?";
+
+		try{
+			PreparedStatement ps = con.preparedStatemment(sql);
+			ps.setString(1, name);
+			ps.setString(2, password);
+
+		}
+	}
+
+}

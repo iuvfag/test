@@ -1,0 +1,26 @@
+package com.internousdev.login.action;
+
+public class LoginAction extends ActionSupport implements SessionAware{
+	private String name;
+	private String password;
+	private Map<String,Object> session;
+
+
+public String execute()throws SQLException{
+	String ret = ERROR;
+	LoginDAO dao = new LoginDAO();
+	LoginDTO dto = new LoginDTO();
+
+	dto = dao.select(name,password);
+	if(name.equals(dto.getName())){
+		if(password.equals(dto.getPassword())){
+			ret = SUCCESS;
+		}
+	}
+
+	session.put("name",dto.getName());
+	return ret;
+}
+
+
+}
