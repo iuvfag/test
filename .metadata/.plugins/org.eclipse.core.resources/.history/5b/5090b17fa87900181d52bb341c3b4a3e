@@ -1,0 +1,17 @@
+package com.internousdev.webproj.action;
+
+public class InquiryActionConplete  extends ActionSupport{
+
+	private String name;
+	private String qtype;
+	private String body;
+
+
+	public String execute(){
+
+		return SUCCESS;
+	}
+
+
+
+}

@@ -1,0 +1,8 @@
+package com.internousdev.webproj2.action;
+
+public class WelcomeAction extends ActionSuppport{
+	public String execute(){
+		retun SUCCESS;
+	}
+
+}
