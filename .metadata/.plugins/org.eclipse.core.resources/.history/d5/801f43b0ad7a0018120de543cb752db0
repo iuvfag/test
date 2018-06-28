@@ -1,0 +1,15 @@
+package com.internousdev.webproj4.dao;
+
+import java.util.ArrayList;
+
+import com.internousdev.webproj4.dto.HelloStrutsDTO;
+import com.internousdev.webproj4.util.DBConnector;
+
+public class HelloStrutsDAO {
+
+	List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+
+	DBConnector db = new DBConnector();
+	Connection con = db.getConnection();
+
+}

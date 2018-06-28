@@ -1,0 +1,20 @@
+package com.internousdev.webproj3.action;
+
+import com.internousdev.webproj3.dao.InquiryCompleteDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class InquiryCompleteAction extends ActionSupport{
+
+	private String name;
+	private String qtype;
+	private String body;
+
+	public String execute(){
+		String ret = ERROR;
+
+		InquiryCompleteDAO dao = new InquiryCompleteDAO();
+
+
+	}
+
+}

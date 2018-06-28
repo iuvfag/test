@@ -1,0 +1,16 @@
+package com.internousdev.webproj3.dao;
+
+import com.internousdev.webproj3.util.DBConnector;
+
+public class LoginDAO {
+
+	public String username;
+	public String password;
+
+
+	public LoginDTO select(String username, String password){
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+	}
+
+}
