@@ -10,15 +10,25 @@ import com.opensymphony.xwork2.ActionSupport;
 public class HelloStrutsAction extends ActionSupport{
 
 	private List<HelloStrutsDTO> HelloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+	/**
+	 * List型の変数HelloStrutsDTOListを宣言する
+	 * 「helloStrutsDTOList」と区別するため、先頭は大文字にする
+	 */
 
 	public String execute(){
 
 		String ret = ERROR;
 		HelloStrutsDAO dao = new HelloStrutsDAO();
 
-		HelloStrutsDTOList = dao.sselect();
+		HelloStrutsDTOList = dao.select();
+		/**
+		 * DAOクラスのselectメソッドを呼び出す
+		 * selectメソッドの戻り値はList方であるため、
+		 * List型の変数HelloStrutsDTOListに代入する
+		 */
 
 		if(HelloStrutsDTOList.size() > 0){
+			// 代入された値が1以上（存在するなら）という条件式
 			ret = SUCCESS;
 		}else{
 			ret = ERROR;

@@ -1,0 +1,14 @@
+package com.internousdev.webproj4.action;
+
+public class InquiryCompleteAction extends ActionSupport{
+
+	private String name;
+	private String qtype;
+	private String body;
+
+	public String execute(){
+		String ret = ERROR;
+		InquiryCompleteDAO dao = new InquiryCompleteDAO();
+	}
+
+}

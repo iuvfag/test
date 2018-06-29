@@ -13,8 +13,17 @@ import com.internousdev.webproj4.util.DBConnector;
 public class HelloStrutsDAO {
 
 	List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+	/**
+	 * HelloStrutsDTO型のList型変数を宣言する
+	 * 変数名は小文字で始める
+	 */
 
-	public List<HelloStrutsDTO> sselect(){
+	public List<HelloStrutsDTO> select(){
+		/**
+		 *今回、結果はList型変数（配列）として戻すため
+		 * Listを戻り値として宣言する
+		 */
+
 
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
@@ -32,6 +41,10 @@ public class HelloStrutsDAO {
 				dto.setPassword(rs.getString("password"));
 				dto.setResult("MySQLと接続できます。");
 				helloStrutsDTOList.add(dto);
+				/**
+				 * 取得した結果をそれぞれListに代入
+				 * 結果は配列の型で保存される
+				 */
 
 			}
 
@@ -44,6 +57,7 @@ public class HelloStrutsDAO {
 			e.printStackTrace();
 		}
 		return helloStrutsDTOList;
+		//結果が代入されたListを戻す
 
 
 	}

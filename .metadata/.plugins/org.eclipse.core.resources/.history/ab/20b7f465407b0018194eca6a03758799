@@ -1,0 +1,16 @@
+package com.internousdev.webproj4.dto;
+
+public class LoginDTO {
+
+	private String username;
+	private String password;
+
+	public String setUsername(){
+		return username;
+	}
+
+	public void setUsername(String username){
+		this.username = username;
+	}
+
+}
