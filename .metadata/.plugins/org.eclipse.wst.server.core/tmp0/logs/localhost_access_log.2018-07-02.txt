@@ -1,0 +1,8 @@
+127.0.0.1 - - [02/Jul/2018:10:50:45 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [02/Jul/2018:10:50:47 +0900] "GET /WebProj4/ HTTP/1.1" 500 3081
+0:0:0:0:0:0:0:1 - - [02/Jul/2018:11:02:04 +0900] "GET /WebProj4/ HTTP/1.1" 200 2357
+0:0:0:0:0:0:0:1 - - [02/Jul/2018:11:02:18 +0900] "GET /WebProj4/TestAction.action;jsessionid=A7DD535F294DAE223D5D71B325D780B7?username=siro&password=258 HTTP/1.1" 200 397
+0:0:0:0:0:0:0:1 - - [02/Jul/2018:11:03:19 +0900] "GET /WebProj4/ HTTP/1.1" 200 2203
+0:0:0:0:0:0:0:1 - - [02/Jul/2018:11:03:19 +0900] "GET /WebProj4/css/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [02/Jul/2018:11:03:53 +0900] "GET /WebProj4/ HTTP/1.1" 200 2137
+0:0:0:0:0:0:0:1 - - [02/Jul/2018:11:04:03 +0900] "POST /WebProj4/TestAction.action HTTP/1.1" 200 460

@@ -1,0 +1,11 @@
+package com.internousdev.webproj4.action;
+
+public class TestAction extends ActionSpport{
+
+	private String username;
+	private String password;
+
+	private List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
+
+
+}
