@@ -1,0 +1,11 @@
+package com.internousdev.webproj5.action;
+
+import java.util.List;
+
+public class LoginAction extends ActionSupport implements SessionAware{
+
+	private String username;
+	private String password;
+	private List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
+
+}

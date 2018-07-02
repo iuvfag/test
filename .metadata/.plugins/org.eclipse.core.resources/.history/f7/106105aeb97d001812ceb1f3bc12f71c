@@ -1,0 +1,6 @@
+package com.internousdev.webproj5.action;
+
+public class HelloStrutsAction extends ActionSupport implements SessionAware{
+
+	private List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+}
