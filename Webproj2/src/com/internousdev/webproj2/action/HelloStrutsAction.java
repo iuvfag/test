@@ -9,6 +9,10 @@ public class HelloStrutsAction extends ActionSupport{
 		String ret = ERROR;
 		HelloStrutsDAO dao = new HelloStrutsDAO();
 		boolean b = dao.select();
+		/**
+		 * DAOクラスの結果はboolean型の変数で戻ってくるため
+		 * こちらでもboolean型の変数に格納する
+		 */
 
 		if(b == true){
 			ret = SUCCESS;

@@ -1,0 +1,15 @@
+package jp.co.internous.action;
+
+public class Test2 {
+	public static void main(String[]args){
+		Robot aibo=new Robot();
+		aibo.name="aibo";
+		System.out.println(aibo.name);
+		aibo.talk();
+		aibo.walk();
+		aibo.run();
+
+
+	}
+
+}

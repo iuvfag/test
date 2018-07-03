@@ -1,0 +1,8 @@
+package com.internousdev.webproj5.dao;
+
+public class InquiryCompleteDAO {
+
+	List<InquiryDTO> dto = new ArrayList<InquiryDTO>();
+
+
+}

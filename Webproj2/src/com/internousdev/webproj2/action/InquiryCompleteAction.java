@@ -13,9 +13,17 @@ public class InquiryCompleteAction extends ActionSupport{
 		String ret = ERROR;
 		InquiryCompleteDAO dao = new InquiryCompleteDAO();
 		int count = dao.insert(name, qtype, body);
+		/**
+		 * INquiryCompleteActionクラスをインスタンス化し、
+		 * insertメソッドを呼び出す
+		 * メソッドの戻り値はint型なのでint型の変数countに格納
+		 */
 		if(count > 0){
 			ret = SUCCESS;
 		}
+		/**
+		 * 接続に成功し、値が戻ってきた場合は成功とする
+		 */
 
 		return ret;
 	}

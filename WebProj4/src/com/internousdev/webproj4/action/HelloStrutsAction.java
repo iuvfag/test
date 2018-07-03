@@ -23,12 +23,16 @@ public class HelloStrutsAction extends ActionSupport{
 		HelloStrutsDTOList = dao.select();
 		/**
 		 * DAOクラスのselectメソッドを呼び出す
-		 * selectメソッドの戻り値はList方であるため、
+		 * selectメソッドの戻り値はList型であるため、
 		 * List型の変数HelloStrutsDTOListに代入する
 		 */
 
 		if(HelloStrutsDTOList.size() > 0){
-			// 代入された値が1以上（存在するなら）という条件式
+			/**
+			 *  代入された値が1以上（存在するなら）という条件式
+			 *  Listの要素数を調べたい場合はsizeを利用する
+			 *  存在する場合は1つ以上は要素が入っているはず
+			 */
 			ret = SUCCESS;
 		}else{
 			ret = ERROR;

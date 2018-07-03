@@ -8,6 +8,8 @@
 	<constant name="struts.devMode" value="true" />
 
 	<package name="com.internousdev.webproj4.action" extends="struts-default">
+	<!-- 今回使用するJavaのパッケージファイルを指定する
+		メインで呼び出すのはActionパッケージであるためそちらを指定 -->
 
 		<action name="HelloStrutsAction" class="com.internousdev.webproj4.action.HelloStrutsAction"
 		method="execute">
@@ -40,6 +42,11 @@
 		method="execute">
 			<result name="success">test.jsp</result>
 		</action>
+		<!-- actionタグの中にはJSPファイルからアクセスしたいJavaファイル名と
+		そのパッケージ名、 methodを指定する-->
+			<!-- resultタグの中にはactionタグ内のmethodに応じて、
+				（今回であればexecuteの結果"success"か"error"ごとに）
+				呼び出すファイルを指定する -->
 
 	</package>
 

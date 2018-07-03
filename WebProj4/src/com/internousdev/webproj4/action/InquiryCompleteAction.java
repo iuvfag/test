@@ -19,7 +19,11 @@ public class InquiryCompleteAction extends ActionSupport{
 		String ret = ERROR;
 		InquiryCompleteDAO dao = new InquiryCompleteDAO();
 		int count = dao.insert(name, qtype, body);
-		//countにDAOクラスのinseertメソッドの実行結果を代入
+		/**
+		 * countにDAOクラスのinsertメソッドの実行結果を代入
+		 * insertメソッドの戻り値はint型であるため
+		 * int型で受ける
+		 */
 
 		if(count > 0){
 			inquiryDTOList = dao.select();
@@ -29,6 +33,7 @@ public class InquiryCompleteAction extends ActionSupport{
 			 * DTOクラス型のListにDAOクラスのselectメソッド
 			 * （データベースの中にある情報をすべて取り出す）
 			 * の実行結果を代入
+			 * retにSUCCESSを代入
 			 */
 		}
 		return ret;

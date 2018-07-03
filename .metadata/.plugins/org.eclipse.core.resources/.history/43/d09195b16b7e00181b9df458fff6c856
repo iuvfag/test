@@ -1,0 +1,12 @@
+package com.internousdev.webproj5.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.webproj5.dto.LoginDTO;
+
+public class TestDAO {
+
+	public List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
+
+}

@@ -16,6 +16,11 @@ public class LoginAction extends ActionSupport{
 		System.out.println(password);
 		LoginDAO dao = new LoginDAO();
 		LoginDTO dto = new LoginDTO();
+		/**
+		 * 今回はDAOクラスにあるselectメソッド、
+		 * DTOクラスにあるsetterやgetterを利用することとなるため
+		 * どちらもインスタンス化しておく
+		 */
 
 		dto = dao.select(username, password);
 

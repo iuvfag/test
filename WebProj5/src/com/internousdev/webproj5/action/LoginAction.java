@@ -54,7 +54,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		return username;
 	}
 
-	public void serUsername(String username){
+	public void setUsername(String username){
 		this.username = username;
 	}
 

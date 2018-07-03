@@ -16,7 +16,7 @@ public class HelloStrutsDAO {
 		HelloStrutsDTO dto = new HelloStrutsDTO();
 		/**
 		 * HelloStrutsDTOクラスをインスタンス化しておく
-		 * 後で接続結果をDTOクラスのresutに代入し、戻すため
+		 * 後で接続結果をDTOクラスのresultに代入し、戻すため
 		 */
 
 		String sql = "select * from users";

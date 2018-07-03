@@ -24,7 +24,10 @@ public class TestDAO {
 			if(i > 0){
 				System.out.println(i + "件登録されました");
 				ret = i;
-				//登録された件数を返す
+				/**
+				 * 登録されたものがあれば、
+				 * その件数を返す
+				 */
 			}
 
 		}catch(SQLException e ){

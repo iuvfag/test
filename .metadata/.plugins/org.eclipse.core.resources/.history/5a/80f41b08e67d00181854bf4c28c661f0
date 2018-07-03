@@ -1,0 +1,45 @@
+package jp.co.internous.action;
+
+public class Test {
+	public static void main(String[]args){
+		Person taro=new Person();
+		taro.name="山田太郎";
+		taro.age=20;
+		taro.phoneNumber="090-XXXX-XXXX";
+		taro.address="sample1@gmail.com";
+		System.out.println(taro.name);
+		System.out.println(taro.age);
+		System.out.println(taro.phoneNumber);
+		System.out.println(taro.address);
+
+		Person jiro=new Person();
+		jiro.name="木村次郎";
+		jiro.age=18;
+		jiro.phoneNumber="080-XXXX-XXXX";
+		jiro.address="sample2@gmail.com";
+		System.out.println(jiro.name);
+		System.out.println(jiro.age);
+		System.out.println(jiro.phoneNumber);
+		System.out.println(jiro.address);
+
+		Person hanako=new Person();
+		hanako.name="鈴木花子";
+		hanako.age=16;
+		hanako.phoneNumber="070-XXXX-XXXX";
+		hanako.address="sample3@gmail.com";
+		System.out.println(hanako.name);
+		System.out.println(hanako.age);
+		System.out.println(hanako.phoneNumber);
+		System.out.println(hanako.address);
+
+		Person ayumi=new Person();
+		ayumi.name="遠藤安由美";
+		ayumi.age=24;
+		ayumi.phoneNumber="090-0000-XXXX";
+		ayumi.address="sample4@gmail.com";
+		System.out.println(ayumi.name);
+		System.out.println(ayumi.age);
+		System.out.println(ayumi.phoneNumber);
+		System.out.println(ayumi.address);
+	}
+}

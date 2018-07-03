@@ -37,6 +37,12 @@ public class LoginDAO {
 			}
 
 			if(loginDTOList.size() <=0){
+				/**
+				 * もし該当者がいない場合は
+				 * 上記のwhile文の結果、
+				 * DTOクラスには何も入っていないため、
+				 * loginDTOListの中身も1以下となる
+				 */
 				LoginDTO dto = new LoginDTO();
 				dto.setUsername("該当なし");
 				dto.setPassword("該当なし");

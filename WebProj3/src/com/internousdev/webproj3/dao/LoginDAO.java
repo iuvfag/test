@@ -15,6 +15,11 @@ public class LoginDAO {
 
 
 	public LoginDTO select(String username, String password){
+		/**
+		 * 今回は結果をLoginDTO型の変数で戻すため
+		 * LoginDTOクラスでインスタンス化する
+		 */
+
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		LoginDTO dto = new LoginDTO();
@@ -34,6 +39,11 @@ public class LoginDAO {
 				dto.setUsername("該当なし");
 				dto.setPassword("該当なし");
 			}
+			/**
+			 * いずれの結果の場合も
+			 * setter、getterを利用してDTOクラスの
+			 * usernameとpasswordに結果を返す
+			 */
 		}catch(SQLException e ){
 			e.printStackTrace();
 		}

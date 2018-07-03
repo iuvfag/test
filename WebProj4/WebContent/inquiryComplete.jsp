@@ -35,6 +35,8 @@
 					<s:if test='qtype=="support"'>
 						<td>アフターサポートについて</td>
 					</s:if>
+					<!-- qtypeは上記の3パターンしかないため
+						それぞれの場合に応じた処理を指定 -->
 
 					<td><s:property value="body" /></td>
 				</tr>

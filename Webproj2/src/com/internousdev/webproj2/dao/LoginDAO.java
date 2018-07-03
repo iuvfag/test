@@ -14,6 +14,11 @@ public class LoginDAO {
 
 	public boolean select(String username, String password){
 		boolean ret = false;
+		/**
+		 * boolean型の変数なので、
+		 * 代入される値はtrueまたはfalse
+		 * 初期状態ではfalseとしておく
+		 */
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
@@ -31,8 +36,13 @@ public class LoginDAO {
 				/*
 				 * 取得したユーザー名とパスワードを
 				 * このクラスの変数「username」「password」に代入
+				 * （このプロジェクトにはDTOが無いため）
 				 */
 				ret = true;
+				/**
+				 * 接続が出来た場合はboolean型の変数retに
+				 * trueを代入しなおす
+				 */
 			}
 		}catch(SQLException e ){
 			e.printStackTrace();

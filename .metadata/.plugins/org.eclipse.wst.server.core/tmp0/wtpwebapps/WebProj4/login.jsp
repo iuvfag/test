@@ -12,8 +12,8 @@
 
 		<s:property value="LoginDTOList.get(0).username"/>さん、ようこそ！
 		<!-- 今回の場合、Listに代入される組み合わせは
-			index0に「username」と「password」というひとつのみであり、
-			値を取り出したい場合に指定するindexも0である -->
+			index(0)に「username」と「password」というひとつのみであり、
+			値を取り出したい場合に指定するindexも(0)である -->
 
 		<br>
 		<table>

@@ -13,7 +13,11 @@ public class TestAction extends ActionSupport{
 	String ret = ERROR;
 	TestDAO dao = new TestDAO();
 	int count = dao.insert(username, password);
-	//TestDAOクラスをインスタンス化し、insertメソッドを利用
+	/**
+	 * TestDAOクラスをインスタンス化し、insertメソッドを利用
+	 * 戻り値はint型で帰ってくるため、
+	 * こちらでもint型で受け取る
+	 */
 	if(count > 0){
 		ret = SUCCESS;
 	}
