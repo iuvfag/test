@@ -1,0 +1,11 @@
+package com.internousdev.template.dao;
+
+import com.internousdev.template.dto.BuyItemDTO;
+
+public class BuyItemDAO {
+
+	public BuyItemDTO getBuyItemInfo(){
+
+	}
+
+}

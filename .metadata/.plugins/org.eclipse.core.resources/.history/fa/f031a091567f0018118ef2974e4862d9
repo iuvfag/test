@@ -1,0 +1,9 @@
+package com.internousdev.template.dao;
+
+public class BuyItemDAO {
+
+	public BuyItemDAO getBuyItemInfo(){
+
+	}
+
+}
