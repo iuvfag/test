@@ -61,13 +61,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 			session.put("login_user_id", loginDTO.getLoginId());
 			session.put("id", buyItemDTO.getId());
-			session.put("buyItemName", buyItemDTO.getItemName());
+			session.put("buyItem_name", buyItemDTO.getItemName());
 			session.put("buyItem_price", buyItemDTO.getItemPrice());
-			/**
+			/**^
 			 * BuyItemDTOクラス、LoginDTOクラスのgetterを利用して
 			 * MapにユーザーID、
 			 * 商品ID、商品名、商品価格をそれぞれ代入する
-			 * これで、JSPファイルでKeyを指定すれば呼び出せるようになる
+			 * これで、Javaファイル、JSPファイルでKeyを指定すれば呼び出せるようになる
 			 */
 
 			return result;
