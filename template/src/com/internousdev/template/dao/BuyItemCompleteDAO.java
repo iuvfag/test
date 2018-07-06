@@ -32,7 +32,7 @@ public class BuyItemCompleteDAO {
 			preparedStatement.setString(5, pay);
 			preparedStatement.setString(6, dateUtil.getDate());
 
-			preparedStatement.executeQuery();
+			preparedStatement.execute();
 		}catch(Exception e ){
 			e.printStackTrace();
 		}finally{

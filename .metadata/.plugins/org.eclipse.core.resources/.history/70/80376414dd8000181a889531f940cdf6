@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- strutsの詳細設定 -->
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+<!-- 対象のpackageを設定 -->
+	<package name="com.internousdev.template.action" extends="struts-default">
+
+		<!-- HomeAction -->
+		<!-- 最初に実行する処理、表示する画面。ログイン、新規ユーザー登録などの機能を持つ -->
+		<action name="HomeAction" class="com.internousdev.template.action.HomeAction"
+		method="execute">
+			<result name="success">login.jsp</result>
+		</action>
+
+
+		<!-- LoginAction -->
+		<!-- ログインの処理。成功した場合は商品購入ページへ、失敗した場合はホームに戻る -->
+		<action name="LoginAction" class="com.internousdev.template.action.LoginAction"
+		method="execute">
+			<result name="success">buyItem.jsp</result>
+			<result name="error">home.jsp</result>
+		</action>
+
+
+		<!-- UserCreateAction -->
+		<!-- 新たにユーザー登録する場合にページに移動する処理 -->
+		<action name="UserCreateAction" class="com.internousdev.template.action.UserCreateAction"
+		method="execute">
+			<result name="success">userCreate.jsp</result>
+		</action>
+
+
+		<!-- UserCreateConfirmAction -->
+		<!-- 新たにユーザー登録する場合の処理。成功した場合は確認画面へ、
+			そうでない場面はもう一度登録画面に戻す -->
+		<action name="UserCreateConfirmAction" class="com.internousdev.template.action.UserCreateConfirmAction"
+		method="execute">
+			<result name="success">userCreateConfirm.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+		<!-- UserCreateCompleteAction -->
+		<!-- ユーザー登録の際の確認画面。登録に成功したことを表示する -->
+		<action name="UserCreateCompleteAction" class="com.internousdev.template.action.UserCreateCompleteAction"
+		method="execute">
+			<result name="success">userCreateComplete.jsp</result>
+		</action>
+
+		<!-- BuyItemAction -->
+		<!-- 商品ページから購入確認画面に移動する -->
+		<action name="BuyItemAction" class="com.internousdev.template.action.BuyItemAction"
+		method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+		</action>
+
+
+		<!-- BuyItemConfirmAction -->
+		<!-- 購入確認の処理。商品購入確定の画面を表示する -->
+		<action name="BuyItemConfirmAction" class="com.internousdev.template.action.BuyItemConfirmAction"
+		method="execute">
+			<result name="success">buyItemComplete.jsp</result>
+		</action>
+
+
+		<!-- MyPageAction -->
+		<action name="MyPageAction" class="com.internousdev.template.action.MyPageAction"
+		method="execute">
+			<result name="success">myPage.jsp</result>
+		</action>
+
+
+	</package>
+
+</struts>

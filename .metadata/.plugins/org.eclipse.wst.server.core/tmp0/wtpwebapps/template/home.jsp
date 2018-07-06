@@ -20,7 +20,7 @@
 
 		<meta name="description" content="" />
 		<!-- 検索エンジンに対してホームページの内容紹介を表記しておく場合に使う
-			content=""野中にホームページの照会文を書く -->
+			content=""の中にホームページの照会文を書く -->
 
 		<meta name="keywords" content="" />
 		<!-- 検索エンジンの検索のキーワードとして使用される

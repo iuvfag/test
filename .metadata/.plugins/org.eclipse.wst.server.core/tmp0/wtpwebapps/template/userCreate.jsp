@@ -73,7 +73,7 @@
 			</div>
 
 			<div>
-				<s:if test="errorMessage != ">
+				<s:if test="errorMessage != ''">
 					<s:property value="errorMessage" escape="false"/>
 					<!-- ecapeタグ
 						HTMLタグをそのまま表示するかどうかを指定できる

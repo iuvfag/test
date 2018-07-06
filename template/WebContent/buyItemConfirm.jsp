@@ -109,6 +109,8 @@
 
 				</table>
 				</s:form>
+				<!-- buyItem.jspからbuyItemAction.javaに渡された情報を再度表示。
+					これでよければbuyItemConfirm.javaに情報を渡す -->
 			</div>
 
 		</div>

@@ -1,11 +1,21 @@
 package com.internousdev.template.dto;
 
 public class LoginDTO {
+	/**
+	 * ログインの際に必要な情報を格納するためのクラス
+	 */
 
 	private String loginId;
 	private String loginPassword;
 	private String userName;
 	private boolean loginFlg = false;
+	/**
+	 * ログインID、パスワード、ユーザー名とは別に
+	 * boolean型の変数loginFlgを宣言する
+	 * この変数はログインできたかどうかを判定する
+	 * デフォルトではfalseにしておく
+	 * @return
+	 */
 
 	public String getLoginId(){
 		return loginId;

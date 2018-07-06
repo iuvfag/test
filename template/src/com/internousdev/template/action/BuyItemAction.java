@@ -23,7 +23,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 		session.put("stock", stock);//--1
 		int intStock = Integer.parseInt(session.get("stock").toString());//--2
 		/**
-		 * JSPファイル内で選択された値(1)を取得して
+		 * JSPファイル内で選択された値を取得してsessionに代入(1)
 		 * intStockに代入(2)
 		 */
 		int intPrice = Integer.parseInt(session.get("buyItem_price").toString());
@@ -40,6 +40,9 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 		 */
 
 		String payment;
+		/**
+		 * buyItem.jspファイルで選択された支払い方法を宣言（受け取る）
+		 */
 
 		if(pay.equals("1")){
 			payment = "現金払い";
@@ -48,6 +51,10 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 			payment = "クレジットカード";
 			session.put("pay", payment);
 		}
+		/**
+		 * JSPファイルで指定された場合わけに応じて
+		 * 支払い方法をsessionに格納
+		 */
 		return result;
 	}
 
