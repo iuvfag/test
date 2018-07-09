@@ -22,6 +22,14 @@ public class MyPageDAO {
 		String sql = "select iit.item_name, ubit.total_price, ubit.total_count, ubit.pay from user_buy_item_transaction "
 				+ "ubit left join item_info_transaction iit on ubit.item_transaction_id = iit.id where ubit.item_transaction_id= ?"
 				+ "and ubit.user_master_id = ? order by ubit.insert_date desc";
+		/**
+		 * 商品情報から商品名を、
+		 * ユーザーが購入する商品情報から合計金額と購入数、支払い方法を取得し、
+		 * ユーザー購入商品情報をベースにテーブル結合を行う。
+		 * その際に商品情報の商品IDとユーザー購入情報の商品IDを一致させる。
+		 * 結合の際に取得する情報は商品IDとユーザーIDを着順にする。
+		 * また、購入日順に並びかえる。
+		 */
 
 		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);

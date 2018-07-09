@@ -1,0 +1,10 @@
+package com.internousdev.ecsite.dao;
+
+import com.internousdev.ecsite.util.DBConnector;
+
+public class LoginDAO {
+
+	private DBConnector dbConnetor = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+
+}

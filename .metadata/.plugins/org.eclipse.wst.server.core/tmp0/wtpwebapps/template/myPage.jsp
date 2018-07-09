@@ -109,6 +109,9 @@
 				<s:if test="session.message != null">
 					<h3><s:property value="session.message" /></h3>
 				</s:if>
+				<!-- 削除ボタンを押した場合は、商品購入履歴が画面から表示されなくなり、
+					このメッセージのみが表示されるようになる。
+					下のログアウトボタンは変わらず表示される。 -->
 					<div>
 						<br>
 						<span>前画面に戻る場合は</span>

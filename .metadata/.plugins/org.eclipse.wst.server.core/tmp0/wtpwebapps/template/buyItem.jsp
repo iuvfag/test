@@ -102,6 +102,7 @@
 						<td>
 							<select name="stock">
 							<option value="1" selected="selected">1</option>
+							<!-- selectedを指定した選択肢は初期状態で選択されている状態になる -->
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>

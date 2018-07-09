@@ -75,7 +75,7 @@
 			<div>
 				<s:if test="errorMessage != ''">
 					<s:property value="errorMessage" escape="false"/>
-					<!-- ecapeタグ
+					<!-- escapeタグ
 						HTMLタグをそのまま表示するかどうかを指定できる
 						(trueかfalse) -->
 				</s:if>
