@@ -1,7 +1,0 @@
-package com.internousdev.webproj5.dao;
-
-public class TestDAO {
-
-	public List<LoginDTO> loginDTOList = new ArrayList<LoginDtO>();
-
-}
