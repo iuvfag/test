@@ -1,7 +1,0 @@
-package com.internousdev.template.dao;
-
-public class LoginDAO {
-
-	public LoginDTO getLoginUserInfo(){}
-
-}

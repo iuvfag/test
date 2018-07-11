@@ -13,7 +13,7 @@ public class HomeAction extends ActionSupport implements SessionAware{
 	public Map<String, Object> session;
 
 	public String execute(){
-		String result = LOGIN;
+		String result = "login";
 
 		if(session.containsKey("id")){
 			BuyItemDAO buyItemDAO = new BuyItemDAO();

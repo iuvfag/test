@@ -1,9 +1,0 @@
-package com.internousdev.template.dao;
-
-import com.internousdev.template.dto.LoginDTO;
-
-public class LoginDAO {
-
-	public LoginDTO getLoginUserInfo(){}
-
-}

@@ -1,0 +1,45 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class MyPageAction extends ActionSupport implements SessionAware{
+
+	private Map<String, Object> session;
+	private MypageDAO myPageDAO = new MyPageDAO();
+	private ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
+	private String deleteFlg;
+	private String message;
+
+	public String execute() throws SQLException{
+
+		if(!session.containsKey("id")){
+			return ERROR;
+		}
+		/**
+		 * 履歴の削除がされているかチェックする
+		 */
+		if(deleteFlg == null){
+			String item_transaction_id = session.get("id").toString();
+			String user_master_id = session.get("login_user_id").toString();
+
+			myPageList = myPageDAO.getMyPageUserInfo(item_transaction_id, user_master_id);
+			/**
+			 * DBから取得した履歴情報をmyPageList二格納
+			 */
+
+		}else if(deleteFlg.equals("1")){
+			delete();
+			//deleteメソッドを呼び出して履歴の削除を行う
+		}
+
+		String result = SUCCESS;
+		return result;
+	}
+
+}

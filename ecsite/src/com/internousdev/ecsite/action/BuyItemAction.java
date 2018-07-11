@@ -8,7 +8,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class BuyItemAction extends ActionSupport implements SessionAware{
 
-	public Map<String, Object> session;
+	private Map<String, Object> session;
 	private int count;
 	private String pay;
 
@@ -51,6 +51,10 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 	@Override
 	public void setSession(Map<String, Object> session){
 		this.session = session;
+	}
+
+	public Map<String, Object> getSession(){
+		return session;
 	}
 
 }

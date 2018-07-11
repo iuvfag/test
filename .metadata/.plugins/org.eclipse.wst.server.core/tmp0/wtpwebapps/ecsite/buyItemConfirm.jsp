@@ -79,7 +79,7 @@
 
 		<div id="main">
 			<div id="top">
-				<p>BuyItem</p>
+				<p>BuyItemConfirm画面</p>
 			</div>
 
 			<div>
@@ -94,14 +94,14 @@
 					<tr>
 						<td>値段</td>
 						<td>
-							<s:property value="session.total_price" />
+							<s:property value="session.total_price" /><span>円</span>
 						</td>
 					</tr>
 
 					<tr>
 						<td>購入個数</td>
 						<td>
-							<s:property value="session.count" />
+							<s:property value="session.count" /><span>個</span>
 						</td>
 					</tr>
 
@@ -118,7 +118,7 @@
 
 					<tr>
 						<td><input type="button" value="戻る" onclick="submitAction('HomeAction')" /></td>
-						<td><input type="button" value="完了" onclick="submitAction('BuyItemConFirmAction')" /></td>
+						<td><input type="button" value="完了" onclick="submitAction('BuyItemConfirmAction')" /></td>
 					</tr>
 				</s:form>
 			</div>
