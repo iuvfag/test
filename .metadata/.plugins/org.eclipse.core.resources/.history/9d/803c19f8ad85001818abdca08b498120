@@ -1,0 +1,14 @@
+package com.internousdev.ecsitetest.dao;
+
+import com.internousdev.ecsitetest.dto.LoginDTO;
+import com.internousdev.ecsitetest.util.DBConnector;
+
+public class LoginDAO {
+
+	public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword){
+		DBConnector db = new DBConnector();
+		Coonection con = db.getConnection();
+		LoginDTO dto = LoginDTO();
+	}
+
+}

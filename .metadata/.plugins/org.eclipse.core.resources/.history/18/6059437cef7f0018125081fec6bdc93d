@@ -1,9 +1,0 @@
-package com.internousdev.template.action;
-
-public class UserCreateAction extends ActionSupport{
-
-	public String execute(){
-		return SUCCESS;
-	}
-
-}

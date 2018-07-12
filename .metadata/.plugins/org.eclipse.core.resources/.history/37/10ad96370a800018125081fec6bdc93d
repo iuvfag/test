@@ -1,7 +1,0 @@
-package com.internousdev.template.dao;
-
-public class UserCreateCompleteDAO {
-
-	private DateUtil dateUtil = new DateUtil();
-
-}

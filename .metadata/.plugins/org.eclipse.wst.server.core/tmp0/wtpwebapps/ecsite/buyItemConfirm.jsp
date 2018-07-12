@@ -65,7 +65,17 @@
 		<script type="text/javascript">
 			function submitAction(url){
 				$('form').attr('action', url);
+				/*
+				 * attr=HTMLの属性を取得するメソッド
+				 * 上記のように書くことで属性の変更が出来る
+				 * 今回の場合は「form要素にaction=urlを上書きする」という意味
+				*/
 				$('form').submit();
+				/*
+				 * 上記の文の入力で、
+				 * ボタンのクリックイベントでjQueryを呼び出し、
+				 * $('form').attr('action', url);の実行をするように設定
+				*/
 			}
 		</script>
 

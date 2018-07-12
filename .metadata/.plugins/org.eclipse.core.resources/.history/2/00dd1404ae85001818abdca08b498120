@@ -1,0 +1,25 @@
+package com.internousdev.ecsitetest.dao;
+
+import java.sql.Connection;
+
+import com.internousdev.ecsitetest.dto.LoginDTO;
+import com.internousdev.ecsitetest.util.DBConnector;
+import java.sql.PreparedStatement;
+
+public class LoginDAO {
+
+	public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword){
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		LoginDTO dto = new LoginDTO();
+
+		String sql = "SELECT * FROM login_user_transaction WHERE login_id=? AND login_pass=?";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, loginUserId);
+			ps.setString(2, loginPassword);
+		}
+	}
+
+}
