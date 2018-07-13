@@ -25,9 +25,9 @@ public class LoginDAO {
 			ResultSet rs = ps.executeQuery();
 
 			if(rs.next()){
-				dto.setLoginId("login_id");
-				dto.setLoginPassword("login_pass");
-				dto.setUserName("user_name");
+				dto.setLoginId(rs.getString("login_id"));
+				dto.setLoginPassword(rs.getString("login_pass"));
+				dto.setUserName(rs.getString("user_name"));
 
 				if(!(rs.getString("login_id").equals(null))){
 					dto.setLoginFlg(true);

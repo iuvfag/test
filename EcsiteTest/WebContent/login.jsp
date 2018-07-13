@@ -28,8 +28,8 @@
 
 			<div>
 				<h3>商品を購入する際にはログインをお願いします。</h3>
-				<s:if test="session..errorMessage != null">
-					<s:property vale="session.errorMessage" />
+				<s:if test="session.errorMessage != null">
+					<s:property value="session.errorMessage" />
 				</s:if>
 				<s:form action="LoginAction">
 					<s:textfield name="loginUserId" />

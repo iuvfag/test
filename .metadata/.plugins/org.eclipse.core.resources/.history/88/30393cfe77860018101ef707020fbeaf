@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+body, html{
+	margin: 0; /* 余白の削除 */
+	padding; 0; /* 余白の削除 */
+	width: 100%;
+	height: 100%;
+}
+
+#header{
+	position: fixed;
+	float: left;
+	width: 100%;
+	height: 60px;
+	padding: 10px;
+	background-color: #005392;
+}
+
+#header-menu{
+	float: left;
+	width: 80%;
+	margin-left: -30px;
+}
+
+#header-menu ul{
+	float: left;
+	margin-top: 15px;
+	nargin-left: 20px;
+	width: 100%;
+}
+
+#header-menu ul li{
+	float: left;
+	height: 30px;
+	margin-top: 17px;
+	margin-left: 25px;
+	width: 10%;
+	font-family: 'Vidaloka', serif;
+	color: #ffffff;
+	font-size: 17px;
+}
+
+.submit_btn{
+	padding: 0.5em 1em;
+	text-decoration: none;
+	border-radius: 100px;
+	width: 100px;
+	height: 35px;
+	margin-top: -5px;
+	margin-left: 6px;
+	font-size: 10px;
+	text-align: center;
+	color: #fff;
+	box-shadow: 2px 2px #1a6ea0;
+	background: #4b7ea1;
+	background: -webkit-gradient(linear, left top, left bottom, from(#81a8cb), to(#447a1) );
+	background: -moz-linear-gradient(-90deg, #4477a1, #81a8cb);
+	filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#4477a1', endColorstr='#81a8cb');
+}
+
+.submit_btn:active{
+	background: #4477a1;
+}
+
+.txt-keywords{
+	width: 95%;
+	height: 20px;
+	padding-left: 5%;
+	box-shadow: 0 0 7px #3498db;
+	border: 1px solid #3498db;
+	border-radius: 100px;
+}
+
+.txt-keywords:focus{
+	border: 1px solid #ff9900;
+	color: #011892;
+	outline: 0;
+}
+
+#contents{
+	padding-top: 70px;
+	margin-top: 50px;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	overflow: auto; /* コンテンツの表示を自動に設定（スクロール） */
+}
+
+.contents-btn-set{
+	margin: 3%;
+	display: inline-block;
+	float: left;
+}
+
+h1{
+	width: 90%;
+	color;
+}

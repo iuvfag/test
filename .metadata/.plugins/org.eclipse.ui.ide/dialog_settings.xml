@@ -3,15 +3,28 @@
 	<section name="CleanDialogSettings">
 		<item value="901" key="DIALOG_WIDTH"/>
 		<item value="true" key="BUILD_ALL"/>
-		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
 		<item value="447" key="DIALOG_HEIGHT"/>
 		<item value="292" key="DIALOG_X_ORIGIN"/>
 		<item value="104" key="DIALOG_Y_ORIGIN"/>
 		<item value="true" key="BUILD_NOW"/>
 	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\internousdev\Desktop\internous-sample\sample-web"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
 		<item value="-163" key="DIALOG_X_ORIGIN"/>
