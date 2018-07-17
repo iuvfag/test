@@ -1,0 +1,14 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.ArrayList;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.testsampleweb.dto.MCategoryDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HomeAction extends ActionSupport implements SessionAware{
+
+	private List<MCategoryDTO> mCategoryDTOList = new ArrayList<MCategoryDTO>();
+
+}
