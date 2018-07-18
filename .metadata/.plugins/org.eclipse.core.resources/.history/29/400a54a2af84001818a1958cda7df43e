@@ -1,7 +1,0 @@
-package com.internousdev.ecsite.dao;
-
-public class BuyItemCompleteDAO {
-
-	private DBConnector dbConnector = new DBConnector();
-
-}

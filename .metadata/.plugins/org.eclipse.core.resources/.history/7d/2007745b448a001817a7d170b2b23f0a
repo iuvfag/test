@@ -1,0 +1,15 @@
+package com.internousdev.testsampleweb.dao;
+
+import com.internousdev.testsampleweb.util.DBConnector;
+
+public class UserInfoDAO {
+
+	public int createUser(String familyName, String firstName, String familyNameKana,
+			String firstNameKana, String sex, String email, String loginId, String password){
+
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		int count = 0;
+	}
+
+}
