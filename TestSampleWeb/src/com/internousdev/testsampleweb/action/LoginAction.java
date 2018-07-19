@@ -2,14 +2,17 @@ package com.internousdev.testsampleweb.action;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.testsampleweb.dao.CartInfoDAO;
+import com.internousdev.testsampleweb.dao.DestinationInfoDAO;
 import com.internousdev.testsampleweb.dao.MCategoryDAO;
 import com.internousdev.testsampleweb.dao.UserInfoDAO;
+import com.internousdev.testsampleweb.dto.DestinationInfoDTO;
 import com.internousdev.testsampleweb.dto.MCategoryDTO;
 import com.internousdev.testsampleweb.dto.UserInfoDTO;
 import com.internousdev.testsampleweb.util.InputChecker;
@@ -76,13 +79,25 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				if(count > 0){
 					DestinationInfoDAO destinationInfoDAO = new DestinationInfoDAO();
 					try{
-						List<DestionationInfoDTO> destionationInfoDTOList = new ArrayList<DestinationDTO>();
-						destinationInfoDTOList = destinationInfoDAO.getDestionationInfo(loginId);
-						Iterator<DestinationInfoDTO> iterator = destionationInfoDTOList.iterator();
+						List<DestinationInfoDTO> destinationInfoDTOList = new ArrayList<DestinationInfoDTO>();
+						destinationInfoDTOList = destinationInfoDAO.getDestinationInfo(loginId);
+						Iterator<DestinationInfoDTO> iterator = destinationInfoDTOList.iterator();
+						/**
+						 * DestinationInfoDAOクラスのgetDestinationInfoメソッドを呼び出し、
+						 * その結果をListに格納
+						 * 繰り返し処理を行うため、今回はiteratorを利用する
+						 */
 						if(!(iterator.hasNext())){
 							destinationInfoDTOList = null;
+							/**
+							 * iteratorに入った値がなければ
+							 * Listの中身をnullにする
+							 */
 						}
 						session.put("destinationInfoDTOList", destinationInfoDTOList);
+						/**
+						 * sessionにdestinationInfoDTOListを格納
+						 */
 					}catch(SQLException e ){
 						e.printStackTrace();
 					}
