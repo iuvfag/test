@@ -47,6 +47,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		InputChecker inputChecker = new InputChecker();
 		loginIdErrorMessageList = inputChecker.doCheck("ログインID", loginId, 1, 8, true, false, false, true, false, false, false);
 		passwordErrorMessageList = inputChecker.doCheck("パスワード", password, 1, 16, true, false, false, true, false, false, false);
+		/**
+		 * 入力された文字列が有効かどうかをチェック
+		 * 結果はList型で返ってくるためList型変数で受ける
+		 */
 
 		if(loginIdErrorMessageList.size()!=0
 				&& passwordErrorMessageList.size()!=0){
@@ -54,12 +58,20 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
 			session.put("logined", 0);
 		}
+		/**
+		 * 上記のエラーメッセージリストたちに何か入っていれば
+		 * それをsessionに格納
+		 */
 
 		if(!session.containsKey("mCategoryList")){
 			MCategoryDAO mCategoryDAO = new MCategoryDAO();
 			mCategoryDTOList = mCategoryDAO.getMCategoryList();
 			session.put("mCategoryDTOList", mCategoryDTOList);
 		}
+		/**
+		 * session内にｍCategoryListのキーが保存されている場合は
+		 * そのキーでmCategoryListを格納
+		 */
 
 
 		UserInfoDAO userInfoDAO = new UserInfoDAO();
@@ -67,6 +79,21 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			if(userInfoDAO.login(loginId, password) > 0){
 				UserInfoDTO userInfoDTO = userInfoDAO.getUserInfo(loginId, password);
 				session.put("loginId", userInfoDTO.getUserId());
+
+				/**
+				 * UserInfoDAOクラスのisExistsUserInfoメソッドを呼び出す
+				 * このメソッドはJSPファイルで入力されたログインIDとパスワードを元に
+				 * そのユーザーがDBに存在するかを確認するメソッド
+				 *
+				 * 存在するならloginメソッドを呼び出す
+				 * このメソッドでDB内のカラムloginedを1に設定する
+				 * （今回のプロジェクトではloginedでログイン状態を確認する）
+				 * 設定されたカラムが1以上（存在する）か確かめる
+				 *
+				 * 存在する場合はユーザー情報を取得し
+				 * sessionにログインIDを格納
+				 */
+
 				int count = 0;
 				CartInfoDAO cartInfoDAO = new CartInfoDAO();
 
@@ -75,6 +102,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				 * String.valueOfは数値を文字列に変換するメソッド
 				 * toStringとの違いは値がnullでもそのnullを返すこと
 				 * （toStringだとNullPointerが発生してしまう）
+				 *
+				 * このメソッドを呼び出すことで暫定のIDと登録されたIDを元に
+				 * カート情報をひも付ける
+				 * （カート情報のユーザーID情報を登録済みのものに置き換える）
 				 */
 				if(count > 0){
 					DestinationInfoDAO destinationInfoDAO = new DestinationInfoDAO();

@@ -18,6 +18,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	private String reConfirmationPassword;
 	private String categoryId;
 
+	//エラーメッセージを入れるリストたち
 	private List<String> loginIdErrorMessageList = new ArrayList<String>();
 	private List<String> passwordErrorMessageList = new ArrayList<String>();
 	private List<String> passwordIncorrectErrorMessageList = new ArrayList<String>();
@@ -44,6 +45,10 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 				&& newPasswordErrorMessageList.size()==0
 				&& reConfirmationNewPasswordErrorMessageList.size()==0
 				&& newPasswordIncorrectErrorMessageList.size()==0){
+			/**
+			 * InputCheckerの判別結果が問題ないかどうかを判別
+			 * （エラーメッセージを格納するListの中身がそれぞれ空の場合）
+			 */
 
 			UserInfoDAO userInfoDAO = new UserInfoDAO();
 			if(userInfoDAO.isExistsUserInfo(loginId, password)){
@@ -51,11 +56,19 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 				session.put("loginId", loginId);
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
+				/**
+				 * 渡されたログインIDとパスワードを元に
+				 * 該当するユーサーがいるかどうかをチェック
+				 * パスワードを隠すメソッドを呼び出し、その結果をsessionに格納
+				 */
 
 				result = SUCCESS;
 			}else{
 				passwordIncorrectErrorMessageList.add("入力されたパスワードが異なります。");
 				session.put("passwordIncorrectErrorMessageList", passwordIncorrectErrorMessageList);
+				/**
+				 * ない場合はパスワードの間違いを指摘
+				 */
 			}
 		}else{
 			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
@@ -63,6 +76,10 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 			session.put("newPasswordErrorMessageList", newPasswordErrorMessageList);
 			session.put("reConfirmationNewPasswordErrorMessageList", reConfirmationNewPasswordErrorMessageList);
 			session.put("newPasswordIncorrectErrorMessageList", newPasswordIncorrectErrorMessageList);
+			/**
+			 * そもそもInputCheckerの結果
+			 * エラーメッセージが戻ってきている場合はそれをsessionに格納
+			 */
 		}
 
 		return result;

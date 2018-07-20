@@ -1,0 +1,7 @@
+package com.internousdev.testsampleweb.action;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+public class CreateUserConfirmAction extends ActionSupport implements SessionAware{
+
+}

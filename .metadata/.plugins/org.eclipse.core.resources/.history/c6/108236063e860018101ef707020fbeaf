@@ -1,5 +1,0 @@
-package com.internousdev.ecsitetest.action;
-
-public class LogoutAction extends ActionSupport implements SessionAware{
-
-}

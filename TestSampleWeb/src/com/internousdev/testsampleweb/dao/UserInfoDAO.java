@@ -31,7 +31,7 @@ public class UserInfoDAO {
 			ps.setString(8, email);
 			ps.setInt(9, 0);
 			ps.setInt(10, 1);
-			//注意setString(sex)
+			//注意!setString(sex)
 
 			count = ps.executeUpdate();
 		}catch(SQLException e ){

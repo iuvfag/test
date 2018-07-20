@@ -1,0 +1,51 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.testsampleweb.util.InputChecker;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateUserConfirmAction extends ActionSupport implements SessionAware{
+
+	private String familyName;
+	private String firstName;
+	private String familyNameKana;
+	private String firstNameKana;
+	private String sex;
+	private String email;
+	private String loginId;
+	private String password;
+
+	private List<String> familyNameErrorMessageList = new ArrayList<String>();
+	private List<String> firstNameErrorMessageList = new ArrayList<String>();
+	private List<String> familyNameKanaErrorMessageList = new ArrayList();
+	private List<String> firstNameKanaErrorMessageList = new ArrayList();
+	private List<String> emailErrorMessageList = new ArrayList();
+	private List<String> loginIdErrorMessageList = new ArrayList<String>();
+	private List<String> passwordErrorMEssageLIst = new ArrayList<String>();
+
+	private String categoryId;
+	private List<String> sexList = new ArrayList();
+	private Map<String, Object> session;
+
+
+	public String execute(){
+		String result = ERROR;
+		InputChecker inputChecker = new InputChecker();
+
+		session.put("familyName", familyName);
+		session.put("firstName", firstName);
+		session.put("familyNameKana", familyNameKana);
+		session.put("firstNameKana", firstNameKana);
+		session.put("sex", sex);
+		session.put("email", email);
+		session.put("loginId", loginId);
+
+		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, availableHalfWidthSymbols, availableKatakana, availableFullWidthSymbols)
+	}
+
+}

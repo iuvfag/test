@@ -50,8 +50,8 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.DestinationInfoDAO"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.UserInfoDAO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.UserInfoDAO"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,24 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.testsampleweb.dao.UserInfoDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ResetPasswordCompleteAction extends ActionSupport implements SessionAware{
+
+	private String categoryId;
+	private String loginId;
+	private String password;
+	private Map<String, Object> session;
+
+
+	public String execute(){
+		String result = ERROR;
+		UserInfoDAO userInfoDAO = new UserInfoDAO();
+		int count = userInfoDAO.resetPassword(String.valueOf(session.get("loginId")), String.valueOf(session.get("newPassword")))
+	}
+
+}

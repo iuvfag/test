@@ -13,6 +13,7 @@ public class InputChecker {
 	 * emailを判別したいのであれば英字、数字、記号を含むため下記のようになる
 	 * 例(質問の内容、値、最小文字数、最大文字数、true, false, false, true, true)となる
 	 * 結果はList形式で渡されることに注意
+	 * このメソッドを呼び出す側も戻り値はList型で受け取ること
 	 */
 
 	public List<String> doCheck(String propertyName,  String value, int minLength, int maxLength, boolean availableAlphabeticCharacters, boolean availableKanji, boolean availableHiragana, boolean availableHalfWidthDigit, boolean availableHalfWidthSymbols, boolean availableKatakana, boolean availableFullWidthSymbols){
@@ -27,8 +28,7 @@ public class InputChecker {
 			/**
 			 * StringUtilは文字列が空欄でも例外が発生しない
 			 * 文字列の判定など幅広く使えるメソッド
-			 * 今回は空欄かどうかを判別する
-			 * isEnptyを利用する
+			 * 今回は空欄かどうかを判別するisEmptyを利用
 			 */
 			stringList.add(propertyName + "を入力して下さい。");
 		}

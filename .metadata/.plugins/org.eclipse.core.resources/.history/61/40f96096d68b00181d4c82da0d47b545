@@ -1,0 +1,27 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateUserAction extends ActionSupport implements SessionAware{
+
+	private String familyName;
+	private String firstName;
+	private String familyNameKana;
+	private String firstNameKana;
+	private String sex;
+	private List<String> sexList = new ArrayList<String>();
+	private String email;
+	private String loginId;
+	private String password;
+	private static final String MALE = "男性";
+	private static final String FEMALE = "女性";
+	private String defaultSexValue = MALE;
+	private String categoryId;
+	private Map<String, Object> session;
+
+}
