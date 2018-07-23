@@ -1,0 +1,27 @@
+package com.internousdev.testsampleweb.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.testsampleweb.dto.ProductInfoDTO;
+import com.internousdev.testsampleweb.util.DBConnector;
+
+public class ProductInfoDAO {
+
+	public List<ProductInfoDTO> getPriductInfoList(){
+
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		List<ProductInfoDTO> productInfoDTOList = new ArrayList<ProductInfoDTO>();
+
+		String sql = "SELECT * FROM product_info";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+		}
+	}
+
+}

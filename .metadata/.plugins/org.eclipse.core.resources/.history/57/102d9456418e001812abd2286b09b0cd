@@ -1,0 +1,7 @@
+package com.internousdev.testsampleweb.dao;
+
+public class ProductInfoDAO {
+
+	public List<ProductInfoDTO> getPriductInfoList(){}
+
+}

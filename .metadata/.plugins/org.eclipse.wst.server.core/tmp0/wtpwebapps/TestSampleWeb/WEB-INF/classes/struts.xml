@@ -54,6 +54,24 @@
 		<result name="error">resetPassword.jsp</result>
 	</action>
 
+	<!-- CreateUserAction -->
+	<action name="CreateUserAction" class="com.internousdev.testsampleweb.action.CreateUserAction" method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<!-- CreateUserConfirmAction -->
+	<action name="CreateUserConfirmAction" class="com.internousdev.testsampleweb.action.CreateUserConfirmAction" method="execute">
+		<result name="success">createUserConfirm.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+	<!-- CreateUserCompleteAction -->
+	<action name="CreateUserCompleteAction" class="com.internousdev.testsampleweb.action.CreateUserCompleteAction" method="execute">
+		<result name="success">createUserComplete.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
 	</package>
 
 </struts>

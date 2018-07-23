@@ -34,15 +34,15 @@
 			<s:if test="!#session.familyNameKanaErrorMessageList.isEmpty()">
 				<div class="error">
 					<div class="error-message">
-						<s:iterator value="#sesssion.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
+						<s:iterator value="#session.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
 					</div>
 				</div>
 			</s:if>
 
-			<s:if test="!#session.fitstNameKanaErrorMessageList.isEmpty()">
+			<s:if test="!#session.firstNameKanaErrorMessageList.isEmpty()">
 				<div class="error">
 					<div class="error-message">
-						<s:iterator value="#session.firstNameKanaErrorMessageList"></s:iterator>
+						<s:iterator value="#session.firstNameKanaErrorMessageList"><s:property /><br></s:iterator>
 					</div>
 				</div>
 			</s:if>
@@ -58,12 +58,12 @@
 			<s:if test="!#session.loginIdErrorMessageList.isEmpty()">
 				<div class="error">
 					<div class="error-message">
-						<s:iterator value="#session.loginIdErrorMessage"><s:property /><br></s:iterator>
+						<s:iterator value="#session.loginIdErrorMessageList"><s:property /><br></s:iterator>
 					</div>
 				</div>
 			</s:if>
 
-			<s:if test="!#session.passwordErrorMessageList">
+			<s:if test="!#session.passwordErrorMessageList.isEmpty()">
 				<div class="error">
 					<div class="error-message">
 						<s:iterator value="#session.passwordErrorMessageList"><s:property /><br></s:iterator>
@@ -76,7 +76,7 @@
 				<table class="vertical-list-table">
 					<tr>
 						<th scope="row">姓</th>
-						<td><s:textfield name="familyName" value="%{#session.familyName}" label="姓" placeholder="姓" class="txt" />
+						<td><s:textfield name="familyName" value="%{#session.familyName}" label="姓" placeholder="姓" class="txt" /></td>
 					</tr>
 
 					<tr>
@@ -86,22 +86,22 @@
 
 					<tr>
 						<th scope="row">姓ふりがな</th>
-						<td><s:textfield name="familyNameKana" value="%{#session.familyNameKana}" label="姓ふりがな" class="txt" /></td>
+						<td><s:textfield name="familyNameKana" value="%{#session.familyNameKana}" label="姓ふりがな" placeholder="姓ふりがな" class="txt" /></td>
 					</tr>
 
 					<tr>
 						<th scope="row">名ふりがな</th>
-						<td><s:textfield name="firstNameKana" value="%{#session.firstNameKana}" label="名ふりがな" class="txt" /></td>
+						<td><s:textfield name="firstNameKana" value="%{#session.firstNameKana}" label="名ふりがな" placeholder="名ふりがな" class="txt" /></td>
 					</tr>
 
 					<tr>
 						<th scope="row">性別</th>
-						<td><s:radio name="sex" list="%{session.sexList}" value="%{#session.sex}" label="性別" placeholder="性別" /></td>
+						<td><s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" label="性別" placeholder="性別" /></td>
 					</tr>
 
 					<tr>
 						<th scope="row">メールアドレス</th>
-						<td><s:textfield name="email" value="%{#session.email}" label="メールアドレス" pleceholder="メールアドレス" class="txt" /></td>
+						<td><s:textfield name="email" value="%{#session.email}" label="メールアドレス" placeholder="メールアドレス" class="txt" /></td>
 					</tr>
 
 					<tr>

@@ -1,0 +1,17 @@
+package com.internousdev.testsampleweb.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.testsampleweb.dto.PurchaseHistoryInfoDTO;
+import com.internousdev.testsampleweb.util.DBConnector;
+
+public class ProductInfoDAO {
+
+	public List<PurchaseHistoryInfoDTO> getPurchaseHistoryList(String loginId){
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDTOList = new ArrayList<PurchaseHistoryInfoDTO>();
+	}
+
+}

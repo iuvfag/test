@@ -86,7 +86,26 @@ public class CartInfoDAO {
 	}
 
 
-	public int regist(String userId, String tempUserId, int productId, int productCount, int price){
+	public int getTotalPrice(String userId){
+
+		int totalPrice = 0;
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+
+		String sql = "SELECT SUM(product_count * price) AS total_price FROM cart_info WHERE user_id = ? GROUP BY user_id";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, userId);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()){
+				totalPrice = rs.getInt("total_price");
+			}
+		}
+	}
+
+
+	public int regist(String userId, String tempUserId, int productId, String productCount, int price){
 
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
@@ -99,7 +118,7 @@ public class CartInfoDAO {
 			ps.setString(1, userId);
 			ps.setString(2, tempUserId);
 			ps.setInt(3, productId);
-			ps.setInt(4, productCount);
+			ps.setString(4, productCount);
 			ps.setInt(5, price);
 
 			count = ps.executeUpdate();
