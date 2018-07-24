@@ -1,0 +1,16 @@
+package com.internousdev.testsampleweb.action;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateDestinationCompleteAction extends ActionSupport implements SessionAware{
+
+	private String familyName;
+	private String firstName;
+	private String familyNameKana;
+	private String firstNameKana;
+	private String sex;
+	private List<String> sexList = new ArrayList<String>();
+
+}

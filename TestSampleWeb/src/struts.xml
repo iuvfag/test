@@ -17,6 +17,56 @@
 		<result name="success">home.jsp</result>
 	</action>
 
+	<!-- AddCartAction -->
+	<action name="AddCartAction" class="com.internousdev.testsampleweb.action.AddcartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+		<result name="input">cart.jsp</result>
+	</action>
+
+
+	<!-- CartAction -->
+	<action name="CartAction" class="com.internousdev.testsampleweb.action.CartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- CreateDestinationAction -->
+	<action name="CreateDestinationAction" class="com.internousdev.testsampleweb.action.CreateDestinationAction" method="execute">
+		<result name="success">createDestination.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- CreateDestinationConfirmAction -->
+	<action name="CreateDestinationConfirmAction" class="com.internousdev.testsampleweb.action.CreateDestinationAction" method="execute">
+		<result name="success">createDestinationConfirm.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+
+	<!-- CreateDestinationCompleteAction -->
+	<action name="CreateDestinationCompleteAction" class="com.internousdev.testsampleweb.action.CreateDestinationCompleteAction" method="execute">
+		<result name="success">createDestinationComplete.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+
+	<!-- DeleteCartAction -->
+	<action name="DeleteCartAction" class="com.internousdev.testsampleweb.action.DeleteCartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">cart.jsp</result>
+	</action>
+
+
+	<!-- DeletePurcaseHistoryAction -->
+	<action name="DeletePurchaseHistoryAction" class="com.internousdev.testsampleweb.action.DeletePurchaseHistoryAction" method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
 	<!-- LoginAction -->
 	<action name="LoginAction" class="com.internousdev.testsampleweb.action.LoginAction" method="execute">
 		<result name="success">home.jsp</result>
@@ -34,6 +84,13 @@
 	<action name="LogoutAction" class="com.internousdev.testsampleweb.action.LogoutAction" method="execute">
 		<result name="success">index.jsp</result>
 		<result name="error">index.jsp</result>
+	</action>
+
+
+	<!-- MyPageAction -->
+	<action name="MyPageAction" class="com.internousdev.testsampleweb.action.MyPageAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="error">home.jsp</result>
 	</action>
 
 	<!-- ResetPasswordAction -->

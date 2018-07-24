@@ -12,6 +12,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class CartInfoDAO {
 
+	//カート情報取得のためのメソッド
 	public List<CartInfoDTO> getCartInfoDTOList(String loginId){
 
 		DBConnector db = new DBConnector();
@@ -86,6 +87,7 @@ public class CartInfoDAO {
 	}
 
 
+	//商品の合計金額を算出しDBにその結果を格納するメソッド
 	public int getTotalPrice(String userId){
 
 		int totalPrice = 0;
@@ -101,10 +103,19 @@ public class CartInfoDAO {
 			if(rs.next()){
 				totalPrice = rs.getInt("total_price");
 			}
+		}catch(SQLException e ){
+			e.printStackTrace();
 		}
+		try{
+			con.close();
+		}catch(SQLException e ){
+			e.printStackTrace();
+		}
+		return totalPrice;
 	}
 
 
+	//カートに商品を登録するためのメソッド
 	public int regist(String userId, String tempUserId, int productId, String productCount, int price){
 
 		DBConnector db = new DBConnector();

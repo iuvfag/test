@@ -65,7 +65,7 @@
 	<section name="CallHierarchySearchScope">
 	</section>
 	<section name="RefactoringWizard.preview">
-		<item value="600" key="width"/>
+		<item value="870" key="width"/>
 		<item value="400" key="height"/>
 	</section>
 	<section name="SourceActionDialog.methods">

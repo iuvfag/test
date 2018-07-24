@@ -45,14 +45,17 @@
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.DestinationInfoDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.DestinationInfoDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.UserInfoDAO"/>
-<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.PurchaseHistoryInfoDTO"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.CartInfoDTO"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.PurchaseHistoryInfoDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.PurchaseHistoryInfoDTO"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

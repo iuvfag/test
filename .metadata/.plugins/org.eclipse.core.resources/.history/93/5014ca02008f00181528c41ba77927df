@@ -1,0 +1,17 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.ArrayList;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateDestinationConfirmAction extends ActionSupport implements SessionAware{
+
+	private String familyName;
+	private String firstName;
+	private String familyNameKana;
+	private String firstNameKana;
+	private List<String> sexList = new ArrayList<String>();
+
+}

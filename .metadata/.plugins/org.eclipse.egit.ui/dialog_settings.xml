@@ -6,4 +6,7 @@
 	</list>
 	<section name="GitImportWizard">
 	</section>
+	<section name="GitCommitSearchPage">
+		<item value="0" key="HISTORY_SIZE"/>
+	</section>
 </section>

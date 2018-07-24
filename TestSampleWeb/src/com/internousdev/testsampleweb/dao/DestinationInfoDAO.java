@@ -12,6 +12,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class DestinationInfoDAO {
 
+	//宛先情報登録のメソッド
 	public int insert(String userId, String familyName, String firstName, String familyNameKana, String firstNameKana, String email, String tellNumber, String userAddress){
 
 		DBConnector db = new DBConnector();
