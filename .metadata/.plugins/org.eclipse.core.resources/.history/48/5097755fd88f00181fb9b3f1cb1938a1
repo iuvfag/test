@@ -1,0 +1,17 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.ArrayList;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.testsampleweb.dto.MCategoryDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class SearchItemAction extends ActionSupport implements SessionAware{
+
+	private String categoryId;
+	private String keywords;
+	private String pageNo;
+	private List<MCategoryDTO> mCategoryDTOList = new ArrayList<MCategoryDTO>();
+
+}

@@ -1,0 +1,26 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class SettlementConfirmAction extends ActionSupport implements SessionAware{
+
+	private String categoryId;
+	private Collection<String> checkList;
+	private String productId;
+	private String productName;
+	private String productNameKana;
+	private String imageFilePath;
+	private String imageFileName;
+	private String price;
+	private String releaseCompany;
+	private String releaseDate;
+	private String productCount;
+	private String subtotal;
+
+	private Map<String, Object> session;
+
+}

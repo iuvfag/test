@@ -1,0 +1,19 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.testsampleweb.dto.MCategoryDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class PurchaseHistoryAction extends ActionSupport implements SessionAware{
+
+	private String categoryId;
+
+	private List<MCategoryDTO> mCategoryDTOList = new ArrayList<MCategoryDTO>();
+
+	private Map<String, Object> session;
+
+}

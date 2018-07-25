@@ -12,6 +12,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class PurchaseHistoryInfoDAO {
 
+	//商品購入履歴を取得するためのメソッド
 	public List<PurchaseHistoryInfoDTO> getPurchaseHistoryList(String loginId){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();

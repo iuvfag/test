@@ -33,11 +33,11 @@ public class PaginationDTO {
 	private int nextPageNo;
 	private int previousPageNo;
 
-	public int getPageTotalSize(){
+	public int getTotalPageSize(){
 		return totalPageSize;
 	}
 
-	public void setPageTotalSize(int totalPageSize){
+	public void setTotalPageSize(int totalPageSize){
 		this.totalPageSize = totalPageSize;
 	}
 
@@ -113,7 +113,7 @@ public class PaginationDTO {
 		this.nextPageNo = nextPageNo;
 	}
 
-	public int getPrevousPageNo(){
+	public int getPreviousPageNo(){
 		return previousPageNo;
 	}
 

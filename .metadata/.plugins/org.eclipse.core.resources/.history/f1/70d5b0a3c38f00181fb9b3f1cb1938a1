@@ -1,0 +1,13 @@
+package com.internousdev.testsampleweb.util;
+
+import com.internousdev.testsampleweb.dto.PaginationDTO;
+import com.internousdev.testsampleweb.dto.ProductInfoDTO;
+
+public class Pagination {
+
+	public PaginationDTO initalize(List<ProductInfoDTO> list, int pageSize){
+
+		PaginationDTO paginationDTO = new PaginationDTO();
+	}
+
+}

@@ -12,7 +12,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class ProductInfoDAO {
 
-	public List<ProductInfoDTO> getPriductInfoList(){
+	public List<ProductInfoDTO> getProductInfoList(){
 
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();

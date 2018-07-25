@@ -1,0 +1,19 @@
+package com.internousdev.testsampleweb.util;
+
+import java.util.List;
+
+import com.internousdev.testsampleweb.dto.PaginationDTO;
+import com.internousdev.testsampleweb.dto.ProductInfoDTO;
+
+public class Pagination {
+
+	public PaginationDTO initalize(List<ProductInfoDTO> list, int pageSize){
+
+		PaginationDTO paginationDTO = new PaginationDTO();
+
+		//全ページ数
+		paginationDTO.setTotalPageSize((int)(Math.ceil(list.size() / pageSize)));
+		//ceilは与えられた数字を四捨五入して、double型で返す
+	}
+
+}

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="com.sun.corba.se.pept.transport.Connection"/>
@@ -26,7 +25,6 @@
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dao.BuyItemDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dto.BuyItemDTO"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.util.DateUtil"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dao.BuyItemCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.util.DBConnector"/>
@@ -37,7 +35,6 @@
 <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.CharacterAction"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.MCategoryDTO"/>
-<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.MCategoryDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.UserInfoDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.CartInfoDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.util.DBConnector"/>
@@ -47,15 +44,20 @@
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.UserInfoDAO"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.CartInfoDTO"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.PurchaseHistoryInfoDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.PurchaseHistoryInfoDTO"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.ProductInfoDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.MCategoryDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.testsampleweb.util.Pagination"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.text.ParseException"/>
 </qualifiedTypeNameHistroy>
