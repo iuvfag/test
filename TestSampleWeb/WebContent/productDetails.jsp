@@ -19,7 +19,7 @@
 					<div class="box">
 						<div class="2column-container">
 							<div class="right">
-								<img src='<s:property value="%{#session.imageFilePath}" />/<s:property value="imageFileName" />' class="item-image-box-320"/><br>
+								<img src='<s:property value="%{#session.imageFilePath}" />/<s:property value="%{#session.imageFileName}" />' class="item-image-box-320"/><br>
 							</div>
 
 							<div class="left">
@@ -41,17 +41,17 @@
 
 									<tr>
 										<th scope="row"><s:label value="購入個数" /></th>
-										<td><s:select name="productCount" list=%{#session.productCountList} />個</td>
+										<td><s:select name="productCount" list="%{#session.productCountList}" />個</td>
 									</tr>
 
 									<tr>
 										<th scope="row"><s:label value="発売会社名" /></th>
-										<td><s:property value="%{#session.releaseCompany" /></td>
+										<td><s:property value="%{#session.releaseCompany}" /></td>
 									</tr>
 
 									<tr>
 										<th scope="row"><s:label value="発売年月日" /></th>
-										<td><s:property value="%{#session.releaseDate" /></td>
+										<td><s:property value="%{#session.releaseDate}" /></td>
 									</tr>
 
 									<tr>
@@ -68,9 +68,9 @@
 						<s:hidden name="imageFilePath" value="%{#session.imageFilePath}" />
 						<s:hidden name="imageFileName" value="%{#session.imageFileName}" />
 						<s:hidden name="price" value="%{#session.price}" />
-						<s:hidden name="releaseCompany" value="%{#session.relaseCompany}" />
+						<s:hidden name="releaseCompany" value="%{#session.releaseCompany}" />
 						<s:hidden name="releaseDate" value="%{#session.releaseDate}" />
-						<s:hidden name="priductDescription" value="productDescription" />
+						<s:hidden name="productDescription" value="%{#session.productDescription}" />
 
 					</div>
 
@@ -81,7 +81,7 @@
 				</s:form>
 
 				<div class="box">
-					<div class="product-details-recomemend-box">
+					<div class="product-details-recommend-box">
 						<s:iterator value="#session.productInfoDTOList">
 						<!-- <div class="product-list">
 							<div class="product-list-box> -->

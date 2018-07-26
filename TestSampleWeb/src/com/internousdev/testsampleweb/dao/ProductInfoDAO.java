@@ -31,7 +31,7 @@ public class ProductInfoDAO {
 				productInfoDTO.setProductName(rs.getString("product_name"));
 				productInfoDTO.setProductNameKana(rs.getString("product_name_kana"));
 				productInfoDTO.setProductDescription(rs.getString("product_description"));
-				productInfoDTO.setCategoryId(rs.getInt("categoryId"));
+				productInfoDTO.setCategoryId(rs.getInt("category_id"));
 				productInfoDTO.setPrice(rs.getInt("price"));
 				productInfoDTO.setImageFilePath(rs.getString("image_file_path"));
 				productInfoDTO.setImageFileName(rs.getString("image_file_name"));
@@ -79,7 +79,7 @@ public class ProductInfoDAO {
 				productInfoDTO.setPrice(rs.getInt("price"));
 				productInfoDTO.setImageFilePath(rs.getString("image_file_path"));
 				productInfoDTO.setImageFileName(rs.getString("image_file_name"));
-				productInfoDTO.setReleaseDate(rs.getDate("regist_date"));
+				productInfoDTO.setReleaseDate(rs.getDate("release_date"));
 				productInfoDTO.setReleaseCompany(rs.getString("release_company"));
 				productInfoDTO.setStatus(rs.getInt("status"));
 				productInfoDTO.setRegistDate(rs.getDate("regist_date"));
@@ -104,7 +104,7 @@ public class ProductInfoDAO {
 		Connection con = db.getConnection();
 		List<ProductInfoDTO> productInfoDTOList = new ArrayList<ProductInfoDTO>();
 
-		String sql = "SELECT * FROM product_info WHERE category_id = ? AND product_id = NOT IN(?) ORDER BY RAND() LIMIT ?, ?";
+		String sql = "SELECT * FROM product_info WHERE category_id = ? AND product_id  NOT IN(?) ORDER BY RAND() LIMIT ?,?";
 		/**
 		 * not in～は特定の値以外のデータを取得したい場合に使用する
 		 * 今回はその後の値を？にし、引数で渡されたものを使用する
@@ -191,8 +191,8 @@ public class ProductInfoDAO {
 				productInfoDTO.setPrice(rs.getInt("price"));
 				productInfoDTO.setImageFilePath(rs.getString("image_file_path"));
 				productInfoDTO.setImageFileName(rs.getString("image_file_name"));
-				productInfoDTO.setReleaseDate(rs.getDate("regist_date"));
-				productInfoDTO.setReleaseCompany(rs.getString("regist_company"));
+				productInfoDTO.setReleaseDate(rs.getDate("release_date"));
+				productInfoDTO.setReleaseCompany(rs.getString("release_company"));
 				productInfoDTO.setStatus(rs.getInt("status"));
 				productInfoDTO.setRegistDate(rs.getDate("regist_date"));
 				productInfoDTO.setUpdateDate(rs.getDate("update_date"));
@@ -211,21 +211,21 @@ public class ProductInfoDAO {
 	}
 
 
-	public List<ProductInfoDTO> getProductInfoListByKeyWords(String[] keywordList, String categoryId){
+	public List<ProductInfoDTO> getProductInfoListByKeyWords(String[] keywordsList, String categoryId){
 
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		List<ProductInfoDTO> productInfoDTOList = new ArrayList<ProductInfoDTO>();
 
 		String sql = "SELECT * FROM product_info WHERE";
-		boolean initializeFlag = false;
+		boolean initializeFlag = true;
 
-		for(String keyword : keywordList){
+		for(String keyword : keywordsList){
 			if(initializeFlag){
-				sql += "category_id = " + categoryId + "AND (product_name LIKE '%" + keyword + "%' OR product_name_kana LIKE '%" + keyword + "%')";
+				sql += " category_id = " + categoryId + " AND(product_name LIKE '%" + keyword + "%' OR product_name_kana LIKE '%" + keyword + "%')";
 				initializeFlag = false;
 			}else{
-				sql += " AND (product_name LIKE '%" + keyword + "%' OR product_name_kana LIKE '%" + keyword + "%')";
+				sql += " AND(product_name LIKE '%" + keyword + "%' OR product_name_kana LIKE '%" + keyword + "%')";
 			}
 		}
 
@@ -240,7 +240,7 @@ public class ProductInfoDAO {
 				productInfoDTO.setProductName(rs.getString("product_name"));
 				productInfoDTO.setProductNameKana(rs.getString("product_name_kana"));
 				productInfoDTO.setProductDescription(rs.getString("product_description"));
-				productInfoDTO.setCategoryId(rs.getInt("categroy_id"));
+				productInfoDTO.setCategoryId(rs.getInt("category_id"));
 				productInfoDTO.setPrice(rs.getInt("price"));
 				productInfoDTO.setImageFilePath(rs.getString("image_file_path"));
 				productInfoDTO.setImageFileName(rs.getString("image_file_name"));

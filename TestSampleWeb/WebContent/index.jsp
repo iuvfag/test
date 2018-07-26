@@ -21,7 +21,7 @@
 	<body>
 
 		<div id="footer">
-			<s:include value="fotter.jsp" />
+			<s:include value="footer.jsp" />
 			<!-- JSPから他のJSPなどを呼び出すことができる
 				ファイル指定はCSSなどと一緒 -->
 

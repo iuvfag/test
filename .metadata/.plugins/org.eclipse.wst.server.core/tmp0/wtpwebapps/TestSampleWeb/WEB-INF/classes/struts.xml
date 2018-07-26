@@ -101,6 +101,13 @@
 	</action>
 
 
+	<!-- ProductListAction -->
+	<action name="ProductListAction" class="com.internousdev.testsampleweb.action.ProductListAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
 	<!-- PurchaseHistoryAction -->
 	<action name="PurchaseHistoryAction" class="com.internousdev.testsampleweb.action.PurchaseHistoryAction" method="execute">
 		<result name="success">purchaseHistory.jsp</result>
@@ -114,7 +121,7 @@
 
 	<!-- ResetPasswordConfirmAction -->
 	<action name="ResetPasswordConfirmAction" class="com.internousdev.testsampleweb.action.ResetPasswordConfirmAction" method="execute">
-		<result name="sucess">resetPasswordConfirm.jsp</result>
+		<result name="success">resetPasswordConfirm.jsp</result>
 		<result name="error">resetPassword.jsp</result>
 	</action>
 
@@ -122,6 +129,12 @@
 	<action name="ResetPasswordCompleteAction" class="com.internousdev.testsampleweb.action.ResetPasswordCompleteAction" method="execute">
 		<result name="success">resetPasswordComplete.jsp</result>
 		<result name="error">resetPassword.jsp</result>
+	</action>
+
+	<!-- SearchItemAction -->
+	<action name="SearchItemAction" class="com.internousdev.testsampleweb.action.SearchItemAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">productList.jsp</result>
 	</action>
 
 	<!-- CreateUserAction -->

@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib pprefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Success: Upload User Image</title>
+	</head>
+	<body>
+
+		<div id="contents">
+			<h2>アップロード画像</h2>
+			画像：<s:property value="userImage" /><br>
+
+		</div>
+
+	</body>
+</html>

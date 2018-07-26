@@ -1,0 +1,48 @@
+package com.internousdev.testsampleweb.action;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.testsampleweb.dao.ProductInfoDAO;
+import com.internousdev.testsampleweb.dto.MCategoryDTO;
+import com.internousdev.testsampleweb.dto.ProductInfoDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ProductDetailsAction extends ActionSupport implements SessionAware{
+
+	private int productId;
+	private List<MCategoryDTO> mCategoryDTOList = new ArrayList<MCategoryDTO>();
+	private List<ProductInfoDTO> productInfoDTOList = new ArrayList<ProductInfoDTO>();
+	private String categoryId;
+	private Map<String, Object> session;
+
+
+	public String execute(){
+		String result = ERROR;
+		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
+		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+		productInfoDTO = productInfoDAO.getProductInfo(productId);
+
+		session.put("id", productInfoDTO.getId());
+		session.put("productId", productInfoDTO.getProductId());
+		session.put("productName", productInfoDTO.getProductName());
+		session.put("productNameKana", productInfoDTO.getProductNameKana());
+		session.put("imageFilePath", productInfoDTO.getImageFilePath());
+		session.put("imageFileName", productInfoDTO.getImageFileName());
+		session.put("price", productInfoDTO.getPrice());
+
+		session.put("releaseCompany", productInfoDTO.getReleaseCompany());
+		session.put("releaseDate", productInfoDTO.getReleaseDate());
+		session.put("productDescription", productInfoDTO.getProductDescription());
+
+		List<Integer> productCountList = new ArrayList<Integer>();
+
+		session.put("productCountList", productCountList);
+
+		productInfoDTOList = productInfoDAO.getProductInfoListByCategoryId(productInfoDTO.getCategoryId(), productInfoDTO.getProductId(), 0, 3);
+	}
+
+}

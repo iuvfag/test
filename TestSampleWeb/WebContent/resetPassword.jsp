@@ -32,6 +32,15 @@
 					</div>
 				</s:if>
 
+				<s:if test="!#session.passwordIncorrectErrorMessageList.isEmpty()">
+					<div class="error">
+						<div class="error-message">
+							<s:iterator value="#session.passwordIncorrectErrorMessageList"><s:property />
+							<br></s:iterator>
+						</div>
+					</div>
+				</s:if>
+
 				<s:if test="!#session.newPasswordErrorMessageList.isEmpty()">
 					<div class="error">
 						<div class="error-message">

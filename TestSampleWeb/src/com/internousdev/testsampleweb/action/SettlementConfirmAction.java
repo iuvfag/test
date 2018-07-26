@@ -160,7 +160,53 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		this.imageFileName = imageFileName;
 	}
 
-	public
+	public String setPrice(){
+		return price;
+	}
+
+	public void setPrice(String price){
+		this.price = price;
+	}
+
+	public String getReleaseCompany(){
+		return releaseCompany;
+	}
+
+	public void setReleaseCompany(String releaseCompany){
+		this.releaseCompany = releaseCompany;
+	}
+
+	public String getReleaseDate(){
+		return releaseDate;
+	}
+
+	public void setReleaseDate(String releaseDate){
+		this.releaseDate = releaseDate;
+	}
+
+	public String ProductCount(){
+		return productCount;
+	}
+
+	public void setProductCount(String productCount){
+		this.productCount = productCount;
+	}
+
+	public String getSubtotal(){
+		return subtotal;
+	}
+
+	public void setSubtotal(String subtotal){
+		this.subtotal = subtotal;
+	}
+
+	public Map<String, Object> getSession(){
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session){
+		this.session = session;
+	}
 
 
 

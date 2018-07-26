@@ -121,7 +121,7 @@
 
 	<!-- ResetPasswordConfirmAction -->
 	<action name="ResetPasswordConfirmAction" class="com.internousdev.testsampleweb.action.ResetPasswordConfirmAction" method="execute">
-		<result name="sucess">resetPasswordConfirm.jsp</result>
+		<result name="success">resetPasswordConfirm.jsp</result>
 		<result name="error">resetPassword.jsp</result>
 	</action>
 

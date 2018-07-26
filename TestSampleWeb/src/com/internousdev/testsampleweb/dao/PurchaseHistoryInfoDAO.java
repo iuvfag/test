@@ -95,6 +95,7 @@ public class PurchaseHistoryInfoDAO {
 
 
 
+	//購入履歴に情報を追加するためのメソッド
 	public int regist(String loginId, int productId, int productCount, int destinationId, int price){
 
 		DBConnector db = new DBConnector();

@@ -16,7 +16,7 @@
 		<div class="contents">
 			<h1>マイページ画面</h1>
 
-			<s:form action="PurchaseHistory">
+			<s:form action="PurchaseHistoryAction">
 				<table class="vertical-list-table">
 					<tr>
 						<th scope="row"><s:label value="姓" /></th>

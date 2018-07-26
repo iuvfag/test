@@ -145,7 +145,7 @@ public class UserInfoDAO {
 				userInfoDTO.setStatus(rs.getString("status"));
 				userInfoDTO.setLogined(rs.getInt("logined"));
 				userInfoDTO.setRegistDate(rs.getDate("regist_date"));
-				userInfoDTO.setUpdateDate(rs.getDate("updateDate"));
+				userInfoDTO.setUpdateDate(rs.getDate("update_date"));
 			}
 		}catch(SQLException e ){
 			e.printStackTrace();
@@ -169,8 +169,8 @@ public class UserInfoDAO {
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, loginId);
-			ps.setString(2, password);
+			ps.setString(1, password);
+			ps.setString(2, loginId);
 			result = ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();

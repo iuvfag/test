@@ -96,7 +96,7 @@ public class ProductInfoDTO {
 	}
 
 	public void setReleaseDate(Date releaseDate){
-		this.registDate = releaseDate;
+		this.releaseDate = releaseDate;
 	}
 
 	public String getReleaseCompany(){
