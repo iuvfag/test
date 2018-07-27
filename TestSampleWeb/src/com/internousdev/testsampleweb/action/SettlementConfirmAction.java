@@ -39,7 +39,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 
 		if(session.containsKey("loginId")){
 			DestinationInfoDAO destinationInfoDAO = new DestinationInfoDAO();
-			List<DestinationInfoDTO> destinationInfoDTOList = new ArrayList<DestinationInfoDTO>();
+			List<DestinationInfoDTO> destinationInfoDTOList = new ArrayList<>();
 
 			try{
 				destinationInfoDTOList = destinationInfoDAO.getDestinationInfo(String.valueOf(session.get("loginId")));
@@ -160,7 +160,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		this.imageFileName = imageFileName;
 	}
 
-	public String setPrice(){
+	public String getPrice(){
 		return price;
 	}
 
@@ -184,7 +184,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		this.releaseDate = releaseDate;
 	}
 
-	public String ProductCount(){
+	public String getProductCount(){
 		return productCount;
 	}
 

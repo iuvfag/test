@@ -14,7 +14,7 @@
 		<div id="contents">
 			<h1>決済確認画面</h1>
 			<div class="info">
-				送り先情報を確認してください
+				送り先情報を選択してください
 			</div>
 
 			<s:form id="form" action="SettlementCompleteAction">
@@ -35,7 +35,7 @@
 						<s:iterator value="#session.destinationInfoDTOList" status="st">
 							<tr>
 								<td>
-									<s:if test="#st.index == ">
+									<s:if test="#st.index == 0">
 									<input type="radio" name="id" checked="checked" value="<s:property value='id' />" />
 									</s:if>
 									<s:else>

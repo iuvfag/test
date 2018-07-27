@@ -27,9 +27,9 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 		session.remove("familyNameErrorMessageList");
 		session.remove("firstNameErrorMessageList");
 		session.remove("familyNameKanaErrorMessageList");
-		session.remove("fisrNameKanaErrorMessageList");
+		session.remove("fisrtNameKanaErrorMessageList");
 		session.remove("emailErrorMessageList");
-		session.remove("tellNumberErrormessageList");
+		session.remove("tellNumberErrorMessageList");
 		session.remove("userAddressErrorMessageList");
 
 		result = SUCCESS;

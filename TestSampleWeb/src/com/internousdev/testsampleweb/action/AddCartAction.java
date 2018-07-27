@@ -49,11 +49,11 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		//ログイン状態の場合
 		if(session.containsKey("loginId")){
 			userId = String.valueOf(session.get("loginId"));
-			//そのままユーザーIDに代入
+			//値を取り出しそのままユーザーIDに代入
 		}
 
 
-		//暫定ユーザーIDを持っている場合
+		//暫定ユーザーIDのみを持っている場合
 		if(!(session.containsKey("loginId")) && session.containsKey("tempUserId")){
 			userId = String.valueOf(session.get("tempUserId"));
 			tempUserId = String.valueOf(session.get("tempUserId"));
@@ -89,7 +89,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		 * if文内でhasNextを利用、次の要素がなければカート情報はnullにしておく
 		 */
 
-		session.put("cartInfoDTOlist", cartInfoDTOList);
+		session.put("cartInfoDTOList", cartInfoDTOList);
 		int totalPrice = Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPrice(userId)));
 		session.put("totalPrice", totalPrice);
 		return result;

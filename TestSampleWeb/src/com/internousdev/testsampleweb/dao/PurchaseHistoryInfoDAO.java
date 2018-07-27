@@ -40,7 +40,7 @@ public class PurchaseHistoryInfoDAO {
 				+ "di.first_name_kana as first_name_kana, " /* 名かな */
 				+ "di.email as email, " /* メールアドレス */
 				+ "di.tel_number as tel_number, " /* 電話番号 */
-				+ "di.user_address as user_address, " /* 住所 */
+				+ "di.user_address as user_address " /* 住所 */
 				+ "FROM purchase_history_info as phi "
 				+ "LEFT JOIN product_info as pi "
 				+ "ON phi.product_id = pi.product_id "
@@ -58,7 +58,7 @@ public class PurchaseHistoryInfoDAO {
 				PurchaseHistoryInfoDTO purchaseHistoryInfoDTO = new PurchaseHistoryInfoDTO();
 				purchaseHistoryInfoDTO.setId(rs.getInt("id"));
 				purchaseHistoryInfoDTO.setUserId(rs.getString("user_id"));
-				purchaseHistoryInfoDTO.setProductId(rs.getInt("priduct_id"));
+				purchaseHistoryInfoDTO.setProductId(rs.getInt("product_id"));
 				purchaseHistoryInfoDTO.setProductCount(rs.getInt("product_count"));
 				purchaseHistoryInfoDTO.setPrice(rs.getInt("price"));
 				purchaseHistoryInfoDTO.setRegistDate(rs.getDate("regist_date"));
@@ -70,7 +70,7 @@ public class PurchaseHistoryInfoDAO {
 				purchaseHistoryInfoDTO.setImageFileName(rs.getString("image_file_name"));
 				purchaseHistoryInfoDTO.setImageFilePath(rs.getString("image_file_path"));
 				purchaseHistoryInfoDTO.setReleaseCompany(rs.getString("release_company"));
-				purchaseHistoryInfoDTO.setReleaseDate(rs.getDate("get_date"));
+				purchaseHistoryInfoDTO.setReleaseDate(rs.getDate("release_date"));
 				purchaseHistoryInfoDTO.setFamilyName(rs.getString("family_name"));
 				purchaseHistoryInfoDTO.setFirstName(rs.getString("first_name"));
 				purchaseHistoryInfoDTO.setFamilyNameKana(rs.getString("family_name_kana"));
@@ -102,7 +102,7 @@ public class PurchaseHistoryInfoDAO {
 		Connection con = db.getConnection();
 		int count = 0;
 
-		String sql = "INSERT INTO purchase_history_info(user_id, product_id, product_count, destination_id, regist_date, update_date) VALUES(?, ?, ?, ?, ?, now(), '0000-01-01')";
+		String sql = "INSERT INTO purchase_history_info(user_id, product_id, product_count, price, destination_id, regist_date, update_date) VALUES(?, ?, ?, ?, ?, now(), '0000-01-01')";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);

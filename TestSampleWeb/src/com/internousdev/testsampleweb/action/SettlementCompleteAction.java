@@ -68,7 +68,7 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 
 		if(count > 0){
 			CartInfoDAO cartInfoDAO = new CartInfoDAO();
-			count = cartInfoDAO.deleteAll(String.valueOf("loginId"));
+			count = cartInfoDAO.deleteAll(String.valueOf(session.get("loginId")));
 			/**
 			 * 商品購入履歴に情報が登録できたら
 			 * カート情報は削除する

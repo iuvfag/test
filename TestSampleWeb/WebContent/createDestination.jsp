@@ -107,11 +107,16 @@
 						<th scope="row"><s:label value="電話番号" /></th>
 						<td><s:textfield name="tellNumber" class="txt" /></td>
 					</tr>
+
+					<tr>
+						<th scope="row"><s:label value="メールアドレス" /></th>
+						<td><s:textfield name="email" class="txt" /></td>
+					</tr>
 				</table>
 
 				<div class="submit_btn_box">
 					<div id=".contents-btn-set">
-						<s:submit value="宛先情報確認" class="submmit_btn" />
+						<s:submit value="宛先情報確認" class="submit_btn" />
 					</div>
 				</div>
 

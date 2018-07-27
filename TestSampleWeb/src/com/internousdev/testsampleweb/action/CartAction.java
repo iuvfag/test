@@ -37,6 +37,9 @@ public class CartAction extends ActionSupport implements SessionAware{
 		 * sessionにユーザーIDがあればそれを、
 		 * ユーザーIDがなく暫定IDがあればそれを
 		 * userIdに代入する
+		 *
+		 * これでログイン状態でもログイン状態でなくとも
+		 * 代入されたログインIDでカート情報を取り出すことが出来る
 		 */
 
 		cartInfoDTOList = cartInfoDAO.getCartInfoDTOList(userId);

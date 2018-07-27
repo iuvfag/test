@@ -57,7 +57,7 @@ public class CartInfoDAO {
 				cartInfoDTO.setTempUserId(rs.getString("temp_user_id"));
 				cartInfoDTO.setProductId(rs.getInt("product_id"));
 				cartInfoDTO.setProductCount(rs.getInt("product_count"));
-				cartInfoDTO.setPrice(rs.getInt(rs.getInt("price")));
+				cartInfoDTO.setPrice(rs.getInt("price"));
 				cartInfoDTO.setRegistDate(rs.getDate("regist_date"));
 				cartInfoDTO.setUpdateDate(rs.getDate("update_date"));
 				cartInfoDTO.setProductName(rs.getString("product_name"));

@@ -12,7 +12,7 @@
 		<script type="text/javascript">
 
 		function goDeleteCartAction(){
-			document.getElementById("form").action="DeleteCartAction";
+			document.getElementById("form").action='DeleteCartAction';
 			/* getElementByIdは任意のHTMLタグで指定したIDにマッチする
 			ドキュメント要素を取得するメソッド
 			 今回はそのID「form」にアクションを指定している*/
@@ -74,9 +74,10 @@
 							<s:hidden name="releaseCompany" value="%{releaseCompany}" />
 							<s:hidden name="releaseDate" value="%{releaseDate}" />
 							<s:hidden name="productCount" value="%{productCount}" />
-							<s:hidden name="subtotal" value="subtotal" />
+							<s:hidden name="subtotal" value="%{subtotal}" />
 
 						</s:iterator>
+						<!-- カートに入っている商品をiteratorですべて表示する -->
 					</tbody>
 				</table>
 

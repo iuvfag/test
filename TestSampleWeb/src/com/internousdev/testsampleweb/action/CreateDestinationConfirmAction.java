@@ -96,6 +96,14 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 		this.familyNameKana = familyNameKana;
 	}
 
+	public String getFirstNameKana(){
+		return firstNameKana;
+	}
+
+	public void setFirstNameKana(String firstNameKana){
+		this.firstNameKana = firstNameKana;
+	}
+
 	public List<String> getSexList(){
 		return sexList;
 	}

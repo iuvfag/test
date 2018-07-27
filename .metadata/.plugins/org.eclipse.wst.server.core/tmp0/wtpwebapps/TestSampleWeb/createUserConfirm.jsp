@@ -57,8 +57,8 @@
 					</tr>
 				</table>
 				<div class="submit_btn_box">
-					<div id=".content-btn-set">
-						<s:submit value="登録" class="submit_btn"></s:submit>
+					<div id=".contents-btn-set">
+						<s:submit value="登録" class="submit_btn" />
 					</div>
 				</div>
 
@@ -69,11 +69,11 @@
 				<s:hidden name="familyNameKana" value="%{familyNameKana}" />
 				<s:hidden name="firstNameKana" value="%{firstNameKana}" />
 
-				<s:if test='sex.equals("女性")'>
-					<s:hidden name="sex" value="1" />
+				<s:if test='sex.equals("男性")'>
+					<s:hidden name="sex" value="0" />
 				</s:if>
 
-				<s:if test='sex.equals("男性")'>
+				<s:if test='sex.equals("女性")'>
 					<s:hidden name="sex" value="1" />
 				</s:if>
 

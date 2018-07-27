@@ -62,7 +62,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 				&& loginIdErrorMessageList.size()==0
 				&& passwordErrorMessageList.size()==0){
 			result = SUCCESS;
-			//エラーメッセージがなければsessionに情報を格納
+			//エラーメッセージがなければSUCCESS
 
 		}else{
 			session.put("familyNameErrorMessageList", familyNameErrorMessageList);
@@ -190,7 +190,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 	}
 
 	public void setFirstNameKanaErrorMessageList(List<String> firstNameKanaErrorMessageList){
-		this.firstNameErrorMessageList = firstNameKanaErrorMessageList;
+		this.firstNameKanaErrorMessageList = firstNameKanaErrorMessageList;
 	}
 
 	public List<String> getEmailErrorMessageList(){
@@ -221,6 +221,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		return session;
 	}
 
+	@Override
 	public void setSession(Map<String, Object> session){
 		this.session = session;
 	}

@@ -13,7 +13,7 @@
 	<body>
 
 		<jsp:include page="header.jsp" />
-		<div class="contents">
+		<div id="contents">
 			<h1>マイページ画面</h1>
 
 			<s:form action="PurchaseHistoryAction">

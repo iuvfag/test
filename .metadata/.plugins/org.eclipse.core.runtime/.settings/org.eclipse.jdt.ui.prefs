@@ -29,6 +29,7 @@ org.eclipse.jdt.ui.typefilter.enabled=java.awt.List;
 org.eclipse.jface.textfont=1|\uFF2D\uFF33 \u30B4\u30B7\u30C3\u30AF|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|\uFF2D\uFF33 \u30B4\u30B7\u30C3\u30AF;
 proposalOrderMigrated=true
 semanticHighlighting.localVariable.color=255,0,255
+semanticHighlighting.staticField.italic=false
 semanticHighlighting.staticFinalField.italic=false
 semanticHighlighting.staticMethodInvocation.italic=false
 spelling_locale_initialized=true

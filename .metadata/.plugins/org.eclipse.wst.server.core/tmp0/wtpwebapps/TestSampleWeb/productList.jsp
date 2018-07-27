@@ -38,11 +38,21 @@
 							</ul>
 						</div>
 					</s:iterator>
+
+					<!-- Iteratorを利用することでPaginationなどで指定した数だけ
+						商品を表示することが出来る -->
+
 				</div>
 
 				<div class="pager">
 					<s:iterator begin="1" end="#session.totalPageSize" status="pageNo">
+					<!-- 上記のようにsタグ内にstatusを設定すると繰り返しの状態を取得できる
+						pageNoがstatusということになる
+						下記のようにsタグ内で呼び出し、使用することも可能 -->
+
 						<s:if test="#session.currentPageNo == #pageNo.count">
+						<!-- 先ほど登場したstatusを使用
+							countは何番目かというのを判定するもの(1から数えて) -->
 							<s:property value="%{#pageNo.count}" />
 						</s:if>
 

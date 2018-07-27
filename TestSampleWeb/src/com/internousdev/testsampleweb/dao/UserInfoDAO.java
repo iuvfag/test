@@ -17,7 +17,7 @@ public class UserInfoDAO {
 		Connection con = db.getConnection();
 		int count = 0;
 
-		String sql = "INSERT INTO user_info(user_id, password, family_name, first_name, family_name_kana, first_name_kana, sex, email, status, logined, regist_date, update_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ? ,?, now(), 0)";
+		String sql = "INSERT INTO user_info(user_id, password, family_name, first_name, family_name_kana, first_name_kana, sex, email, status, logined, regist_date, update_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ? ,?, now(), now())";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);

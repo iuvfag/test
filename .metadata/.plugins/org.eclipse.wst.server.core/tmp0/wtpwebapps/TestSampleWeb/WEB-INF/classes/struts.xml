@@ -40,7 +40,7 @@
 
 
 	<!-- CreateDestinationConfirmAction -->
-	<action name="CreateDestinationConfirmAction" class="com.internousdev.testsampleweb.action.CreateDestinationAction" method="execute">
+	<action name="CreateDestinationConfirmAction" class="com.internousdev.testsampleweb.action.CreateDestinationConfirmAction" method="execute">
 		<result name="success">createDestinationConfirm.jsp</result>
 		<result name="error">createDestination.jsp</result>
 	</action>
@@ -62,7 +62,7 @@
 
 	<!-- DeletePurcaseHistoryAction -->
 	<action name="DeletePurchaseHistoryAction" class="com.internousdev.testsampleweb.action.DeletePurchaseHistoryAction" method="execute">
-		<result name="success">createUser.jsp</result>
+		<result name="success">myPage.jsp</result>
 		<result name="error">home.jsp</result>
 	</action>
 
@@ -135,6 +135,20 @@
 	<action name="SearchItemAction" class="com.internousdev.testsampleweb.action.SearchItemAction" method="execute">
 		<result name="success">productList.jsp</result>
 		<result name="error">productList.jsp</result>
+	</action>
+
+
+	<!-- SettlementConfirmAction -->
+	<action name="SettlementConfirmAction" class="com.internousdev.testsampleweb.action.SettlementConfirmAction" method="execute">
+		<result name="success">settlementConfirm.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+
+	<!-- SettlementCompleteAction -->
+	<action name="SettlementCompleteAction" class="com.internousdev.testsampleweb.action.SettlementCompleteAction" method="execute">
+		<result name="success">settlementComplete.jsp</result>
+		<result name="error">settlementConfirm.jsp</result>
 	</action>
 
 	<!-- CreateUserAction -->

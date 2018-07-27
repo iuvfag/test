@@ -203,7 +203,7 @@ comment = "宛先情報テーブル"
 ;
 
 insert into destination_info values
-(1, "guest", "インターノウス", "テストユーザー", "いんたーのうす", "てすとゆーざー", "guest@internous.co.jp", "080-1234-5678", "東京都千代田区三番町１－１　KY三番町ビル１F", now(), "0000-00-00 00:00:00");
+(1, "guest", "インターノウス", "テストユーザー", "いんたーのうす", "てすとゆーざー", "guest@internous.co.jp", "080-1234-5678", "東京都千代田区三番町１－１　KY三番町ビル１F", now(), "2018-07-25 07:00:00");
 
 create table m_category(
 	id int primary key not null comment "ID",

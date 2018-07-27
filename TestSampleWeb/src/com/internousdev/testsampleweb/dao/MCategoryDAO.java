@@ -13,7 +13,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class MCategoryDAO {
 
-	//カテゴリー取得のためのメソッド
+	//カテゴリー情報取得のためのメソッド
 	public List<MCategoryDTO> getMCategoryList(){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();

@@ -52,6 +52,19 @@ public class DeletePurchaseHistoryAction extends ActionSupport implements Sessio
 			sexList.add(MALE);
 			sexList.add(FEMALE);
 
+			session.put("sexList", sexList);
+			/**
+			 * 上記の3文を書いておかないとエラーが発生する
+			 * strutsファイルのresult先がuserCreate.jspとなっているが、
+			 * ここのファイル内にradioタグ内に「list="%{session.sexList}"」が存在する
+			 * radioボタンの選択肢をsession内のsexListから選ぶものであるが、
+			 * このjavaファイルによってsexListはputされていないため
+			 * 未定義であるというエラーが発生してしまう
+			 *
+			 * これを避けるためには上のようにsessionにputしなおすか
+			 * strutsのresultのリンク先を変更するしかないと思われる
+			 */
+
 			result = SUCCESS;
 		}
 		return result;

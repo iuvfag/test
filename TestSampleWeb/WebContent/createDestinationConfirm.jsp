@@ -19,7 +19,7 @@
 				<table class="vertical-list-table">
 					<tr>
 						<th scope="row"><s:label value="姓" /></th>
-						<td><s:property value="familyName" /><s:hidden name="familyName" value="%{familyName}"></s:hidden></td>
+						<td><s:property value="familyName" /><s:hidden name="familyName" value="%{familyName}" /></td>
 					</tr>
 
 					<tr>
@@ -29,7 +29,7 @@
 
 					<tr>
 						<th scope="row"><s:label value="姓ふりがな" /></th>
-						<td><s:property value="familyNameKana"/><s:hidden name="firstName" value="%{familyNameKana}" /></td>
+						<td><s:property value="familyNameKana"/><s:hidden name="familyNameKana" value="%{familyNameKana}" /></td>
 					</tr>
 
 					<tr>
