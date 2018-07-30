@@ -11,6 +11,9 @@
 	</head>
 	<body>
 
+	<!-- 入力内容を再度表示
+		ユーザーに確認してもらうページ -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>登録内容確認画面</h1>
@@ -69,6 +72,7 @@
 				<s:hidden name="familyNameKana" value="%{familyNameKana}" />
 				<s:hidden name="firstNameKana" value="%{firstNameKana}" />
 
+
 				<s:if test='sex.equals("男性")'>
 					<s:hidden name="sex" value="0" />
 				</s:if>
@@ -78,6 +82,13 @@
 				</s:if>
 
 				<s:hidden name="email" value="%{email}" />
+
+				<!-- 性別に関してはこれまでString型の文字列で「男性」、「女性」
+					と判別してきたが、DBでは0か1で識別するため、ここで
+					男性か女性化に応じて0か1に変換しておく -->
+
+				<!-- 値はhiddenで渡しておかないと
+					Javaファイルに渡せない -->
 
 			</s:form>
 

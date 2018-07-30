@@ -37,6 +37,11 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 		productInfoDTOList = productInfoDAO.getProductInfoList();
 		Pagination pagination = new Pagination();
 		PaginationDTO paginationDTO = pagination.initalize(productInfoDTOList, 9);
+		/**
+		 * まず、すべての商品の情報を取得、
+		 * その商品数に基づいて商品一覧ページに表示する商品数や
+		 * ページ数を指定していく
+		 */
 
 		session.put("totalPageSize", paginationDTO.getTotalPageSize());
 		session.put("currentPageNumber", paginationDTO.getCurrentPageNo());
@@ -51,7 +56,7 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 		session.put("previousPageNo", paginationDTO.getPreviousPageNo());
 		/**
 		 * Paginationクラスのinitializeメソッドを呼び出す
-		 * ページ移動ボタンに関する値を
+		 * 商品一覧ページのoagerに関する値を
 		 * sessionに格納
 		 */
 

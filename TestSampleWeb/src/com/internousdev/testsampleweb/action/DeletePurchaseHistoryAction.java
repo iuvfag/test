@@ -37,6 +37,8 @@ public class DeletePurchaseHistoryAction extends ActionSupport implements Sessio
 			/**
 			 * 削除が出来れば（削除件数が1件でもあれば）
 			 * 購入履歴のListをもう一度取得
+			 *
+			 * 成功していればListは空になるはずである
 			 */
 
 			if(!(iterator.hasNext())){

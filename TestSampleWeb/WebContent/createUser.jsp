@@ -11,6 +11,9 @@
 	</head>
 	<body>
 
+	<!-- ユーザー情報を入力してもらうページ
+		入力内容に不備があればここに戻される -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>ユーザー情報入力画面</h1>
@@ -70,6 +73,9 @@
 					</div>
 				</div>
 			</s:if>
+
+			<!-- 毎度のようにエラーメッセージがあれば表示する
+				ただし、最初のActionクラスではメッセージをremoveすることを忘れないように -->
 
 
 			<s:form action="CreateUserConfirmAction">

@@ -11,6 +11,9 @@
 	</head>
 	<body>
 
+	<!-- ここではエラーメッセージの表示と
+		登録情報の送信を行う -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>宛先情報入力画面</h1>
@@ -70,6 +73,10 @@
 					</div>
 				</div>
 			</s:if>
+
+			<!-- 入力内容に不備がある場合
+				一度ページを戻し、エラーメッセージを表示させたいため
+				エラーメッセージがあればここで表示 -->
 
 			<s:form action="CreateDestinationConfirmAction">
 				<table class="vertical-list-table">

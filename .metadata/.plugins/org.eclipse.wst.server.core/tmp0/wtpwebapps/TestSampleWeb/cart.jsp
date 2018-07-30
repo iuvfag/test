@@ -15,13 +15,20 @@
 			document.getElementById("form").action='DeleteCartAction';
 			/* getElementByIdは任意のHTMLタグで指定したIDにマッチする
 			ドキュメント要素を取得するメソッド
-			 今回はそのID「form」にアクションを指定している*/
+			 今回はそのID「form」にアクションを指定し、
+			 「DeleteCartAction」を呼び出している*/
 		}
 
 		</script>
 
 	</head>
 	<body>
+
+		<!-- このページでは
+			①カートに商品がなければそのメッセージを表示
+			②カートに商品があればそれを表示
+			が主な役割
+			if文で条件分岐させよう -->
 
 		<jsp:include page="header.jsp" />
 		<div id="contents">
@@ -33,6 +40,9 @@
 					</div>
 				</div>
 			</s:if>
+
+			<!-- エラーメッセージに何か登録されていれば表示する
+				今後もよく出てくるよ -->
 
 		<s:if test="#session.cartInfoDTOList.size()>0">
 			<s:form id="form" action="SettlementConfirmAction">
@@ -56,6 +66,13 @@
 							<tr>
 								<td><s:checkbox name="checkList" value="checked" fieldValue="%{id}" /></td>
 								<s:hidden name="productId" value="%{productId}" />
+								<!-- このcheckListはどの商品が選択されたかをJavaファイルに送り
+									判別するためのもの
+									今回はDeleteCartActionクラスに送るものを判別するため使用
+									hiddenでproductIdも渡しておく
+									fieldValueは出力されるvalueの属性に反映されるもので
+									今回はidとしておく -->
+
 								<td><s:property value="productName" /></td>
 								<td><s:property value="productNameKana" /></td>
 								<td><img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' width="50px" height="50px" /></td>
@@ -77,7 +94,9 @@
 							<s:hidden name="subtotal" value="%{subtotal}" />
 
 						</s:iterator>
-						<!-- カートに入っている商品をiteratorですべて表示する -->
+						<!-- カートに入っている商品をiteratorですべて表示する
+							商品情報はhiddenで渡しておく
+							さもないと#sessionに値が渡せないよ -->
 					</tbody>
 				</table>
 
@@ -91,6 +110,7 @@
 				<div class="submit_btn_box">
 					<div id=".contents-btn-set">
 						<s:submit value="削除" class="submit_btn" onclick="this.form.action='DeleteCartAction';" />
+						<!-- このsubmitを押すことでactionを呼び出し -->
 					</div>
 				</div>
 			</s:form>

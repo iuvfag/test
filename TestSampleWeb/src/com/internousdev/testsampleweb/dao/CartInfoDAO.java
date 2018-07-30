@@ -12,7 +12,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class CartInfoDAO {
 
-	//カート情報取得のためのメソッド
+	//カート情報取得のためのメソッド(ログインIDを元に)
 	public List<CartInfoDTO> getCartInfoDTOList(String loginId){
 
 		DBConnector db = new DBConnector();
@@ -86,7 +86,7 @@ public class CartInfoDAO {
 	}
 
 
-	//商品の合計金額を算出しDBにその結果を格納するメソッド
+	//商品の合計金額を算出しDBにその結果を格納するメソッド(ユーザーIDを元に)
 	public int getTotalPrice(String userId){
 
 		int totalPrice = 0;
@@ -114,7 +114,7 @@ public class CartInfoDAO {
 	}
 
 
-	//カートに商品を登録するためのメソッド
+	//カートに商品(個数、価格など)を登録するためのメソッド
 	public int regist(String userId, String tempUserId, int productId, String productCount, int price){
 
 		DBConnector db = new DBConnector();
@@ -143,10 +143,9 @@ public class CartInfoDAO {
 		return count;
 	}
 
+	//カート情報削除のためのメソッド(IDを元に)
 	public int delete(String id){
-		/**
-		 * 注意！本当にString型？？？
-		 */
+
 
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
@@ -169,6 +168,7 @@ public class CartInfoDAO {
 		return count;
 	}
 
+	//カート情報削除のためのメソッド(ユーザーIDを元に)
 	public int deleteAll(String userId){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
@@ -196,6 +196,11 @@ public class CartInfoDAO {
 		return false;
 	}
 
+	/**
+	 * カート情報をユーザーIDに紐付ける
+	 * DBのカート情報の暫定ユーザーIDをNullにし、
+	 * ユーザーIDを登録してあるものに置き換える
+	 */
 	public int linkToLoginId(String tempUserId, String loginId){
 
 		DBConnector db = new DBConnector();

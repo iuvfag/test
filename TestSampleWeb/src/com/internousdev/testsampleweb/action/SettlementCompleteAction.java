@@ -38,10 +38,13 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 			purchaseHistoryInfoDTOList.get(i).setDestinationId(destinationInfoDTOList.get(0).getId());
 		}
 		/**
+		 * 先のSettlementConfirmActionでリスト化した
 		 * 購入履歴リストの値であるdestinationId(宛先情報のID)に
 		 * 宛先リストの0番目のID(最初のID)をputしていく
 		 * for文でリストの長さ分回し、すべての宛先ID
 		 * をputしていく
+		 *
+		 * これですべての購入履歴の宛先IDがユーザーのものとして登録できる
 		 */
 
 
@@ -57,6 +60,7 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 					);
 		}
 		/**
+		 * 実はまだDAOクラスを通じてDBに購入履歴の登録をしていないため
 		 * 商品購入履歴に情報を登録していく
 		 * purchaseHistoryInfoDTOListから
 		 * ログインID、商品ID、商品購入数、宛先ID、合計を取り出し
@@ -71,7 +75,9 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 			count = cartInfoDAO.deleteAll(String.valueOf(session.get("loginId")));
 			/**
 			 * 商品購入履歴に情報が登録できたら
-			 * カート情報は削除する
+			 * カート情報からは削除する
+			 *
+			 * 忘れると購入商品が永遠増えていく現象が起こるので注意！
 			 */
 
 			if(count > 0){
@@ -83,6 +89,13 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 				cartInfoDTOList = null;
 			}
 			session.put("cartInfoDTOList", cartInfoDTOList);
+			/**
+			 * カート情報を取得し
+			 * iteratorに代入
+			 * 次の要素があるか確認し、なければnullを代入
+			 *
+			 * 今回はnullになるはずである
+			 */
 
 			int totalPrice = Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPrice(String.valueOf(session.get("loginId")))));
 			session.put("totalPrice", totalPrice);

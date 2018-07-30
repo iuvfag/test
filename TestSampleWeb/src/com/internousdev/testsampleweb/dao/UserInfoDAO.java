@@ -10,6 +10,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class UserInfoDAO {
 
+	//ユーザー情報登録のためのメソッド
 	public int createUser(String familyName, String firstName, String familyNameKana,
 			String firstNameKana, String sex, String email, String loginId, String password){
 
@@ -46,6 +47,7 @@ public class UserInfoDAO {
 	}
 
 
+	//ユーザー情報の存在を確認するメソッド(ログインID、パスワードを元に)
 	public boolean isExistsUserInfo(String loginId, String password){
 
 		DBConnector db = new DBConnector();
@@ -77,6 +79,7 @@ public class UserInfoDAO {
 	}
 
 
+	//ユーザー情報取得のためのメソッド(ログインID、パスワードを基にする)、ログイン用
 	public UserInfoDTO getUserInfo(String loginId, String password){
 
 		DBConnector db = new DBConnector();
@@ -159,6 +162,7 @@ public class UserInfoDAO {
 	}
 
 
+	//パスワード更新用のメソッド
 	public int resetPassword(String loginId, String password){
 
 		DBConnector db = new DBConnector();
@@ -183,6 +187,7 @@ public class UserInfoDAO {
 		return result;
 	}
 
+	//ログイン用メソッド(loginedの値を1にする)
 	public int login(String loginId, String password){
 
 		DBConnector db = new DBConnector();
@@ -208,6 +213,7 @@ public class UserInfoDAO {
 	}
 
 
+	//ログアウト用のメソッド(loginedの値を0に戻す)
 	public int logout(String loginId){
 
 		DBConnector db = new DBConnector();
@@ -215,6 +221,7 @@ public class UserInfoDAO {
 		int result = 0;
 
 		String sql = "UPDATE user_info SET logined=0 WHERE user_id=?";
+		//loginedを0にする
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);

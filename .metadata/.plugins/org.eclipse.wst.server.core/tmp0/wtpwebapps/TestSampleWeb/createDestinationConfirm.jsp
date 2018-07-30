@@ -11,6 +11,9 @@
 	</head>
 	<body>
 
+	<!-- 先のページで入力された情報を再度表示して
+		ユーザーに確認してもらう -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>宛先情報確認画面</h1>
@@ -58,6 +61,9 @@
 					</tr>
 
 				</table>
+
+				<!-- %{}を忘れると大変なことになるので注意！
+					値はhideenで渡さないとActionクラスにわたらないので注意！ -->
 
 				<div class="submit_btn_box">
 					<div id=".contents-btn-set">

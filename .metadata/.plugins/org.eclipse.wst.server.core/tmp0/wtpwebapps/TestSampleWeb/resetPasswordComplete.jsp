@@ -11,6 +11,8 @@
 	</head>
 	<body>
 
+	<!-- パスワード再設定完了を表示するページ -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>パスワード再設定完了画面</h1>

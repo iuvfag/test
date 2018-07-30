@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./css/style.css">
+		<title>商品一覧</title>
+	</head>
+	<body>
+
+	<!-- 商品一覧表次ページ
+		商品の画像を押すと商品詳細に飛ぶようにする -->
+
+		<jsp:include page="header.jsp" />
+
+		<div id="contents">
+			<h1>商品一覧画面</h1>
+			<s:if test="productInfoDTOList==null">
+				<div class="info">
+					検索結果がありません。
+				</div>
+			</s:if>
+
+			<s:else>
+				<div id="product-list">
+					<s:iterator value="#session.productInfoDTOList">
+						<div class="product-list-box">
+							<ul>
+								<li>
+									<a href='<s:url action="ProductDetailsAction">
+									<s:param name="productId" value="%{productId}" /></s:url>'>
+									<!-- 上のように書くことでクリックするとアクションクラスに値を渡すurlリンクを作ることが出来る -->
+									<img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' class="item-image-box-200" /></a><br>
+									<s:property value="productName" /><br>
+									<s:property value="productNameKana" /><br>
+									<s:property value="price"/>円<br>
+								</li>
+							</ul>
+						</div>
+					</s:iterator>
+
+					<!-- Iteratorを利用することでリスト内のすべての値を取得することが出来る
+						今回は全商品数分取得する -->
+
+				</div>
+
+				<div class="pager">
+					<s:iterator begin="1" end="#session.totalPageSize" status="pageNo">
+					<!-- 上記のようにsタグ内にstatusを設定すると繰り返しの状態を取得できる
+						pageNoがstatusということになる
+						下記のようにsタグ内で呼び出し、使用することも可能 -->
+
+						<s:if test="#session.currentPageNo == #pageNo.count">
+						<!-- 先ほど登場したstatusを使用
+							countは何番目かというのを判定するもの(1から数えて) -->
+							<s:property value="%{#pageNo.count}" />
+						</s:if>
+
+						<s:else>
+							<a href="<s:url action='SearchItemAction'><s:param name='pageNo' value='%{#pageNo.count}' /><s:param name='categoryId' value='%{categoryId}' /></s:url> ">	<s:property value="%{#pageNo.count}" /></a>
+						</s:else>
+					</s:iterator>
+				</div>
+			</s:else>
+
+		</div>
+
+		<s:include value="footer.jsp" />
+
+	</body>
+</html>

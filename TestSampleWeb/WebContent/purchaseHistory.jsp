@@ -11,6 +11,11 @@
 	</head>
 	<body>
 
+	<!-- 商品の購入履歴を表示、
+		そして、削除のactionを呼び出すページ
+		購入履歴がない場合もあるためif文で分岐させ
+		メッセージを表示させよう -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>商品購入履歴画面</h1>

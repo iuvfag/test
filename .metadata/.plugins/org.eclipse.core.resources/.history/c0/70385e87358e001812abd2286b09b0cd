@@ -1,9 +1,0 @@
-package com.internousdev.testsampleweb.dao;
-
-public class ProductInfoDAO {
-
-	public List<PurchaseHistoryInfoDAO> getPurchaseHistoryList(String loginId){
-		DBConnector db = new DBConnector();
-	}
-
-}

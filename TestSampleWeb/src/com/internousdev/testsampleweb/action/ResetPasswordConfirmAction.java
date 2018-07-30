@@ -30,6 +30,14 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 
 	public String execute(){
+
+		/**
+		 * このクラスで行うことは
+		 * ①入力されたパスワードのチェック
+		 * ②入力されたユーザーがいるかのチェック
+		 * ③画面に表示する新しいパスワードの表示
+		 */
+
 		String result = ERROR;
 
 		InputChecker inputChecker = new InputChecker();
@@ -52,13 +60,15 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 			UserInfoDAO userInfoDAO = new UserInfoDAO();
 			if(userInfoDAO.isExistsUserInfo(loginId, password)){
-				String concealedPassword = userInfoDAO.concealPassword(password);
+				String concealedPassword = userInfoDAO.concealPassword(reConfirmationPassword);
 				session.put("loginId", loginId);
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
 				/**
 				 * 渡されたログインIDとパスワードを元に
 				 * 該当するユーサーがいるかどうかをチェック
+				 *
+				 * その後
 				 * パスワードを隠すメソッドを呼び出し、その結果をsessionに格納
 				 */
 

@@ -29,6 +29,10 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 			result = SUCCESS;
 		}
 		return result;
+		/**
+		 * 入力内容をDBに登録
+		 * 登録できたら成功！
+		 */
 	}
 
 

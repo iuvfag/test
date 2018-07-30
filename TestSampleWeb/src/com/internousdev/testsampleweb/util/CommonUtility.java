@@ -20,6 +20,7 @@ public class CommonUtility {
 		return value;
 	}
 
+	//渡されたString型の変数をひたすらカンマで区切っていくメソッド
 	public String[] parseArrayList(String s){
 		return s.split(", ",0);
 		/**

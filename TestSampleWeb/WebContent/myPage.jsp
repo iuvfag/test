@@ -12,6 +12,9 @@
 	</head>
 	<body>
 
+	<!-- 登録者情報を表示
+		また、購入情報へのリンク機能も実装する -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>マイページ画面</h1>
@@ -36,6 +39,10 @@
 					<tr>
 						<th scope="row"><s:label value="性別" /></th>
 						<td><s:if test="#session.sex==0">男性</s:if><s:if test="#session.sex==1">女性</s:if></td>
+
+						<!-- 性別に関してはDB上では0か1で管理しているため、
+							ここでも0か1かで性別を判別する -->
+
 					</tr>
 
 					<tr>

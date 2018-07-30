@@ -33,6 +33,7 @@ public class CreateDestinationCompleteAction extends ActionSupport implements Se
 			result = SUCCESS;
 		}
 		return result;
+		//宛先情報の登録を行い、登録できれば成功！
 	}
 
 	public String getFamilyName(){

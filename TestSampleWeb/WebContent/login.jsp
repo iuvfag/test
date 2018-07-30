@@ -28,6 +28,9 @@
 	</head>
 	<body>
 
+	<!-- ログインを行うページ
+		新規ユーザー登録、パスワード変更もこちらから飛べるようにしておく -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>ログイン画面</h1>
@@ -47,6 +50,8 @@
 						</div>
 					</div>
 				</s:if>
+
+				<!-- エラーメッセージを表示 -->
 
 				<!--
 					SAVED:<s:property value="%{#session.savedLoginId}" />

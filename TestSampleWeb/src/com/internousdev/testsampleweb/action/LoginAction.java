@@ -43,6 +43,14 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("savedLoginId", false);
 			session.put("loginId", loginId);
 		}
+		//まず、ログイン状態かどうか判別
+
+		/**
+		 * ここでは複雑な分岐を行う
+		 * ①ユーザー情報が登録済みか、登録済みならログインする
+		 * ②ログイン前にすでにカートに商品を登録している場合、IDにカートを紐付ける
+		 * ③カートに商品が登録されている場合で宛先情報は登録済みか,登録済みなら決済画面に飛ばす
+		 */
 
 		InputChecker inputChecker = new InputChecker();
 		loginIdErrorMessageList = inputChecker.doCheck("ログインID", loginId, 1, 8, true, false, false, true, false, false, false);
@@ -69,7 +77,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("mCategoryDTOList", mCategoryDTOList);
 		}
 		/**
-		 * session内にｍCategoryListのキーが保存されている場合は
+		 * session内にｍCategoryListのキーが保存されていない場合は
 		 * そのキーでmCategoryListを格納
 		 */
 
@@ -81,13 +89,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				session.put("loginId", userInfoDTO.getUserId());
 
 				/**
+				 * まず①を確認
 				 * UserInfoDAOクラスのisExistsUserInfoメソッドを呼び出す
 				 * このメソッドはJSPファイルで入力されたログインIDとパスワードを元に
 				 * そのユーザーがDBに存在するかを確認するメソッド
 				 *
 				 * 存在するならloginメソッドを呼び出す
 				 * このメソッドでDB内のカラムloginedを1に設定する
-				 * （今回のプロジェクトではloginedでログイン状態を確認する）
 				 * 設定されたカラムが1以上（存在する）か確かめる
 				 *
 				 * 存在する場合はユーザー情報を取得し
@@ -99,6 +107,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 				count = cartInfoDAO.linkToLoginId(String.valueOf(session.get("tempUserId")), loginId);
 				/**
+				 * ②を実行
 				 * String.valueOfは数値を文字列に変換するメソッド
 				 * toStringとの違いは値がnullでもそのnullを返すこと
 				 * （toStringだとNullPointerが発生してしまう）
@@ -106,6 +115,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				 * このメソッドを呼び出すことで暫定のIDと登録されたIDを元に
 				 * カート情報をひも付ける
 				 * （カート情報のユーザーID情報を登録済みのものに置き換える）
+				 * これでログイン前のカート情報をログイン後にも引き継ぐことが出来る
 				 */
 				if(count > 0){
 					DestinationInfoDAO destinationInfoDAO = new DestinationInfoDAO();
@@ -114,6 +124,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 						destinationInfoDTOList = destinationInfoDAO.getDestinationInfo(loginId);
 						Iterator<DestinationInfoDTO> iterator = destinationInfoDTOList.iterator();
 						/**
+						 * ③を確認
+						 * カート情報がすでに登録されている場合、
 						 * DestinationInfoDAOクラスのgetDestinationInfoメソッドを呼び出し、
 						 * その結果をListに格納
 						 * 繰り返し処理を行うため、今回はiteratorを利用する

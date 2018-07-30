@@ -11,6 +11,9 @@
 	</head>
 	<body>
 
+	<!-- 商品詳細を表示するページ
+		カートに商品を追加するactionも実装しておく -->
+
 		<jsp:include page="header.jsp" />
 
 		<div id="contents">
@@ -72,6 +75,8 @@
 						<s:hidden name="releaseDate" value="%{#session.releaseDate}" />
 						<s:hidden name="productDescription" value="%{#session.productDescription}" />
 
+						<!-- 値をhiddenで渡す -->
+
 					</div>
 
 					<div class="submit_btn_box">
@@ -79,6 +84,9 @@
 					</div>
 
 				</s:form>
+
+				<!-- おすすめ商品も表示する
+					session内に格納されたものを呼び出そう -->
 
 				<div class="box">
 					<div class="product-details-recommend-box">

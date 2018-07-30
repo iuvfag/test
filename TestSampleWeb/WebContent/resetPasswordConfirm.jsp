@@ -11,6 +11,9 @@
 	</head>
 	<body>
 
+	<!-- 入力されたパスワードを確認するページ
+		新しいパスワードは隠して表示しよう -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>パスワード再設定確認画面</h1>

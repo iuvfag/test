@@ -20,6 +20,13 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 	 * Collectionは要素をひとつのユニットに集めるもの
 	 * Set、List、Queueなどの上の階層に属するもので
 	 * Collectionを介して要素を追加することが出来る
+	 *
+	 * こちらでは商品削除の際の判別のため使用する
+	 * JSPファイルでチェックボックスとしている場合、
+	 * 複数選択される可能性があるので、こちらでは
+	 * Collectionで受け取っておく
+	 * Stringでも受け取れるが、その場合カンマ＆半角スペース
+	 * で区切られてくる
 	 */
 
 	private String categoryId;
@@ -43,7 +50,6 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 
 	private Map<String, Object> session;
 
-	//注意！　全部Stringでいいの？
 
 	public String execute(){
 		String result = ERROR;
@@ -55,17 +61,34 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 			checkListErrorMessageList.add("チェックされていません。");
 			session.put("checkListErrorMessageList", checkListErrorMessageList);
 			return ERROR;
+			/**
+			 * このcheckListはJSPファイルにあるcheckList
+			 * JSPファイル側でチェックしていない場合は渡される値がNullであるため
+			 * エラーメッセージを表示する
+			 */
 		}
 
 		for(String id : checkList){
 			System.out.println(id);
 			count += cartInfoDAO.delete(id);
 		}
+		/**
+		 * 拡張for文
+		 * checkListの要素の数だけ繰り返す
+		 *
+		 * 処理内容はcheckList内に格納された要素を元に
+		 * deleteメソッドを呼び出すこと
+		 * これで選択された商品情報をカートから削除することが可能になる
+		 */
 
 		if(count <= 0){
 			checkListErrorMessageList.add("チェックされていません。");
 			session.put("checkListErrorMessageList", checkListErrorMessageList);
 			return ERROR;
+			/**
+			 * うまく削除されなかった場合はエラーメッセージを表示する
+			 */
+
 		}else{
 			String userId = null;
 			List<CartInfoDTO> cartInfoDTOList = new ArrayList<CartInfoDTO>();
@@ -87,10 +110,21 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 			int totalPrice = Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPrice(userId)));
 			session.put("totalPrice", totalPrice);
 
+			/**
+			 * 削除された場合、
+			 * ログイン状態かどうかを判別し
+			 * いずれの場合(ログイン状態、そうでない場合)もカート情報を再度取得する
+			 *
+			 * カート情報にはないにもないはずである
+			 *
+			 */
+
 			sexList.add(MALE);
 			sexList.add(FEMALE);
+			//この文はなくてもいいかも
 
 			result = SUCCESS;
+			//ここまでの処理がうまくいけば成功！
 		}
 		return result;
 	}

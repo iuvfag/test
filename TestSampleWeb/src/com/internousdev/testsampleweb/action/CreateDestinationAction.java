@@ -31,6 +31,11 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 		session.remove("emailErrorMessageList");
 		session.remove("tellNumberErrorMessageList");
 		session.remove("userAddressErrorMessageList");
+		/**
+		 * すでにメッセージがある場合、それを残したままにすると
+		 * 余計な場所でメッセージが発生する場合がある
+		 * いったんここではsessionから取り除いておこう
+		 */
 
 		result = SUCCESS;
 		return result;

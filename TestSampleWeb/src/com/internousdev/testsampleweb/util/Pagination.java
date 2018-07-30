@@ -9,6 +9,7 @@ import com.internousdev.testsampleweb.dto.ProductInfoDTO;
 public class Pagination {
 
 	public PaginationDTO initalize(List<ProductInfoDTO> list, int pageSize){
+		//このpageSizeは1ページに表示する商品の数！！
 
 		PaginationDTO paginationDTO = new PaginationDTO();
 
@@ -16,14 +17,14 @@ public class Pagination {
 		paginationDTO.setTotalPageSize((int)(Math.ceil(list.size() / pageSize)));
 		/**
 		 * ceilは与えられた数字を四捨五入して、double型で返す
-		 * 式の内容はListのサイズ（商品すべての数）÷ページサイズを整数にしたもの
-		 * 1ページに表示する商品の数
+		 * 式の内容はListのサイズ（商品すべての数）÷1ページの商品数を整数にしたもの
+		 * すべての商品を表示するのに必要な全ページ数が計算できる
 		 */
 
 		//現在のレコード番号
 		paginationDTO.setCurrentPageNo(1);
 
-		//全レコード数
+		//全レコード数(商品数)
 		paginationDTO.setTotalRecordSize(list.size() - 1);
 
 		//現在のページ番号に対する開始レコード番号（オフセット）
@@ -39,6 +40,7 @@ public class Pagination {
 		/**
 		 * 全ページ数の数だけfor文をまわし、
 		 * まわしている回数分順番にpageNumberListに格納し続ける
+		 * 全ページの数だけListに格納される
 		 */
 
 		List<ProductInfoDTO> productInfoPages = new ArrayList<ProductInfoDTO>();
@@ -57,7 +59,7 @@ public class Pagination {
 		paginationDTO.setCurrentProductInfoPage(productInfoPages);
 		/**
 		 * 1ページ分のリストページに上のListを格納
-		 * これで1ページに必要な商品が並べられる
+		 * これで1ページに必要な商品のindexが並べられる
 		 */
 
 		if((paginationDTO.getStartRecordNo() - 1) <= 0){
@@ -81,7 +83,9 @@ public class Pagination {
 		}
 		/**
 		 * 次ページの必要・不必要を判別するためif文の分岐を使用する
-		 * 終了レコード番号(ページサイズ-1)とページサイズの合計が全ページ数を超えてしまう場合は
+		 * 1ページに表示する最後の商品の番号と
+		 * 1ページあたりの商品表示数の合計が
+		 * 全ページ数を超えてしまう場合は
 		 * 「次のページが存在するか」はfalse
 		 * そうでない場合はtrueとなり、現在のページに1足した数を
 		 * 次ページ番号へ格納する

@@ -22,8 +22,10 @@ public class GoLoginAction extends ActionSupport implements SessionAware{
 			mCategoryDTOList = mCategoryDAO.getMCategoryList();
 			session.put("mCategoryDTOList", mCategoryDTOList);
 		}
+		//ログイン状態かどうかを判別する、ログイン状態であれば商品カテゴリーをgetする
 		session.put("loginIdErrorMessageList", "");
 		session.put("passwordErrorMessageList", "");
+		//エラーメッセージには空で入れておく
 		return SUCCESS;
 	}
 

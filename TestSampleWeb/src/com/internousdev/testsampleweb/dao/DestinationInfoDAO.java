@@ -47,6 +47,7 @@ public class DestinationInfoDAO {
 	}
 
 
+	//宛先情報取得のためのメソッド
 	public List<DestinationInfoDTO> getDestinationInfo(String loginId)throws SQLException{
 
 		DBConnector db = new DBConnector();

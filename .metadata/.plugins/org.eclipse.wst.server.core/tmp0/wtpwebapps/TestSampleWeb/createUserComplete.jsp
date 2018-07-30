@@ -12,6 +12,8 @@
 	</head>
 	<body>
 
+	<!-- ユーザー登録成功の画面表示 -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>登録完了画面</h1>

@@ -36,21 +36,42 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		}
 		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false, true, true);
 
+		/**
+		 * まず入力されたキーワードに応じて場合分け
+		 * キーワードが空欄の場合は空欄をkeywordsに代入
+		 * そうでない場合は入力された情報のチェック
+		 *
+		 * その後のswitch分の分岐で
+		 * ①商品カテゴリーが「すべて」で検索されている場合
+		 * ②それ以外のカテゴリーが選択されている場合
+		 * に分けて検索を行う
+		 */
+
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 		switch(categoryId){
 			case"1":
 				productInfoDTOList = productInfoDAO.getProductInfoListAll(keywords.replaceAll("　", " ").split(" "));
 				/**
+				 * JSPから送られている値が1の場合(すべての商品が選択されている場合)
+				 * すべての商品情報を取得する
+				 *
 				 * replaceAllは文字列を置換するもの(正規表現を変換する際に使う)
 				 * カッコ内の最初の引数(正規表現であること)をカンマの後のものに変換する
 				 *
 				 * splitは指定した要素で(カッコ内の要素)で文字列を区切るもの
+				 *
+				 * 今回は「まず全角のスペースを半角に変換、その後半角のスペースで
+				 * キーワードを区切る」ということをやっているよ
 				 */
 				result = SUCCESS;
 				break;
 
 			default:
 				productInfoDTOList = productInfoDAO.getProductInfoListByKeyWords(keywords.replaceAll("　", " ").split(" "), categoryId);
+				/**
+				 * カテゴリーIDに1以外が選択されている場合は
+				 * 引数にカテゴリーIDを渡し、キーワード検索を行う
+				 */
 				result = SUCCESS;
 				break;
 		}
@@ -59,6 +80,12 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		if(!(iterator.hasNext())){
 			productInfoDTOList = null;
 		}
+		/**
+		 * 取得したリストに次の要素がなければNullを代入
+		 * キーワードが空欄の場合はSQL文がうまく実行されないため
+		 * 必然的にnullになってしまうが？？
+		 */
+
 		session.put("keywordsErrorMessageList", keywordsErrorMessageList);
 
 
@@ -67,6 +94,12 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			mCategoryDTOList = mCategoryDAO.getMCategoryList();
 			session.put("mCategoryDTOList", mCategoryDTOList);
 		}
+		/**
+		 * 商品カテゴリーのリストがsessionになければ取得してsessionに代入
+		 *
+		 * 次にページャーに必要な値を取得する
+		 */
+
 
 		if(!(productInfoDTOList==null)){
 			Pagination pagination = new Pagination();
@@ -76,6 +109,12 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			}else{
 				paginationDTO = pagination.getPage(productInfoDTOList, 9, pageNo);
 			}
+			/**
+			 * Listに値が入っていれば
+			 * pageNoの中身にあいたが入っているかどうかに応じて
+			 * (いずれの場合にも対応させておく)
+			 * ページャーに必要な情報を取得する
+			 */
 
 			session.put("productInfoDTOList", paginationDTO.getCurrentProductInfoPage());
 			session.put("totalPageSize", paginationDTO.getTotalPageSize());

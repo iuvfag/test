@@ -37,7 +37,9 @@ public class CreateUserAction extends ActionSupport implements SessionAware{
 		session.remove("userIdErrorMessageList");
 		session.remove("passwordErrorMessageList");
 		/**
-		 * sessionからエラーメッセージを取り除く
+		 * エラーメッセージが残ったままだと
+		 * JSP側で表示されてしまうので
+		 * sessionからエラーメッセージを取り除いておこう
 		 */
 
 		session.put("familyName", familyName);
@@ -54,9 +56,20 @@ public class CreateUserAction extends ActionSupport implements SessionAware{
 		sexList.add(MALE);
 		sexList.add(FEMALE);
 		session.put("sexList", sexList);
+		/**
+		 * このリスト、マップに追加するのはこの選択肢を
+		 * JSP側で表示したいため
+		 * JSPから送られてくるものは「MALE」、「FEMALE」
+		 * の2択となる
+		 */
+
 		session.put("email", email);
 		session.put("loginId", loginId);
 		session.put("password", password);
+		/**
+		 * 入力された情報たちをsessionに保持して
+		 * SUCCCESSを返す
+		 */
 
 		result = SUCCESS;
 		return result;

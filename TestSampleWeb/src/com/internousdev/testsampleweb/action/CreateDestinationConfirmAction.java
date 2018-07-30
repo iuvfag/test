@@ -40,7 +40,7 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 		String result = ERROR;
 		InputChecker inputChecker = new InputChecker();
 
-		//フォームの入力内容をInputCheckerでチェック
+		//フォームの入力内容をInputCheckerでチェック、結果をメッセージリストに代入
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, true);
 		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, true);
 		familyNameKanaErrorMessageList = inputChecker.doCheck("姓ふりがな", familyNameKana, 1, 16, false, false, true, false, false, false, false);
@@ -57,6 +57,7 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 				&& tellNumberErrorMessageList.size()==0
 				&& userAddressErrorMessageList.size()==0){
 			result = SUCCESS;
+			//特にメッセージリストに何も入っていなければ成功！
 
 		}else{
 			session.put("familyNameErrorMessageList", familyNameErrorMessageList);
@@ -67,6 +68,7 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 			session.put("tellNumberErrorMessageList", tellNumberErrorMessageList);
 			session.put("userAddressErrorMessageList", userAddressErrorMessageList);
 		}
+		//何かメッセージリストに入った場合はそれをsessionに格納
 		sexList.add(MALE);
 		sexList.add(FEMALE);
 		return result;

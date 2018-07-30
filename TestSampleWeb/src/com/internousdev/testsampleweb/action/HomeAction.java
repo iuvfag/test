@@ -42,7 +42,10 @@ public class HomeAction extends ActionSupport implements SessionAware{
 			 */
 		}
 
-		// ③カートに商品が入っている場合？？
+		/**
+		 *  ③商品カテゴリーをまだ取得していない場合
+		 *  (ログインしていない場合はこうなる)
+		 */
 		if(!session.containsKey("mCategoryList")){
 			MCategoryDAO mCategoryDAO = new MCategoryDAO();
 			mCategoryDTOList = mCategoryDAO.getMCategoryList();

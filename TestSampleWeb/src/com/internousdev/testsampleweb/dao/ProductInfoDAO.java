@@ -56,6 +56,7 @@ public class ProductInfoDAO {
 	}
 
 
+	//商品情報を取得するメソッド(商品IDを元に)
 	public ProductInfoDTO getProductInfo(int productId){
 
 		DBConnector db = new DBConnector();
@@ -98,6 +99,10 @@ public class ProductInfoDAO {
 	}
 
 
+	/**
+	 * カテゴリーID、商品IDを元に指定の数の商品情報を取得するメソッド
+	 * ただし、ここでの商品情報はお勧めとして表示するもの！
+	 */
 	public List<ProductInfoDTO> getProductInfoListByCategoryId(int categoryId, int productId, int limitOffset, int limitRowCount){
 
 		DBConnector db = new DBConnector();
@@ -158,6 +163,11 @@ public class ProductInfoDAO {
 	}
 
 
+	/**
+	 * 商品情報取得のメソッド
+	 * カテゴリー「すべて」の場合
+	 * 場合に応じてSQL文を分岐させているためややこしいかも
+	 */
 	public List<ProductInfoDTO> getProductInfoListAll(String[] keywordList){
 
 		DBConnector db = new DBConnector();
@@ -175,6 +185,11 @@ public class ProductInfoDAO {
 				sql += "AND (product_name like '%" + keyword + "%' OR product_name_kana LIKE '%" + keyword + "%')";
 			}
 		}
+		/**
+		 * 拡張for文を使用する
+		 * keywordリストに格納されている要素の数だけ要素を取り出し
+		 * SQL文に代入している
+		 */
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -211,6 +226,11 @@ public class ProductInfoDAO {
 	}
 
 
+	/**
+	 * 商品情報取得のメソッド
+	 * カテゴリー「すべて」以外の何かが選択されている場合
+	 * 場合に応じてSQL文を分岐させているためややこしいかも
+	 */
 	public List<ProductInfoDTO> getProductInfoListByKeyWords(String[] keywordsList, String categoryId){
 
 		DBConnector db = new DBConnector();
@@ -228,6 +248,10 @@ public class ProductInfoDAO {
 				sql += " AND(product_name LIKE '%" + keyword + "%' OR product_name_kana LIKE '%" + keyword + "%')";
 			}
 		}
+		/**
+		 * 今回の場合はカテゴリーIDを代入している
+		 * それ以外は基本的には上のメソッドと同じ
+		 */
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);

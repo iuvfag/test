@@ -41,6 +41,12 @@
 									<s:else>
 									<input type="radio" name="id" value="<s:property value='id' />" />
 									</s:else>
+
+									<!-- sessionに格納された宛先情報をすべて取得
+										indexは0から何番目かを取得するもの
+										ここで場合分けしているのは0番目(最初に登録している宛先)
+										をチェック状態にするため -->
+
 								</td>
 
 								<td>

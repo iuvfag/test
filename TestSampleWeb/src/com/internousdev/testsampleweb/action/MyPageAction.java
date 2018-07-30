@@ -27,6 +27,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		UserInfoDTO userInfoDTO = new UserInfoDTO();
 
 		userInfoDTO = userInfoDAO.getUserInfo(String.valueOf(session.get("loginId")));
+		//ログインIDを元にユーザー情報を取得
 
 		if(userInfoDTO != null){
 			session.put("familyName", userInfoDTO.getFamilyName());
@@ -37,6 +38,9 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 			session.put("email", userInfoDTO.getEmail());
 
 			System.out.println(session.get("familylName"));
+			/**
+			 * マイページに表示させたい情報をsessionに格納する
+			 */
 
 			result = SUCCESS;
 		}

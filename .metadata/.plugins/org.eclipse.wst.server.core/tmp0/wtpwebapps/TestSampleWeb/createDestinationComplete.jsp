@@ -11,6 +11,9 @@
 	</head>
 	<body>
 
+	<!-- 登録完了！
+		と表示するページ -->
+
 		<jsp:include page="header.jsp" />
 		<div id="contents">
 			<h1>宛先情報登録完了画面</h1>

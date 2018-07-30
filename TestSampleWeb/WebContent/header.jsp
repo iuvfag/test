@@ -42,6 +42,11 @@
 	<body>
 	<header>
 
+	<!-- このヘッダーでいろんな動作を行う
+		ログイン、マイページ、カート、商品一覧、ログアウト、商品検索など
+		多機能
+		がんばろう -->
+
 		<div id="header">
 			<div id="header-title">
 				TestSampleWeb
@@ -70,6 +75,11 @@
 						<s:if test="#session.logined==1">
 							<li><s:submit value="マイページ" class="submit_btn" onclick="goMyPageAction();" /></li>
 						</s:if>
+
+						<!-- 今回はログイン状態とそうでない場合で表示されるものが異なるものがある
+							判別方法にはsessionに格納されたloginedを使用している
+							これはDBにも定義されている -->
+
 					</s:form>
 				</ul>
 

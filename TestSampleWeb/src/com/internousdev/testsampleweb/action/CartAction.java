@@ -57,7 +57,7 @@ public class CartAction extends ActionSupport implements SessionAware{
 
 		int totalPrice = Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPrice(userId)));
 		session.put("totalprice", totalPrice);
-		//合憲金額を算出し、sessionに格納
+		//合計金額を算出し、sessionに格納
 
 		result = SUCCESS;
 

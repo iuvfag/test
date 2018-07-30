@@ -44,6 +44,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		session.put("sex", sex);
 		session.put("email", email);
 		session.put("loginId", loginId);
+		//入力内容をsessionに格納
 
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, false);
 		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, false);

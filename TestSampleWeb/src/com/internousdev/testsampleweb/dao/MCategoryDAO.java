@@ -13,7 +13,7 @@ import com.internousdev.testsampleweb.util.DBConnector;
 
 public class MCategoryDAO {
 
-	//カテゴリー情報取得のためのメソッド
+	//商品カテゴリー情報取得のためのメソッド
 	public List<MCategoryDTO> getMCategoryList(){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
@@ -40,7 +40,7 @@ public class MCategoryDAO {
 			/**
 			 * Iterator
 			 * 要素を反復して処理する場合に使用する
-			 * Listのすべての要素に対して処理を行いたい場合などに便利
+			 * Listのすべての要素に対して処理を行いたい場合などに便利かな
 			 */
 			if(!(iterator.hasNext())){
 				mCategoryDTOList = null;

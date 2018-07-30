@@ -20,12 +20,21 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 
 		boolean savedLoginId = Boolean.valueOf(String.valueOf(session.get("savedLoginId")));
 		int count = userInfoDAO.logout(loginId);
+		/**
+		 * logoutメソッドを呼び出し
+		 * 該当するユーザーのloginedを0にする
+		 */
 
 		if(count > 0){
 			session.clear();
 			session.put("savedLoginId", savedLoginId);
 			session.put("loginId", loginId);
 			result = SUCCESS;
+			/**
+			 * loginedを0にできたら
+			 * session内にある情報をclearする
+			 * clearした後にもう一度savedLoginIdとloginIdをsessionに格納しなおす
+			 */
 		}
 		return result;
 	}

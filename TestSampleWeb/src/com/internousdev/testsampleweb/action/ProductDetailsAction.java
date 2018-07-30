@@ -39,20 +39,39 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		session.put("releaseCompany", productInfoDTO.getReleaseCompany());
 		session.put("releaseDate", productInfoDTO.getReleaseDate());
 		session.put("productDescription", productInfoDTO.getProductDescription());
+		/**
+		 * 商品情報を取得してsessionに格納する
+		 */
 
 		List<Integer> productCountList = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
 
 		session.put("productCountList", productCountList);
+		/**
+		 * 商品個数は5個に固定しているため
+		 * Listに1～5の数字を格納してsessionに格納
+		 */
 
 		productInfoDTOList = productInfoDAO.getProductInfoListByCategoryId(productInfoDTO.getCategoryId(), productInfoDTO.getProductId(), 0, 3);
 		Iterator<ProductInfoDTO> iterator = productInfoDTOList.iterator();
 		if(!(iterator.hasNext())){
 			productCountList = null;
 		}
+		/**
+		 * おすすめ商品として表示する商品の情報を取得する
+		 * 値はiteratorに格納する
+		 * if文内で次の要素がない場合はproductCountにnullを代入する
+		 */
 
 		if(!(productInfoDTOList.isEmpty() || productCountList==null)){
 			session.put("productInfoDTOList", productInfoDTOList);
 			result = SUCCESS;
+			/**
+			 * 商品情報を格納したリストに何か値が入っている場合
+			 * あるいは商品個数のproductCountがnullとなっている場合は
+			 * 商品情報が格納されたリストをsessionに格納
+			 * これでお勧めの商品をsessionに格納できる
+			 * SUCCESSを返す
+			 */
 		}
 		return result;
 	}

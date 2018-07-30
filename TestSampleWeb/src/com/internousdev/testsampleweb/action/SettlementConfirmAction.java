@@ -37,6 +37,10 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	public String execute(){
 		String result = ERROR;
 
+		/**
+		 * まず、ログイン状態であることを確認する
+		 */
+
 		if(session.containsKey("loginId")){
 			DestinationInfoDAO destinationInfoDAO = new DestinationInfoDAO();
 			List<DestinationInfoDTO> destinationInfoDTOList = new ArrayList<>();
@@ -44,11 +48,17 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 			try{
 				destinationInfoDTOList = destinationInfoDAO.getDestinationInfo(String.valueOf(session.get("loginId")));
 				Iterator<DestinationInfoDTO> iterator = destinationInfoDTOList.iterator();
+				//入力された情報を元に宛先情報を取得する
 
 				if(!(iterator.hasNext())){
 					destinationInfoDTOList = null;
 				}
 				session.put("destinationInfoDTOList", destinationInfoDTOList);
+				/**
+				 * 取得した要素の次の値がない場合は
+				 * Nullを代入しsessionに格納
+				 */
+
 			}catch(SQLException e ){
 				e.printStackTrace();
 			}
@@ -57,6 +67,16 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 
 		List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDTOList = new ArrayList<PurchaseHistoryInfoDTO>();
 
+
+		/**
+		 * 現在JSPファイルから送られている情報は
+		 * チェックボックス型である
+		 * 複数選択されている場合があり、Collection型で受けるのが望ましいが
+		 * String型で受けることも可能である
+		 * その場合は要素が半角＆スペース区切りで送られてくる
+		 * そのためCommonUtilityの区切りようメソッドを呼び出し
+		 * カンマで区切ってリストに入れていく必要がある
+		 */
 		CommonUtility commonUtility = new CommonUtility();
 		String[] productIdList = commonUtility.parseArrayList(productId);
 		String[] productNameList = commonUtility.parseArrayList(productName);
@@ -86,10 +106,19 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 			}catch(ParseException e ){
 				e.printStackTrace();
 			}
+			//SimpleDateFormatに関しては例外が発生するため、例外処理をしておく
 			purchaseHistoryInfoDTO.setProductCount(Integer.parseInt(String.valueOf(productCountList[i])));
 			purchaseHistoryInfoDTO.setSubtotal(Integer.parseInt(String.valueOf(subtotalList[i])));
 
 			purchaseHistoryInfoDTOList.add(purchaseHistoryInfoDTO);
+
+			/**
+			 * 拡張for文を使用する
+			 * ログインIDはそのままに商品情報などはリストから
+			 * ひとつずつDTOに格納していき、最後にリストに格納する
+			 *
+			 * これを商品IDを格納したリストの要素の数だけ繰り返す
+			 */
 
 		}
 
@@ -101,6 +130,10 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 			result = SUCCESS;
 		}
 		return result;
+		/**
+		 * ログイン状態でない場合は
+		 * ERRORを返す(login.jspに飛ばす)
+		 */
 	}
 
 
