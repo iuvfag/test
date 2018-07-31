@@ -1,0 +1,25 @@
+package com.internousdev.ecsite2.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import com.internousdev.ecsite2.dto.BuyItemDTO;
+import com.internousdev.ecsite2.util.DBConnector;
+
+public class BuyItemDAO {
+
+	private DBConnector db = new DBConnector();
+	private Connection con = db.getConnection();
+	private BuyItemDTO buyItemDTO = new BuyItemDTO();
+
+
+	public BuyItemDTO getBuyItemInfo(){
+		String sql = "SELECT id, item_name, item_price FROM item_info_transaction";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+		}
+	}
+
+}

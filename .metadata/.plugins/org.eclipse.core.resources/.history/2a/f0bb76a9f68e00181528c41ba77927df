@@ -1,5 +1,0 @@
-package com.internousdev.testsampleweb.action;
-
-public class CreateDestinationAction extends ActionSupport implements SessionAware{
-
-}

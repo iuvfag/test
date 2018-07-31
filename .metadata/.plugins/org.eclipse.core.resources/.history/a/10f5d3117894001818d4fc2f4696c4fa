@@ -1,0 +1,10 @@
+package com.internousdev.ecsite2.dao;
+
+import com.internousdev.ecsite2.util.DBConnector;
+
+public class BuyItemDAO {
+
+	private DBConnector db = new DBConnector();
+	private Connection con = db.getConnection();
+
+}

@@ -46,7 +46,7 @@ public class CartInfoDAO {
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-			System.out.println("cartinfodao-getcartinfodtolist" + loginId);
+			System.out.println("cartinfodao-getcartinfodtolist:" + loginId);
 			ps.setString(1, loginId);
 			ResultSet rs = ps.executeQuery();
 
