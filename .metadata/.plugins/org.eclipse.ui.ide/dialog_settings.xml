@@ -15,6 +15,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="C:\Users\internousdev\Desktop\internous-sample\sample-web"/>
+			<item value="C:\Users\internousdev\Desktop\internous-sample\sampleweb"/>
 			<item value="C:\Users\internousdev\Desktop\internous-sample2\sample-web"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
