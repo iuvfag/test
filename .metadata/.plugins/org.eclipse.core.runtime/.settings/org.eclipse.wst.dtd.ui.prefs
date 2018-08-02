@@ -1,2 +1,4 @@
-dtdString=\#3f9f5f | null | false | false | false | false
+dtdComment=\#ff80c0 | null | false | false | false | false
+dtdKeyword=\#ff8040 | null | false | false | false | false
+dtdSymbol=\#ff8000 | null | false | false | false | false
 eclipse.preferences.version=1

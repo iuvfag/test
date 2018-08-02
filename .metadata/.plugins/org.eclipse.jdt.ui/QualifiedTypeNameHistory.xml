@@ -37,7 +37,6 @@
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.DestinationInfoDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.DestinationInfoDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.UserInfoDAO"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.CartInfoDTO"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
@@ -53,11 +52,12 @@
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite2.dao.BuyItemDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite2.dto.BuyItemDTO"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

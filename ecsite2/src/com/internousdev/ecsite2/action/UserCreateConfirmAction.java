@@ -8,6 +8,6 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 
 	private String loginUserId;
 	private String loginPassword;
-	private String userName
+	private String userName;
 
 }

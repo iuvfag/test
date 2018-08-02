@@ -49,8 +49,30 @@
 								</select>
 							</td>
 						</tr>
+
+						<tr>
+							<td><span>支払い方法</span></td>
+							<td>
+								<input type="radio" name="pay" value="1" checked="checked">現金払い
+								<input type="radio" name="pay" value="2">クレジットカード
+							</td>
+						</tr>
+
+						<tr>
+							<s:submit value="購入" />
+						</tr>
 					</table>
 				</s:form>
+
+				<div>
+					<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />' >こちら</a></p>
+					<p>マイページは<a href='<s:url action="MyPageAction" />' >こちら</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div id="pr">
 			</div>
 		</div>
 

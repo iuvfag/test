@@ -1,0 +1,20 @@
+package team;
+
+public class UserInfoDTO {
+
+	private int id;
+	private String userId;
+	private String password;
+	private String familyName;
+	private String firstName;
+	private String familyNameKana;
+	private String firstNameKana;
+	private int sex;
+	private String email;
+	private int logined;
+	private String status;
+	private Date registDate;
+	private Date updateDate;
+
+
+}

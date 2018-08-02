@@ -1,5 +1,0 @@
-package com.internousdev.testsampleweb.action;
-
-public class ProductListAction extends ActionSupport implements SessionAware{
-
-}
