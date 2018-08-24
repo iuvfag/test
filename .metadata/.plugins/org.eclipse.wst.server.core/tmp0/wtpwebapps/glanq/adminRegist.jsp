@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <sx:head/>
+  <sx:head cache="false" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Script-Type" content="text/javascript" >
 <link rel="stylesheet" href="./css/style.css">
@@ -87,8 +87,8 @@
     <td><s:textfield name="productNameKana" value="%{#session.productNameKana}" label="商品名ふりがな" placeholder="商品名ふりがな" class="txt"/></td>
 </tr>
 <tr>
-    <th scope="row">商品名詳細</th>
-    <td><s:textarea name="productDescription" value="%{#session.productDescription}" label="商品名詳細" placeholder="商品名詳細"  class="area"/></td>
+    <th scope="row">商品詳細</th>
+    <td><s:textarea name="productDescription" value="%{#session.productDescription}" label="商品詳細" placeholder="商品詳細"  class="area"/></td>
 </tr>
 <tr>
     <th scope="row">価格</th>
@@ -101,7 +101,7 @@
 <tr>
     <th scope="row">発売年月日</th>
       <!--  <td><s:textfield name="releaseDate" value="%{#session.releaseDate}" label="発売年月日" placeholder="発売年月日" class="txt"/></td>-->
-      <td><sx:datetimepicker name="releaseDate" value="%{#session.releaseDate}" displayFormat="yyyy-MM-dd"  /></td>
+      <td><sx:datetimepicker name="releaseDate" value="%{#session.releaseDate}" displayFormat="yyyy-MM-dd"  /><span class="Description">【XXXX-XX-XXのフォーマットで入力してください。】</span></td>
 </tr>
 <tr>
     <th scope="row">画像ファイル</th>

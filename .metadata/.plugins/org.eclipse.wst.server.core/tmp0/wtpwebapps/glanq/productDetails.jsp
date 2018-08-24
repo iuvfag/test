@@ -37,7 +37,9 @@
 		</div>
 
 		<div id="right_box">
+			<div id="sub_title_i">
 			<h2>～ 商品情報 ～</h2>
+			</div>
 			<s:form action="AddCartAction">
 			<s:hidden name="productId" value="%{#session.productId}"/>
 			<s:hidden name="productName" value="%{#session.productName}"/>

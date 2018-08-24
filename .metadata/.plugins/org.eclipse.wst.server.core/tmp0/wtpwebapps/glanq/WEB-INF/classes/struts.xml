@@ -4,7 +4,7 @@
 "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 <constant name="struts.ui.theme" value="simple" />
-<constant name="struts.devMode" value="true" />
+<constant name="struts.devMode" value="false" />
 <constant name="struts.multipart.maxSize" value="-1" />
 <package name="com.internousdev.glanq.action" extends="struts-default">
 

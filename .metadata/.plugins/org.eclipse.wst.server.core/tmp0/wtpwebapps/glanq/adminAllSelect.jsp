@@ -45,8 +45,8 @@
 <td><s:property value="productId"/></td>
 <td><s:property value="productCount"/></td>
 <td><s:property value="price"/></td>
-<td><s:property value="updateDate"/></td>
 <td><s:property value="registDate"/></td>
+<td><s:property value="updateDate"/></td>
 </tr>
 </s:iterator>
 </tbody>
@@ -121,7 +121,7 @@
 <thead>
 <tr>
 <th><s:label value="ID"/></th>
-<th><s:label value="カテオリID"/></th>
+<th><s:label value="カテゴリID"/></th>
 <th><s:label value="カテゴリ名"/></th>
 <th><s:label value="カテゴリ名詳細"/></th>
 <th><s:label value="登録日"/></th>
@@ -182,6 +182,7 @@
 <td><s:property value="firstNameKana"/></td>
 <td><s:property value="sex"/></td>
 <td><s:property value="status"/></td>
+<td><s:property value="logined" /></td>
 <td><s:property value="registDate"/></td>
 <td><s:property value="updateDate"/></td>
 </tr>

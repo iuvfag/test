@@ -22,6 +22,8 @@ function goCreateUserAction() {
 function goResetPasswordAction() {
 	document.getElementById("form").action = "ResetPasswordAction";
 }
+window.onunload = function() {};
+history.forward();
 </script>
 </head>
 

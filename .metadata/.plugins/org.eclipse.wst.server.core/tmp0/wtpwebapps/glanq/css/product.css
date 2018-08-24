@@ -92,7 +92,9 @@
 	padding: 3px;
 	width: 220px;
 	height: 1em;
+	white-space: nowrap;
 	overflow:hidden;
+	text-overflow: ellipsis;
 }
 #newItemList #item_image_box{
 	display: table-cell;
@@ -136,7 +138,7 @@
 	border: 2px solid #ddddaa;
 	border-radius: 10px;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 30px;
 	text-align: center;
 	background-color: #ffffee;
 }
@@ -144,22 +146,24 @@
 #item_detail #left_box{
 	display: inline-block;
 	width: 345px;
-	height: 390px;
+	height: auto;
 	margin: 0;
 	margin-right: 35px;
+	margin-bottom: 10px;
 /* 	border: 1px solid green; */
 	padding-top: 0px;
 	text-align: center;
 }
 #item_detail h2{
 	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 5px;
 }
 #item_detail #right_box{
 	display: inline-block;
 	width: 460px;
-	height: 400px;
+	height: auto;
 	text-align: center;
 /* 	border: 1px solid green; */
 	margin: 0;
@@ -201,7 +205,11 @@
 	vertical-align: middle;
 }
 
-
+#sub_title_i{
+	width: auto;
+	height: auto;
+	text-align: center;
+}
 table#item_info{
 	width: 450px;
 /* 	border: 2 bouble black; */
@@ -219,6 +227,7 @@ table#item_info td{
 	text-align: left;
 	padding: 4px;
 	background: white;
+	font-size: 14px;
 }
 div#description{
 	max-height: 60px;
@@ -356,7 +365,9 @@ table#buy select{
 	padding: 5px;
 	width: 210px;
 	height: 1em;
+	white-space: nowrap;
 	overflow:hidden;
+	text-overflow: ellipsis;
 }
 #related_product_list #product_image_box{
 	display: table-cell;

@@ -32,7 +32,7 @@
 </tr>
 
 <tr>
-	<th scope="row"><s:label value="商品名詳細"/></th>
+	<th scope="row"><s:label value="商品詳細"/></th>
 	<td><s:property value="productDescription"/></td>
 </tr>
 

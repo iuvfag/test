@@ -45,14 +45,6 @@
          </div>
      </div>
 </s:if>
-<!-- メールアドレス入力エラー -->
-<s:if test="!#session.emailErrorMessageList.isEmpty()">
-     <div class="error">
-          <div class="error-message">
-              <s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
-          </div>
-     </div>
-</s:if>
 <!-- 電話番号入力エラー -->
 <s:if test="!#session.telNumberErrorMessageList.isEmpty()">
      <div class="error">
@@ -67,6 +59,14 @@
          <div class="error-message">
              <s:iterator value="#session.userAddressErrorMessageList"><s:property /><br></s:iterator>
          </div>
+     </div>
+</s:if>
+<!-- メールアドレス入力エラー -->
+<s:if test="!#session.emailErrorMessageList.isEmpty()">
+     <div class="error">
+          <div class="error-message">
+              <s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
+          </div>
      </div>
 </s:if>
 

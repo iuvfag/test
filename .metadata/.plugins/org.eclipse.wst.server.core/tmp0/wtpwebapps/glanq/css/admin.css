@@ -108,6 +108,10 @@
 .txt{
 	width:30%;
 }
+.Description{
+	font-size:15px;
+	color:green;
+}
 
 .area{
 	width:50%;
