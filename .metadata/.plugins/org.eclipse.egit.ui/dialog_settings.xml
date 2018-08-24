@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<item value="963" key="DIALOG_WIDTH"/>
+	<item value="1|メイリオ|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|メイリオ" key="DIALOG_FONT_NAME"/>
+	<item value="true" key="CommitDialog.showUntracked"/>
+	<item value="567" key="DIALOG_HEIGHT"/>
+	<item value="327" key="DIALOG_X_ORIGIN"/>
+	<item value="60" key="DIALOG_Y_ORIGIN"/>
 	<list key="RepositorySelectionPage.UsedUris">
 		<item value="https://github.com/mame3/test"/>
 	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="iuvfag &lt;h211472@nwytg.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="iuvfag &lt;h211472@nwytg.com&gt;"/>
+	</list>
 	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item value="963" key="DIALOG_WIDTH"/>
+		<item value="1|メイリオ|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|メイリオ" key="DIALOG_FONT_NAME"/>
+		<item value="466" key="DIALOG_HEIGHT"/>
+		<item value="327" key="DIALOG_X_ORIGIN"/>
+		<item value="128" key="DIALOG_Y_ORIGIN"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item value="869" key="DIALOG_WIDTH"/>
+		<item value="1|メイリオ|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|メイリオ" key="DIALOG_FONT_NAME"/>
+		<item value="429" key="DIALOG_HEIGHT"/>
+		<item value="374" key="DIALOG_X_ORIGIN"/>
+		<item value="152" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.egit.ui.COMMIT_DIALOG_SECTION">
+		<item value="963" key="DIALOG_WIDTH"/>
+		<item value="1|メイリオ|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|メイリオ" key="DIALOG_FONT_NAME"/>
+		<item value="655" key="DIALOG_HEIGHT"/>
+		<item value="338" key="DIALOG_X_ORIGIN"/>
+		<item value="97" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GitCommitMessageComponent">
 	</section>
 	<section name="GitCommitSearchPage">
 		<item value="0" key="HISTORY_SIZE"/>

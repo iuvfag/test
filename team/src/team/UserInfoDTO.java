@@ -14,7 +14,7 @@ public class UserInfoDTO {
 	private int sex;
 	private String email;
 	private int logined;
-	private String status;
+	private int status;
 	private Date registDate;
 	private Date updateDate;
 	public int getId() {
@@ -77,10 +77,10 @@ public class UserInfoDTO {
 	public void setLogined(int logined) {
 		this.logined = logined;
 	}
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 	public Date getRegistDate() {

@@ -7,6 +7,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/createUser.css">
 		<title>ログイン</title>
 
 		<script>
@@ -35,6 +36,9 @@
 		<div id="contents">
 			<h1>ログイン画面</h1>
 			<s:form id="form" action="LoginAction">
+
+			<!-- エラーメッセージを表示 -->
+
 				<s:if test="!#session.loginIdErrorMessageList.isEmpty()">
 					<div class="error">
 						<div class="error-message">
@@ -51,7 +55,13 @@
 					</div>
 				</s:if>
 
-				<!-- エラーメッセージを表示 -->
+				<s:if test="!#session.loginErrorMessageList.isEmpty()">
+					<div class="error">
+						<div class="error-message">
+							<s:iterator value="#session.loginErrorMessageList"><s:property /><br></s:iterator>
+						</div>
+					</div>
+				</s:if>
 
 				<!--
 					SAVED:<s:property value="%{#session.savedLoginId}" />
@@ -95,22 +105,17 @@
 
 			</s:form>
 
-			<br>
 
 			<div class="submit_btn_box">
-				<div id=".contents-btn-set">
 					<s:form action="CreateUserAction">
 						<s:submit value="新規ユーザー登録" class="submit_btn" />
 					</s:form>
-				</div>
 			</div>
 
 			<div class="submit_btn_box">
-				<div id=".contents-btn-set">
 					<s:form action="ResetPasswordAction">
 						<s:submit value="パスワード再設定" class="submit_btn" />
 					</s:form>
-				</div>
 			</div>
 
 

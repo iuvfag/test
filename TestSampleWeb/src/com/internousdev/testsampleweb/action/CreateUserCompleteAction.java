@@ -4,7 +4,9 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.testsampleweb.dao.CartInfoDAO;
 import com.internousdev.testsampleweb.dao.UserInfoDAO;
+import com.internousdev.testsampleweb.dto.UserInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CreateUserCompleteAction extends ActionSupport implements SessionAware{
@@ -28,6 +30,50 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 		if(count > 0){
 			result = SUCCESS;
 		}
+
+		if(userInfoDAO.isExistsUserInfo(loginId, password)){
+			if(userInfoDAO.login(loginId, password) > 0){
+				UserInfoDTO userInfoDTO = userInfoDAO.getUserInfo(loginId, password);
+				session.put("loginId", userInfoDTO.getUserId());
+
+				/**
+				 * 次にそのままログイン状態へと移行する
+				 * UserInfoDAOクラスのisExistsUserInfoメソッドを呼び出す
+				 * このメソッドはJSPファイルで入力されたログインIDとパスワードを元に
+				 * そのユーザーがDBに存在するかを確認するメソッド
+				 *
+				 * 存在するならloginメソッドを呼び出す
+				 * このメソッドでDB内のカラムloginedを1に設定する
+				 * 設定されたカラムが1以上（存在する）か確かめる
+				 *
+				 * 存在する場合はユーザー情報を取得し
+				 * sessionにログインIDを格納
+				 */
+
+				@SuppressWarnings("unused")
+				int check = 0;
+				CartInfoDAO cartInfoDAO = new CartInfoDAO();
+
+				check = cartInfoDAO.linkToLoginId(String.valueOf(session.get("tempUserId")), loginId);
+				/**
+				 * カート情報をユーザーIDに紐付ける
+				 * String.valueOfは数値を文字列に変換するメソッド
+				 * toStringとの違いは値がnullでもそのnullを返すこと
+				 * （toStringだとNullPointerが発生してしまう）
+				 *
+				 * このメソッドを呼び出すことで暫定のIDと登録されたIDを元に
+				 * カート情報をひも付ける
+				 * （カート情報のユーザーID情報を登録済みのものに置き換える）
+				 * これでログイン前のカート情報をログイン後にも引き継ぐことが出来る
+				 */
+
+				}
+			}else{
+				result = SUCCESS;
+			session.put("logined", 1);
+			//ログインフラグを付ける
+		}
+
 		return result;
 		/**
 		 * 入力内容をDBに登録

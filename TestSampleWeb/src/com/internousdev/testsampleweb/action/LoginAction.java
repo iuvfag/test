@@ -29,12 +29,17 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	private List<String> loginIdErrorMessageList = new ArrayList<String>();
 	private List<String> passwordErrorMessageList = new ArrayList<String>();
+	private List<String> loginErrorMessageList = new ArrayList<String>();
 
 	private Map<String, Object> session;
 
 
 	public String execute(){
 		String result = ERROR;
+
+		session.remove("loginIdErrorMessageList");
+		session.remove("passwordErrorMessageList");
+		session.remove("loginErrorMessageList");
 
 		if(savedLoginId == true){
 			session.put("savedLoginId", true);
@@ -60,16 +65,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		 * 結果はList型で返ってくるためList型変数で受ける
 		 */
 
-		if(loginIdErrorMessageList.size()!=0
-				&& passwordErrorMessageList.size()!=0){
-			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
-			session.put("passwordErrorMessageList", passwordErrorMessageList);
-			session.put("logined", 0);
-		}
-		/**
-		 * 上記のエラーメッセージリストたちに何か入っていれば
-		 * それをsessionに格納
-		 */
 
 		if(!session.containsKey("mCategoryList")){
 			MCategoryDAO mCategoryDAO = new MCategoryDAO();
@@ -150,8 +145,24 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				}
 			}
 			session.put("logined", 1);
-
+		}else{
+				loginErrorMessageList.add("パスワードが異なります。");
 		}
+
+
+		if(loginIdErrorMessageList.size()!=0
+				|| passwordErrorMessageList.size()!=0
+				|| loginErrorMessageList.size()!=0){
+			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
+			session.put("passwordErrorMessageList", passwordErrorMessageList);
+			session.put("loginErrorMessageList", loginErrorMessageList);
+			session.put("logined", 0);
+		}
+		/**
+		 * 上記のエラーメッセージリストたちに何か入っていれば
+		 * それをsessionに格納
+		 */
+
 		return result;
 	}
 
@@ -202,6 +213,14 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	public void setPasswordErrorMessageList(List<String> passwordErrorMessageList){
 		this.passwordErrorMessageList = passwordErrorMessageList;
+	}
+
+	public List<String> getLoginErrorMessageList(){
+		return loginErrorMessageList;
+	}
+
+	public void setLoginErrorMessageList(List<String> loginErrorMessageList){
+		this.loginErrorMessageList = loginErrorMessageList;
 	}
 
 	public Map<String, Object> getSession(){

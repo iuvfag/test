@@ -79,6 +79,37 @@ public class UserInfoDAO {
 	}
 
 
+	//ユーザー情報確認用のメソッド(ログインIDを元に)
+	public boolean isExistsUserInfo(String loginId){
+
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		boolean result = false;
+
+		String sql = "SELECT COUNT(*) AS count FROM user_info where user_id=?";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, loginId);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()){
+				if(rs.getInt("count") > 0){
+					result = true;
+				}
+			}
+
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		try{
+			con.close();
+		}catch(SQLException e ){
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+
 	//ユーザー情報取得のためのメソッド(ログインID、パスワードを基にする)、ログイン用
 	public UserInfoDTO getUserInfo(String loginId, String password){
 
@@ -169,7 +200,7 @@ public class UserInfoDAO {
 		Connection con = db.getConnection();
 		int result = 0;
 
-		String sql = "UPDATE user_info SET password=? WHERE user_id=?";
+		String sql = "UPDATE user_info SET password WHERE password=? AND user_id=?";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);

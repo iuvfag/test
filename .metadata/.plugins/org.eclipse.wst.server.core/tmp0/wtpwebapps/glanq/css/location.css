@@ -1,0 +1,144 @@
+h1{
+	animation-duration: 2s;/* アニメーション時間 */
+	animation-name: RightToLeft;/* アニメーション名 */
+}
+
+/* 「RightToLeft」の動作内容 */
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;/* 透明 */
+    transform: translateX(50px);/* X軸方向に50px */
+    }
+  100% {
+    opacity: 1;/* 不透明 */
+    transform: translateX(0);
+  }
+}
+
+#contents{
+    padding-top : 70px;
+	margin-top : 50px;
+	margin : 0 auto;
+	width : 100%;
+	height : auto;
+	padding-bottom : 10px;
+	margin-bottom : 100px;
+	overflow : auto; /* コンテンツの表示を自動に設定（スクロール）*/
+	text-align: center;
+}
+
+/* submitボタンの設定 */
+.img_button {
+	width:			400px;
+	height:			400px;
+	overflow:		hidden;
+	margin:			10px 8px 10px 16px;
+	position:		relative;
+	display: inline-block;
+}
+
+.img_button2 {
+	width: 300px;
+	height: 300px;
+	overflow:		hidden;
+	margin:			10px 8px 10px 16px;
+	position:		relative;
+	display: inline-block;
+}
+
+.img_button .mask, .img_button2 .mask {
+	/* submitボタンにぴったり重なるように位置と大きさを指定する */
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	/* このプロパティをnoneにすることで、
+	   この要素を貫通して下の要素(submitボタン)をクリックできる */
+    pointer-events: none;
+    /* */
+	top:			0;
+	left:			0;
+	/* 表示しない */
+	opacity:		0;
+	background-color:	rgba(0,0,0,0.4);
+	/* イージングの設定 */
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+
+/* マウスオーバーしたときの設定 */
+.img_button:hover .mask, .img_button2:hover .mask {
+	/* 表示する */
+	opacity:		1;
+	/* ホバーで下にずらす */
+	padding-top:	80px;
+}
+/* キャプションの設定 */
+.img_button .caption, .img_button2 .caption {
+	font-size:		300%;
+	text-align: 	center;
+	color:			#fff;
+}
+
+
+#location_table_box{
+	width: 100%;
+}
+
+.location_table {
+	margin: 0 auto;
+	margin-top: 10px;
+
+}
+
+#fadein_container {
+	animation: fadeIn 4s ease 0s 1 normal;
+    -webkit-animation: fadeIn 4s ease 0s 1 normal;
+}
+
+.location_table_box {
+    animation: BottomToTop 3s ease 0s 1 normal;
+    -webkit-animation: BottomToTop 3s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes BottomToTop {
+  0% {
+    opacity: 0;/* 透明 */
+    transform: translateY(50px);/* Y軸方向に50px */
+  }
+  100% {
+    opacity: 1;/* 不透明 */
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes BottomToTop {
+  0% {
+    opacity: 0;/* 透明 */
+    transform: translateY(50px);/* Y軸方向に50px */
+  }
+  100% {
+    opacity: 1;/* 不透明 */
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+
+
+h2{
+	width : 	90%;
+	color: #757575;/*文字色*/
+	margin-left : 3%;
+	margin-right : 3%;
+ animation-duration: 2s;/* アニメーション時間 */
+  animation-name: RightToLeft;/* アニメーション名 */
+}
+
+/* 右から左へのフェードイン「RightToLeft」の動作内容 */
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;/* 透明 */
+    transform: translateX(50px);/* X軸方向に50px */
+  }
+  100% {
+    opacity: 1;/* 不透明 */
+    transform: translateX(0);
+  }
+}
+
+.cart-elements{
+ animation-duration: 2s;/* アニメーション時間 */
+  animation-name: BottomToTop;/* アニメーション名 */
+}
+
+/* 「BottomToTop」の動作内容 */
+@keyframes BottomToTop {
+  0% {
+    opacity: 0;/* 透明 */
+    transform: translateY(50px);/* Y軸方向に50px */
+  }
+  100% {
+    opacity: 1;/* 不透明 */
+    transform: translateY(0);
+  }
+}
+
+.submit_btn_box_c{
+	width:200px;
+	height:50px;
+	display : block;
+	margin-top : 5px;
+	margin-bottom : 5px;
+	margin-left : 3%;
+	padding-left : 40%;
+/* 	float : left; */
+	/*フェードイン*/
+	animation: fadeIn 5s ease 0s 1 normal;
+    -webkit-animation: fadeIn 5s ease 0s 1 normal;
+    /**/
+}
+
+.info_c{
+width:99%;
+margin:0 auto;
+padding:20px;
+font-size : 1.1em;
+font-weight:600;
+color: #ff0080;
+background-color: #f5ffe6;
+  text-shadow: 1px 1px 0 #e7f499,
+               -1px 1px 0 #e7f499,
+               1px -1px 0 #e7f499,
+               -1px -1px 0 #e7f499;
+}
+
+.error_c{
+width:99%;
+margin:0 auto;
+font-size : 1.1em;
+font-weight:600;
+color: #0080ff;
+background-color: #caf9fd;
+  text-shadow: 1px 1px 0 #ffffff,
+               -1px 1px 0 #ffffff,
+               1px -1px 0 #ffffff,
+               -1px -1px 0 #ffffff;
+animation: fadeIn 5s ease 0s 1 normal;
+-webkit-animation: fadeIn 5s ease 0s 1 normal;
+
+}

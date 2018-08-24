@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+
+/* 下から上へのフェードイン「BottomTotop」の動作内容 */
+@keyframes BottomToTop {
+  0% {
+    opacity: 0;/* 透明 */
+    transform: translateY(50px);/* Y軸方向に50px */
+  }
+  100% {
+    opacity: 1;/* 不透明 */
+    transform: translateY(0);
+  }
+}
+
+/* チェックボックス */
+.box {
+width: 90%;
+margin: 2em auto;
+text-align: left;
+animation-duration: 2s;/* アニメーション時間 */
+	animation-name: BottomToTop;/* アニメーション名 */
+}
+
+.box .label {
+line-height: 135%;
+position: relative;
+margin: 0.5rem;
+cursor: pointer;
+}
+.box .checkbox {
+position: relative;
+margin: 0 1rem 0 0;
+cursor: pointer;
+}
+.box .checkbox:before {
+position: absolute;
+z-index: 1;
+top: 0.125rem;
+left: 0.1875rem;
+width: 0.75rem;
+height: 0.375rem;
+content: '';
+-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+transition:         transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+-webkit-transform: rotate(-45deg) scale(0, 0);
+transform: rotate(-45deg) scale(0, 0);
+border: 2px solid #00d200;
+border-top-style: none;
+border-right-style: none;
+}
+.box .checkbox:checked:before {
+-webkit-transform: rotate(-45deg) scale(1, 1);
+transform: rotate(-45deg) scale(1, 1);
+}
+.box .checkbox:after {
+position: absolute;
+top: -0.125rem;
+left: 0;
+width: 1rem;
+height: 1rem;
+content: '';
+cursor: pointer;
+border: 2px solid #00ff00;
+background: #c8ffc8;
+}
+
+/* ボタン */
+.submit_btn_box_l{
+	width:200px;
+	height:50px;
+	display : block;
+	margin-top : 5px;
+	margin-bottom : 5px;
+	margin-left : 3%;
+	padding-left : 40%;
+	/* float : left; */
+	/*フェードイン*/
+	animation: fadeIn 5s ease 0s 1 normal;
+    -webkit-animation: fadeIn 5s ease 0s 1 normal;
+    /**/
+}

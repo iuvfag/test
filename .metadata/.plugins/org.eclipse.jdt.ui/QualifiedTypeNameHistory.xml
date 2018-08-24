@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.internousdev.webproj2.dao.InquiryCompleteDAO"/>
-<fullyQualifiedTypeName name="com.internousdev.webproj2.util.DBConnector"/>
-<fullyQualifiedTypeName name="com.internousdev.webproj2.dao.TestDAO"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
-<fullyQualifiedTypeName name="com.internousdev.webproj3.dao.HelloStrutsDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj3.dto.HelloStrutsDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj3.dao.LoginDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj3.util.DBConnector"/>
@@ -27,17 +22,13 @@
 <fullyQualifiedTypeName name="com.internousdev.ecsite.util.DBConnector"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dto.MyPageDTO"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
-<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.CharacterAction"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.MCategoryDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.UserInfoDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.CartInfoDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.util.DBConnector"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.DestinationInfoDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.DestinationInfoDAO"/>
-<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.UserInfoDAO"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dto.CartInfoDTO"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.PurchaseHistoryInfoDAO"/>
@@ -48,16 +39,25 @@
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.text.ParseException"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite2.dao.BuyItemDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite2.dto.BuyItemDTO"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.internousdev.glanq.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.internousdev.glanq.dto.UserInfoDTO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.internousdev.sampleweb.dto.UserInfoDTO"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.RecompilableScriptFunctionData"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
+<fullyQualifiedTypeName name="com.internousdev.testsampleweb.dao.UserInfoDAO"/>
 </qualifiedTypeNameHistroy>

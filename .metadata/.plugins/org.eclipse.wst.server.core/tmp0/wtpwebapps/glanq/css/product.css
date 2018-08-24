@@ -1,0 +1,430 @@
+@CHARSET "UTF-8";
+
+#contents{
+	text-align: center;
+	width:100%;
+	padding-top:10px;
+	margin:0 auto;
+	height: auto;
+	padding-bottom:110px;
+
+	padding-top:100px;
+}
+
+#fadein_c{
+	animation-duration: 2s;/* アニメーション時間 */
+	animation-name: BottomToTop;/* アニメーション名 */
+}
+/* ======== productList.jsp ======== */
+#top_l{
+	display: inline-block;
+	width: 1000px;
+	padding: 0 auto;
+	text-align: center;
+	padding-bottom: 15px;
+}
+#top_l h1{
+	width: 90%;
+/* 	text-align: left; */
+/* 	animation-duration: 2s;アニメーション時間 */
+/* 	animation-name: RightToLeft;アニメーション名 */
+ }
+
+#hit{
+	display: inline-block;
+	width: 1000px;
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 18px;
+}
+#newItemList{
+	display: inline-block;
+	width: 1000px;
+	padding-top: 45px;
+	text-align: center;
+	background: #f1fcf2;
+}
+#hiddenBox{
+	display: inline-block;
+	border: 0px dotted #000000;
+	border-radius: 5px;
+/* 	background-color: #ffeebb; */
+	margin: 1px;
+	padding: 15px;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-ms-transition: 0.3s;
+	transition: 0.3s;
+}
+#hiddenBox:hover{
+	background-color: #4aa5ff;
+
+/* 	animation: huriko 0.3s ease 0s 1 alternate; */
+	-webkit-animation: huriko 0.3s ease 0s 1 alternate;
+	-ms-animation: huriko 0.3s ease 0s 1 alternate;
+	-moz-animation: huriko 0.3s ease 0s 1 alternate;
+	-o-animation: huriko 0.3s ease 0s 1 alternate;
+/* 	animation-fill-mode: forwards; */
+/* 	-webkit-animation-fill-mode: forwards; */
+/* 	animation-play-state: running; */
+/* 	-webkit-animation-play-state: running; */
+}
+#newItemBox{
+	display: inline-block;
+	border: 2px solid #ddbb55;
+	border-radius: 5px;
+	box-shadow:2px 2px #1a6ea0;
+	background-color: #ffffdd;
+	margin: 0;
+	padding: 10px;
+}
+#newItemList ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#newItemList ul li {
+	padding: 3px;
+	overflow:hidden;
+}
+#newItemList ul li#i_info {
+	padding: 3px;
+	width: 220px;
+	height: 1em;
+	overflow:hidden;
+}
+#newItemList #item_image_box{
+	display: table-cell;
+	width: 230px;
+	height: 230px;
+	margin: 0 auto;
+	background: white;
+	vertical-align: middle;
+	margin-bottom: 10px;
+}
+#newItemList #item_image{
+	max-width: 230px;
+	max-height: 230px;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+}
+.pager{
+	color: #004000;
+}
+
+/* ======== productDetails.jsp ======== */
+#top_d{
+	display: inline-block;
+	width: 880px;
+	padding: 0 auto;
+	text-align: center;
+	padding-bottom: 15px;
+}
+#top_d h1{
+	width: 94%;
+	margin-left:3%;
+	margin-right:3%;
+/* 	text-align: left; */
+/* 	animation-duration: 2s;アニメーション時間 */
+/* 	animation-name: RightToLeft;アニメーション名 */
+ }
+#item_detail {
+	width: 880px;
+	height: auto;
+	border: 2px solid #ddddaa;
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	background-color: #ffffee;
+}
+
+#item_detail #left_box{
+	display: inline-block;
+	width: 345px;
+	height: 390px;
+	margin: 0;
+	margin-right: 35px;
+/* 	border: 1px solid green; */
+	padding-top: 0px;
+	text-align: center;
+}
+#item_detail h2{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#item_detail #right_box{
+	display: inline-block;
+	width: 460px;
+	height: 400px;
+	text-align: center;
+/* 	border: 1px solid green; */
+	margin: 0;
+	padding: 0;
+	padding-top: 0px;
+}
+
+#item_detail #left_box table{
+	margin: 0;
+}
+#item_detail #left_box th{
+	border: 0px solid #ccc;
+	font-size: 18px;
+/* 	border: 1px solid #ffccbb */
+}
+#item_detail #left_box td{
+	border: 0px solid #ccc;
+	font-size: 18px;
+	text-align: left;
+/* 	border: 1px solid #ffc677; */
+}
+#item_detail #item_image_box{
+	display: table-cell;
+	width: 340px;
+	height: 340px;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	background: #ffddaa;
+	border-radius: 5px;
+    box-shadow: 2px 2px #9a6e10;
+/* 	filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6)); */
+}
+#item_detail img{
+	max-width: 300px;
+	max-height: 300px;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+}
+
+
+table#item_info{
+	width: 450px;
+/* 	border: 2 bouble black; */
+	font-size: 18px;
+}
+table#item_info th{
+	border: 1px solid #ccc;
+	width: 33%;
+	padding: 5px;
+	background-color: #ddffcc;
+}
+table#item_info td{
+	border: 1px solid #ccc;
+	width: 100%;
+	text-align: left;
+	padding: 4px;
+	background: white;
+}
+div#description{
+	max-height: 60px;
+	overflow-y: scroll;
+}
+table#buy{
+	display: inline-block;
+	width: 400px;
+	height: 75px;
+	font-size: 20px;
+	font-weight: bold;
+}
+table#buy tr th{
+	border: 0px;
+	width: 120px;
+	height: 70px;
+	padding-right: 0px;
+/* 	border: 1px solid black; */
+	text-align: right;
+}
+table#buy tr td{
+	border: 0px;
+	width: 200px;
+	height: 70px;
+/* 	padding-right: 15px; */
+/* 	border: 1px solid black; */
+}
+table#buy select{
+/* 	z-index: 1;	要ヘッダーとの兼ね合い */
+/* 	position: relative; */
+	font-size: 18px;
+	border: 1px;
+}
+
+#item_detail .submit_btn{
+/* 	z-index: 1; */
+/* 	position: relative; */
+	border: none;
+	width: 150px;
+	height: 50px;
+	margin: 5px;
+	border-radius: 25px;
+    box-shadow:2px 2px #646d77;
+	font-size: 18px;
+    cursor: pointer;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-ms-transition: 0.3s;
+ 	transition: all 0.3s ease;
+ 	outline: none;
+}
+#item_detail .submit_btn:hover{
+	width: 160px;
+	height: 60px;
+	margin: 0;
+	border-radius: 30px;
+    background-color:#39dda4;
+    box-shadow:2px 2px #0073db;
+	font-size: 20px;
+/* 	font-weight: bold; */
+    cursor: pointer;
+    opacity:0.8;
+}
+
+#relate_logo{
+	z-index: -2;
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 37px;
+	border: 1px solid #e48881;
+	line-height: 32px;
+	border-radius: 7px;
+	background-color: #ffccbb;
+	margin-right: 713px;
+	margin-top: 20px;
+	margin-bottom: -7px;
+	font-size: 18px;
+	font-weight: bold;
+}
+#related_product_list{
+	width: 820px;
+	height: 290px;
+	margin: 0 auto;
+	padding: 0;
+	border: 1px solid #e48881;
+	border-radius: 5px;
+	background-color: #ffccbb;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#relate_none{
+	display: inline-block;
+	border: 2px solid #e48881;
+	border-radius: 5px;
+    box-shadow:2px 2px #1a6ea0;
+	background-color: #ffccbb;
+	margin-top: 80px;
+	padding: 10px;
+}
+#related_product_list #product_box{
+	display: inline-block;
+	border: 2px solid #ddbb55;
+	border-radius: 5px;
+    box-shadow:2px 2px #1a6ea0;
+	background-color: #ffeebb;
+	margin: 10px;
+	padding: 10px;
+}
+#related_product_list #product_box:hover{
+	animation-name: huriko;
+	animation-duration: 0.3s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+#related_product_list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#related_product_list ul li {
+	list-style: none;
+	padding: 5px;
+	margin-bottom: -5px;
+	font-size: 14px;
+}
+#related_product_list ul li#i_info {
+	display: inline-block;
+	padding: 5px;
+	width: 210px;
+	height: 1em;
+	overflow:hidden;
+}
+#related_product_list #product_image_box{
+	display: table-cell;
+	width: 210px;
+	height: 210px;
+	margin: 0 auto;
+	background: white;
+	vertical-align: middle;
+}
+#related_product_list #product_image{
+	max-width: 200px;
+	max-height: 200px;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+}
+
+/* @keyframes huriko { */
+/* 	0% {transform: rotate(0deg);} */
+/* 	33% {transform: rotate(-3deg);} */
+/* 	66% {transform: rotate(1deg);} */
+/* 	100% {transform: rotate(0deg);background: #33ccff;} */
+/* } */
+@-webkit-keyframes huriko {
+	0% {transform: rotate(0deg);z-index: 1;}
+	33% {transform: rotate(-3deg);}
+	66% {transform: rotate(1deg);}
+	100% {transform: rotate(0deg);/* background: #33ccff; */}
+}
+@-ms-keyframes huriko {
+	0% {transform: rotate(0deg);}
+	33% {transform: rotate(-3deg);}
+	66% {transform: rotate(1deg);}
+	100% {transform: rotate(0deg);/* background: #33ccff; */}
+}
+@-moz-keyframes huriko {
+	0% {transform: rotate(0deg);}
+	33% {transform: rotate(-3deg);}
+	66% {transform: rotate(1deg);}
+	100% {transform: rotate(0deg);/* background: #33ccff; */}
+}
+@-o-keyframes huriko {
+	0% {transform: rotate(0deg);}
+	33% {transform: rotate(-3deg);}
+	66% {transform: rotate(1deg);}
+	100% {transform: rotate(0deg);/* background: #33ccff; */}
+}
+
+
+
+/* @keyframes RightToLeft { */
+/* 	0% { */
+/* 		opacity: 0;透明 */
+/* 		transform: translateX(50px);X軸方向に50px */
+/* 	} */
+/* 	100% { */
+/* 		opacity: 1;不透明 */
+/* 		transform: translateX(0); */
+/* 	} */
+/* } */
+
+/* @keyframes BottomToTop { */
+/* 	0% { */
+/* 		opacity: 0;透明 */
+/* 		transform: translateY(50px);Y軸方向に50px */
+/* 	} */
+/* 	100% { */
+/* 		opacity: 1;不透明 */
+/* 		transform: translateY(0); */
+/* 	} */
+/* } */

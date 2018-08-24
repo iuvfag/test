@@ -36,6 +36,7 @@ public class CreateUserAction extends ActionSupport implements SessionAware{
 		session.remove("emailErrorMessageList");
 		session.remove("userIdErrorMessageList");
 		session.remove("passwordErrorMessageList");
+		session.remove("duplicateList");
 		/**
 		 * エラーメッセージが残ったままだと
 		 * JSP側で表示されてしまうので

@@ -1,0 +1,176 @@
+@CHARSET "UTF-8";
+
+/* 入力フォーム用　行くよー */
+/* このファイルは現在使用されておりません。
+	このまま使われずに終わるでしょう
+	お疲れ様でした */
+
+.lock{
+	min-width: 1200px;
+}
+
+section {
+	position: relative;
+  	background: white;
+  	text-align: center;
+ 	padding: 50px 0 0 0;
+  	width: 80%;
+  	margin:0 auto;
+  	height: auto;
+  	z-index: 5;
+  	min-width: 1135px:
+}
+
+
+.sexbox{			/* 性別選択行のデザイン */
+	min-width: 99.99%;
+	position: relative;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding: 8px 0;
+	font-size: 1.35em;
+	line-height: 10px;
+	border-style: none;
+	border-collapse: collapse;
+	margin: 0 auto;
+	border-collapse:collapse;
+}
+
+.sexth{				/* 性別選択欄左側の枠のデザイン */
+	width: 18%;
+	background: #8CD790;
+	color: white;
+	padding: 18px;
+  	letter-spacing: 0.075em;
+  	border-style: none;
+  	white-space: nowrap;
+}
+
+.sextd{				/* 性別選択欄選択枠のデザイン */
+	margin-left: 0px;
+	background: #E8E9EA;
+	border-style: none;
+	white-space: nowrap;
+
+}
+
+.form {				/* 入力フォームのデザイン */
+  width: 100%;
+  margin: 0 auto;
+}
+.form .field {		/* 入力フォーム、入力欄全体のデザイン */
+  width: 100%;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.form .field .defaultLabel{			/* 入力欄左の項目部分のデザイン */
+	position: absolute;
+	width: 18%;
+	top: 0;
+	left: 0;
+	line-height: 30px;
+	background: #8CD790;
+  	white-space: nowrap;
+	padding: 16.5px 0;
+	margin: 0 auto;
+	font-size: 1.45em;
+	letter-spacing: 0.075em;
+	color: white;
+}
+
+.defaultLabel-mini{			/* 入力欄左の項目部分のデザイン(文字長いとき用) */
+	position: absolute;
+	width: 18%;
+	top: 0;
+	left: 0;
+	line-height: 15px;
+	background: #8CD790;
+  	white-space: nowrap;
+	padding: 16.5px 0;
+	margin: 0 auto;
+	font-size: 1em;
+	letter-spacing: 0.075em;
+	color: white;
+}
+
+.form .field .accordion {			/* 入力フォーム、ラベル(伸び縮みする部分)のデザイン */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #C5E99B;
+  width: 82%;
+  line-height: 63px;
+  margin-left: 18%;
+  font-size: 1.25em;
+  letter-spacing: 0.075em;
+  white-space: nowrap;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.form .field .accordion + .nice {			/* 入力フォーム、入力後のラベルに表示される文字などのデザイン */
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #C5E99B;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.form .field .txt {				/* 入力フォーム、実際に文字を入力する枠のデザイン */
+  border: none;
+  background: #E8E9EA;
+  width: 81%;
+  margin-left: 17%;
+  padding: 18px 0;
+  padding-left:2%;
+  color: #313A3D;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+}
+
+/* .form .field #password{		入力フォーム、パスワード用のデザイン */
+/*   border: none; */
+/*   background: #E8E9EA; */
+/*   width: 80.5%; */
+/*   margin: 0; */
+/*   padding-left: 19.5%; */
+/*   color: #313A3D; */
+/*   font-size: 1.4em; */
+/*   letter-spacing: 0.05em; */
+/*   height: 63px; */
+/* } */
+
+.form .field .txt:focus, form .field .txt.focused{					/* 文字入力欄を選択状態、あるいは文字が入力された状態の入力枠のデザイン */
+  outline: none;
+}
+
+.form .field .txt:focus + .accordion,
+.form .field .txt.focused + .accordion {					/* 文字入力欄を選択状態、あるいは文字が入力された状態のラベル(伸び縮みする部分)のデザイン  */
+  width: 0%;
+  background: #C5E99B;
+  color: rgba(0, 0, 0, 0);
+}
+
+.form .field .defaultLabel.focused,
+.form .field .defaultLabel-mini.focused{				/* 文字入力後のラベルの文字色変更用　※上の背景色にそろえておこう！！ */
+  color: #8CD790;
+}
+.form .field:hover .accordion {					/* 入力欄にホバーした際のラベルのデザイン */
+  width: 0%;
+  background: #C5E99B;
+  color: rgba(0, 0, 0, 0);
+  font-size: 0;
+}
+

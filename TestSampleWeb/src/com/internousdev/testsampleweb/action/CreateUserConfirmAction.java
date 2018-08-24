@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.testsampleweb.dao.UserInfoDAO;
 import com.internousdev.testsampleweb.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -27,6 +28,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 	private List<String> emailErrorMessageList = new ArrayList<String>();
 	private List<String> loginIdErrorMessageList = new ArrayList<String>();
 	private List<String> passwordErrorMessageList = new ArrayList<String>();
+	private List<String> duplicateList = new ArrayList<String>();
 
 	private String categoryId;
 	private List<String> sexList = new ArrayList<String>();
@@ -37,6 +39,15 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		String result = ERROR;
 		InputChecker inputChecker = new InputChecker();
 
+		session.remove("familyNameErrorMessageList");
+		session.remove("firstNameErrorMessageList");
+		session.remove("familyNameKanaErrorMessageList");
+		session.remove("firstNameKanaErrorMessageList");
+		session.remove("emailErrorMessageList");
+		session.remove("userIdErrorMessageList");
+		session.remove("passwordErrorMessageList");
+		session.remove("duplicateList");
+
 		session.put("familyName", familyName);
 		session.put("firstName", firstName);
 		session.put("familyNameKana", familyNameKana);
@@ -44,7 +55,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		session.put("sex", sex);
 		session.put("email", email);
 		session.put("loginId", loginId);
-		//入力内容をsessionに格納
+		//入力内容をsessionに格納していく
 
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, false);
 		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, false);
@@ -79,6 +90,15 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 			 * resultもエラーで返す
 			 */
 		}
+
+		UserInfoDAO userInfoDAO = new UserInfoDAO();
+		boolean duplicate = userInfoDAO.isExistsUserInfo(loginId);
+		if(duplicate){
+			duplicateList.add("ユーザーIDがすでに使用されています。");
+			session.put("duplicateList", duplicateList);
+			result = ERROR;
+		}
+
 		return result;
 	}
 

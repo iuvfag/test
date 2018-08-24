@@ -1,0 +1,132 @@
+#contents{
+	margin-bottom:100px;
+}
+.item-image-box-100{
+	width:100px;
+	height:100px;
+}
+.pager{
+    width:100%;
+	text-align:center;
+	color:blue;
+}
+
+
+
+/*・・・画像を真ん中寄せにし、尚且つスクロールや画面を小さくしても枠内に収まる用設定。
+・・・絶対値はその分固定の位置になってしまうのでｶﾗｰﾎﾞｯｸｽが動いても固定のままになってしまう。
+仕様書とは内容が少し違うが、やりたかった事は実現出来た。
+*/
+
+.colorbox{
+	box-shadow:2px 2px #1a6ea0;
+	background-color: #ffffdd;
+	width: 100%;
+	height:auto;
+	overflow:hidden;
+	padding-bottom:50px;
+	text-align:center;
+
+}
+
+/*ボタン拡大ver*/
+.submit_btn_box1{
+	width : 500px;
+	height : 100px;
+	display : inline-block;
+	/*フェードイン*/
+	animation: fadeIn 5s ease 0s 1 normal;
+	-webkit-animation: fadeIn 5s ease 0s 1 normal;
+    margin:50px 100px 0px 100px;
+}
+
+.submit_btn2{
+	padding : 0.5em 1em;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	font-size : 45px;
+	/*画面操作*/
+	background-color: #C5E99B;
+    border: 2px solid black;
+    color: black !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+/*テーブルの追加*/
+.horizontal-list-table, th, td{
+	box-shadow:2px 2px #1a6ea0;
+	background-color: #ffffdd;
+	margin-bottom:20px;
+}
+
+/*テーブル作成*/
+.horizontal-list-table2, th, td {
+	margin : 3%;
+	margin-left:7%;
+	margin-right:7%;
+	margin-bottom:20px;
+	width : 80%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	line-height: 1.5;
+	animation-duration: 2s;/* アニメーション時間 */
+	animation-name: BottomToTop;/* アニメーション名 */
+}
+
+.horizontal-list-table2 th {
+	width: 150px;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 0.8em;
+	text-align: center;
+	vertical-align: top;
+	color: black;
+	background-image: url(../images/naname3.jpg);
+}
+.horizontal-list-table2 td {
+	box-shadow:2px 2px #1a6ea0;
+	background-color: #ffffdd;
+	width: 350px;
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: center;
+}
+.pager2{
+    width:100%;
+    padding-top:50px;
+	text-align:center;
+	color:blue;
+	position:relative;
+	bottom:50px;
+}
+
+.txt{
+	width:30%;
+}
+
+.area{
+	width:50%;
+	height:60px;
+	font-size:24px;
+	border: 0.5px solid #999;
+}
+.error_c{
+width:99%;
+margin:0 auto;
+font-size : 1.1em;
+font-weight:600;
+color: #0080ff;
+background-color: #caf9fd;
+  text-shadow: 1px 1px 0 #ffffff,
+               -1px 1px 0 #ffffff,
+               1px -1px 0 #ffffff,
+               -1px -1px 0 #ffffff;
+animation: fadeIn 5s ease 0s 1 normal;
+-webkit-animation: fadeIn 5s ease 0s 1 normal;
+
+}

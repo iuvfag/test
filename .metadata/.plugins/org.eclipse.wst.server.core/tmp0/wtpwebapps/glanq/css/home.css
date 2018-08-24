@@ -1,0 +1,671 @@
+@CHARSET "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+	padding-top : 110px;
+	margin-top : 50px;
+	margin : 0 auto;
+	width : 100%;
+	height : auto;
+	padding-bottom : 10px;
+	margin-bottom : 100px;
+
+}
+
+
+#gif{
+text-align:center;
+border-radius:30px;
+}
+
+.main{
+	width:100%;
+	margin:0 auto;
+	margin-bottom:110px;
+	min-width: 1300px;
+	height: auto;
+}
+
+.left{
+	width:12%;
+	height:100%;
+		margin:0 auto;
+	float:left;
+}
+
+.right{
+	width:12%;
+	height:100%;
+	margin:0 auto;
+	float:left;
+}
+
+.center{
+	width:76%;
+	height:100%;
+	float:left;
+	margin:0 auto;
+	   		padding-bottom:110px;
+}
+
+.concept{
+   text-align:center;
+   margin:0 auto;
+   font-size:20px;
+ }
+
+ .BBQ_spot_introduction{
+   width:60%;
+   text-align:center;
+   margin:0 auto;
+   font-size:20px;
+ }
+
+h3{
+text-align:center;
+border-bottom:1px solid black;
+width:100%
+}
+
+
+
+/* BBQ場紹介 */
+/* フェードインのための設定 */
+.concept{
+    margin:0 auto;
+    opacity : 0;
+    width:0px; height:0px;
+    padding-top:2%;
+    padding-bottom:5%;
+    border:5px #8CD790 outset;
+    background-color:#8CD790;
+    animation-name:Con;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+    transform : translate(0, 50px);
+    transition : all 2s;
+
+}
+.concept.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Con{
+0%{width:0px; height:0px; border-radius:0px; opacity:0;}
+50%{width:60%; height:10%; border-radius:70%; opacity:0.75;}
+100%{width:60%; height:10%; border-radius:70%; background-color:white; opacity:0.75;}
+}
+
+.intro_title {
+	margin:0 auto;
+    opacity : 0;
+    width:0px; height:0px;
+    padding-top:4%;
+    padding-bottom:10%;
+    transform : translate(0, 50px);
+    transition : all 2s;
+    background-color:#8CD790;
+    animation-name:Con2;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.intro_title.scrollin2 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Con2{
+0%{width:0px; height:0px; border-radius:0px; opacity:0;}
+100%{width:80%; height:25%; border-radius:70%; opacity:0.75;}
+}
+
+.BBQ1 {
+    margin:0 auto;
+    height:20%;
+    opacity : 0;
+    transform : translate(-100px, 100px);
+    transition : all 2s;
+}
+.BBQ1.scrollin3 {
+    opacity : 1;
+    transform : translate(0, 0);
+}
+.BBQ2 {
+    margin:0 auto;
+    height:20%;
+    opacity : 0;
+    transform : translate(100px, 100px);
+    transition : all 2s;
+}
+.BBQ2.scrollin4 {
+    opacity : 1;
+    transform : translate(0, 0);
+}
+.BBQ3 {
+    margin:0 auto;
+    min-width: 590px;
+    height:20%;
+    opacity : 0;
+    transform : translate(-100px, 100px);
+    transition : all 2s;
+}
+.BBQ3.scrollin5 {
+    opacity : 1;
+    transform : translate(0, 0);
+}
+
+/* 内容 */
+
+.BBQ1_img{
+	float:left;
+	width:30%;
+	height:100%;
+	display: inline-block;
+	min-height: 200px;
+	min-width:200px;
+	height: auto !important;
+	margin-top:4%;
+	border-radius:40%;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+}
+
+.BBQ1_text{
+ 	position: relative;
+ 	float:right;
+	display: inline-block;
+	margin-left:10%;
+	padding: 3% 5%;
+	margin: 32px 0 0 15px;
+	width:60%;
+	height:100%;
+    text-aline:left;
+	background: #FFF;
+ 	border: solid 3px #555;
+ 	box-sizing: border-box;
+ 	border-radius:30px;
+}
+
+.BBQ1_text:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -24px;
+ 	margin-top: -12px;
+	border: 12px solid transparent;
+	border-right: 12px solid #FFF;
+ 	z-index: 2;
+}
+
+.BBQ1_text:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -30px;
+ 	margin-top: -14px;
+	border: 14px solid transparent;
+	border-right: 14px solid #555;
+ 	z-index: 1;
+}
+
+.BBQ1_text p {
+	margin: 0;
+	padding: 0;
+}
+
+
+.BBQ2{
+clear:both;
+}
+.BBQ2_text{
+	float:left;
+ 	position: relative;
+	display: inline-block;
+	margin-left:10%;
+	padding: 3% 5%;
+	margin: 32px 0 0 15px;
+	width:60%;
+	height:100%;
+    text-aline:left;
+	background: #FFF;
+ 	border: solid 3px #555;
+ 	box-sizing: border-box;
+ 	border-radius:30px;
+}
+
+.BBQ2_text:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -24px;
+ 	margin-top: -12px;
+	border: 12px solid transparent;
+	border-left: 12px solid #FFF;
+ 	z-index: 2;
+}
+
+.BBQ2_text:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: -30px;
+ 	margin-top: -14px;
+	border: 14px solid transparent;
+	border-left: 14px solid #555;
+ 	z-index: 1;
+}
+
+.BBQ2_text p {
+	margin: 0;
+	padding: 0;
+}
+
+.BBQ2_img{
+	float:right;
+	width:30%;
+	height:100%;
+	display: inline-block;
+	min-height: 200px;
+	min-width:200px;
+	height: auto !important;
+	margin-top:4%;
+	border-radius:40%;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+}
+
+
+.BBQ3{
+	clear:both;
+}
+.BBQ3_img{
+	float:left;
+width:30%;
+	height:100%;
+	display: inline-block;
+	min-height: 200px;
+	min-width:200px;
+	height: auto !important;
+	margin-top:4%;
+	border-radius:40%;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+}
+.BBQ3_text{
+	float:right;
+ 	position: relative;
+	display: inline-block;
+	margin-left:10%;
+	padding: 3% 5%;
+	margin: 32px 0 0 15px;
+	width:60%;
+	height:100%;
+    text-aline:left;
+	background: #FFF;
+ 	border: solid 3px #555;
+ 	box-sizing: border-box;
+ 	border-radius:30px;
+}
+
+.BBQ3_text:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -24px;
+ 	margin-top: -12px;
+	border: 12px solid transparent;
+	border-right: 12px solid #FFF;
+ 	z-index: 2;
+}
+
+.BBQ3_text:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -30px;
+ 	margin-top: -14px;
+	border: 14px solid transparent;
+	border-right: 14px solid #555;
+ 	z-index: 1;
+}
+
+.BBQ3_text p {
+	margin: 0;
+	padding: 0;
+}
+
+/* 左サイドアニメーション */
+
+.left1 {
+	position:relative;
+	left:0%;
+    opacity : 0;
+    margin:0 auto;
+    transform : translate(0, 0);
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Left1;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.left1.scrollanime1 {
+    opacity : 1;
+    transform : translate(0,0);
+    animation-play-state:running;
+}
+@keyframes Left1{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:100px; height:100px; background-color:#8CD790; border-radius:50%; opacity:1;}
+}
+
+
+
+.left2 {
+	position:relative;
+	left:100%;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Left2;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.left2.scrollanime2 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Left2{
+0%{width:0px; height:0; border-radius:0px; background-color:white; opacity:0;}
+100%{width:100px; height:100px; background-color:#8CD790; border-radius:100px; opacity:1;}
+}
+
+.left3 {
+	position:relative;
+	left:10%;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Left3;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.left3.scrollanime3 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Left3{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:80px; height:80px; background-color:#8CD790; border-radius:80px; opacity:1;}
+}
+
+.left4 {
+	position:relative;
+	left:90%;
+	opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+     background-color: #8CD790;
+    border:3px #8CD790 double;
+    animation-name:Left4;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.left4.scrollanime4 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Left4{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:60px; height:60px; background-color:#8CD790; border-radius:60px; opacity:1;}
+}
+
+
+.left5 {
+	position:relative;
+	left:30%;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Left5;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.left5.scrollanime5 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Left5{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:40px; height:40px; background-color:#8CD790; border-radius:40px; opacity:1;}
+}
+
+.left6 {
+	position:relative;
+	left:70%;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Left6;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.left6.scrollanime6 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Left6{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:15px; height:15px; background-color:#8CD790; border-radius:15px; opacity:1;}
+}
+
+
+
+/* 右サイドアニメーション */
+.right1 {
+	position:relative;
+	right:0%;
+	z-index:-100;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Right1;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+
+}
+.right1.scrollanime1 {
+    opacity : 1;
+    transform : translate(0,1000);
+    animation-play-state:running;
+}
+@keyframes Right1{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:100px; height:100px; background-color:#8CD790; border-radius:100px; opacity:1;}
+}
+
+.right2 {
+	position:relative;
+	right:100%;
+	z-index:-100;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Right2;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.right2.scrollanime2 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Right2{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:100px; height:100px; background-color:#8CD790; border-radius:100px; opacity:1;}
+}
+
+.right3 {
+	position:relative;
+	right:10%;
+	z-index:-100;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Right3;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.right3.scrollanime3 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Right3{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:80px; height:80px; background-color:#8CD790; border-radius:80px; opacity:1;}
+}
+
+.right4 {
+	position:relative;
+	right:90%;
+	z-index:-100;
+	opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Right4;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.right4.scrollanime4 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Right4{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:60px; height:60px; background-color:#8CD790; border-radius:60px; opacity:1;}
+}
+
+
+.right5 {
+	position:relative;
+	right:30%;
+	z-index:-100;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Right5;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.right5.scrollanime5 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Right5{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:40px; height:40px; background-color:#8CD790; border-radius:40px; opacity:1;}
+}
+
+.right6 {
+	position:relative;
+	right:70%;
+	z-index:-100;
+    opacity : 0;
+    width:0px; height:0px;
+    margin:0 auto;
+    transform : translate(0, 0);
+    transition : all 1s;
+    background-color:#8CD790;
+    border:3px #8CD790 double;
+    animation-name:Right6;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+}
+.right6.scrollanime6 {
+    opacity : 1;
+    transform : translate(0, 0);
+    animation-play-state:running;
+}
+@keyframes Right6{
+0%{width:0px; height:0px; border-radius:0px; background-color:white; opacity:0;}
+100%{width:20px; height:20px; background-color:#8CD790; border-radius:20px; opacity:1;}
+}
+
+.space1{
+  height:150px;
+}
+
+.space2{
+clear:both;
+  height:100px;
+}
+
+.space3{
+  height:50px;
+}
+
+.space4{
+  height:200px;
+}
