@@ -72,41 +72,42 @@
 
 <s:form action="CreateDestinationConfirmAction">
 <table class="vertical-list-table">
+<!-- 姓入力フォーム -->
 <tr>
 	<th scope="row"><s:label value="姓"/></th>
 	<td><s:textfield name="familyName" class="txt" /></td>
 </tr>
-
+<!-- 名入力フォーム -->
 <tr>
 	<th scope="row"><s:label value="名"/></th>
 	<td><s:textfield name="firstName" class="txt" /></td>
 </tr>
-
+<!-- 姓ふりがな入力フォーム -->
 <tr>
 	<th scope="row"><s:label value="姓ふりがな"/></th>
 	<td><s:textfield name="familyNameKana" class="txt" /></td>
 </tr>
-
+<!-- 名ふりがな入力フォーム -->
 <tr>
 	<th scope="row"><s:label value="名ふりがな"/></th>
 	<td><s:textfield name="firstNameKana" class="txt" /></td>
 </tr>
-
+<!-- 性別入力ボタン -->
 <tr>
 	<th scope="row"><s:label value="性別"/></th>
 	<td><s:radio name="sex" list="sexList" value="defaultSexValue" label="性別" placeholder="性別"/></td>
 </tr>
-
+<!-- 住所入力フォーム -->
 <tr>
 	<th scope="row"><s:label value="住所"/></th>
 	<td><s:textfield name="userAddress" class="txt" /></td>
 </tr>
-
+<!-- 電話番号入力フォーム -->
 <tr>
 	<th scope="row"><s:label value="電話番号"/></th>
 	<td><s:textfield name="telNumber" class="txt" /></td>
 </tr>
-
+<!-- メールアドレス入力フォーム -->
 <tr>
 	<th scope="row"><s:label value="メールアドレス"/></th>
 	<td><s:textfield name="email" class="txt" /></td>

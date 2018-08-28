@@ -18,7 +18,6 @@
 <table class="vertical-list-table">
 <tr>
     <th scope="row"><s:label value="商品カテゴリ"/></th>
-
     <td><s:property value="#session.categoryName" /></td>
 </tr>
 <tr>

@@ -12,8 +12,8 @@
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/admin.css">
 <title>商品登録・追加</title>
-
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 <div id="contents">
@@ -70,6 +70,10 @@
     </div>
 </s:if>
 
+<script>
+document.getElementsByName("releaseDate").value = "1970/01/01";
+document.getElementsByName("dojo.releaseDate").value = "1970/01/01";
+</script>
 
 <s:form action="AdminRegistConfirmAction" method="post" enctype="multipart/form-data">
 
@@ -100,16 +104,16 @@
 </tr>
 <tr>
     <th scope="row">発売年月日</th>
-      <!--  <td><s:textfield name="releaseDate" value="%{#session.releaseDate}" label="発売年月日" placeholder="発売年月日" class="txt"/></td>-->
-      <td><sx:datetimepicker name="releaseDate" value="%{#session.releaseDate}" displayFormat="yyyy-MM-dd"  /><span class="Description">【XXXX-XX-XXのフォーマットで入力してください。】</span></td>
+    <!--<s:textfield name="releaseDate" value="%{#session.releaseDate}" label="発売年月日" placeholder="発売年月日" class="txt"/></td> -->
+   <td><sx:datetimepicker name="releaseDate"  displayFormat="yyyy/MM/dd"  /><span class="Description">【XXXX/XX/XXのフォーマットで入力してください。】</span></td>
 </tr>
+<!-- value="%{#session.releaseDate}" -->
 <tr>
     <th scope="row">画像ファイル</th>
     <td><s:file name="userImage" label="画像ファイル" placeholder="画像ファイル" class="file"/></td>
 </tr> <!-- 画像は選べるようになったが、　この情報をどう送るのかが不明である。 -->
 
 </table>
-
 
 
 <div class="submit_btn_box">

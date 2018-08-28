@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+   http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+   id="WebApp_ID" version="3.0">
+
+<display-name>testsample-web</display-name>
+
+<welcome-file-list>
+<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+
+<filter>
+	<filter-name>struts2</filter-name>
+	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+</filter>
+
+<filter-mapping>
+	<filter-name>struts2</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<error-page>
+	<error-code>404</error-code>
+	<location>/error.html</location>
+</error-page>
+
+<!-- HTTPエラーや例外が発生した場合に表示するページの設定
+	例外に対して設定する場合はerror-codeの代わりに
+	exeption-typeタグの中に例外名を記述して使用する -->
+
+	<!-- 例
+		<error-page>
+			<exception-type>javax.servlet.ServletException</exception-type>
+			<location>/error.jsp</location>
+		</error-page> -->
+
+<error-page>
+	<error-code>500</error-code>
+	<location>/error.html</location>
+</error-page>
+
+<session-config>
+	<session-timeout>5</session-timeout>
+</session-config>
+
+<!-- sessionのタイムアウト時間を設定
+	今回は5分 -->
+
+</web-app>

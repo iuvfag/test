@@ -65,6 +65,13 @@
     </div>
     </div>
 </s:if>
+
+
+<script>
+document.getElementsByName("releaseDate").value = "1970/01/01";
+document.getElementsByname("dojo.releaseDate").value = "1970/01/01";
+</script>
+
 <s:form action="AdminEditDetailsConfirmAction" method="post" enctype="multipart/form-data">
 
 <table class="vertical-list-table">
@@ -100,7 +107,7 @@
 
 	<tr>
 		<th scope="row">発売年月日</th>
-			<td><sx:datetimepicker name="releaseDate" value="%{#session.releaseDate}" displayFormat="yyyy-MM-dd"/><span class="Description">【XXXX-XX-XXのフォーマットで入力してください。】</span></td>
+			<td><sx:datetimepicker name="releaseDate" displayFormat="yyyy/MM/dd"/><span class="Description">【XXXX/XX/XXのフォーマットで入力してください。】</span></td>
 	</tr>
 
 	<tr>
@@ -110,6 +117,9 @@
 	<s:hidden name="productId" value="%{productId}"/>
 
 </table>
+
+
+
 <div class="submit_btn_box">
 <div id=".contents-btn-set">
 	<s:submit value="更新確認画面へ" class="submit_btn"/>

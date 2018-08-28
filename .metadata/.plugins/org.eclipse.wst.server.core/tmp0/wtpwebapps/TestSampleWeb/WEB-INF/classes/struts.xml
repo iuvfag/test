@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundatinon//DTO Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 上記のコードでstrutsタグの記載は変えることなく、
+		Actionクラスから値を取得するstrutsタグの機能はそのままに、
+		生成されるHTMLは余計なデコレーションがない状態にできる -->
+	<!-- 開発者モード(デバッグしたいときにはコメント外してください。ユーザーのエラーページにが無効に出来ます) -->
+	<!-- <constant name="struts.devMode" value="true" />-->
+	<constant name="struts.devMode" value="true" />
+	<package name="com.internousdev.testsampleweb.action" extends="struts-default">
+
+	<action name="HomeAction" class="com.internousdev.testsampleweb.action.HomeAction" method="execute">
+		<result name="success">home.jsp</result>
+	</action>
+
+	<!-- AddCartAction -->
+	<action name="AddCartAction" class="com.internousdev.testsampleweb.action.AddCartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+		<result name="input">cart.jsp</result>
+	</action>
+
+
+	<!-- CartAction -->
+	<action name="CartAction" class="com.internousdev.testsampleweb.action.CartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- CreateDestinationAction -->
+	<action name="CreateDestinationAction" class="com.internousdev.testsampleweb.action.CreateDestinationAction" method="execute">
+		<result name="success">createDestination.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- CreateDestinationConfirmAction -->
+	<action name="CreateDestinationConfirmAction" class="com.internousdev.testsampleweb.action.CreateDestinationConfirmAction" method="execute">
+		<result name="success">createDestinationConfirm.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+
+	<!-- CreateDestinationCompleteAction -->
+	<action name="CreateDestinationCompleteAction" class="com.internousdev.testsampleweb.action.CreateDestinationCompleteAction" method="execute">
+		<result name="success">createDestinationComplete.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+
+	<!-- DeleteCartAction -->
+	<action name="DeleteCartAction" class="com.internousdev.testsampleweb.action.DeleteCartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">cart.jsp</result>
+	</action>
+
+
+	<!-- DeletePurcaseHistoryAction -->
+	<action name="DeletePurchaseHistoryAction" class="com.internousdev.testsampleweb.action.DeletePurchaseHistoryAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- LoginAction -->
+	<action name="LoginAction" class="com.internousdev.testsampleweb.action.LoginAction" method="execute">
+		<result name="success">home.jsp</result>
+		<result name="settlement">settlementConfirm.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<!-- GoLoginAction -->
+	<action name="GoLoginAction" class="com.internousdev.testsampleweb.action.GoLoginAction" method="execute">
+		<result name="success">login.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<!-- LogoutAction -->
+	<action name="LogoutAction" class="com.internousdev.testsampleweb.action.LogoutAction" method="execute">
+		<result name="success">index.jsp</result>
+		<result name="error">index.jsp</result>
+	</action>
+
+
+	<!-- MyPageAction -->
+	<action name="MyPageAction" class="com.internousdev.testsampleweb.action.MyPageAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- ProductDetailsAction -->
+	<action name="ProductDetailsAction" class="com.internousdev.testsampleweb.action.ProductDetailsAction" method="execute">
+		<result name="success">productDetails.jsp</result>
+		<result name="error">productList.jsp</result>
+	</action>
+
+
+	<!-- ProductListAction -->
+	<action name="ProductListAction" class="com.internousdev.testsampleweb.action.ProductListAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- PurchaseHistoryAction -->
+	<action name="PurchaseHistoryAction" class="com.internousdev.testsampleweb.action.PurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result>
+	</action>
+
+	<!-- ResetPasswordAction -->
+	<action name="ResetPasswordAction" class="com.internousdev.testsampleweb.action.ResetPasswordAction" method="execute">
+		<result name="success">resetPassword.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<!-- ResetPasswordConfirmAction -->
+	<action name="ResetPasswordConfirmAction" class="com.internousdev.testsampleweb.action.ResetPasswordConfirmAction" method="execute">
+		<result name="success">resetPasswordConfirm.jsp</result>
+		<result name="error">resetPassword.jsp</result>
+	</action>
+
+	<!-- ResetPasswordCompleteAction -->
+	<action name="ResetPasswordCompleteAction" class="com.internousdev.testsampleweb.action.ResetPasswordCompleteAction" method="execute">
+		<result name="success">resetPasswordComplete.jsp</result>
+		<result name="error">resetPassword.jsp</result>
+	</action>
+
+	<!-- SearchItemAction -->
+	<action name="SearchItemAction" class="com.internousdev.testsampleweb.action.SearchItemAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">productList.jsp</result>
+	</action>
+
+
+	<!-- SettlementConfirmAction -->
+	<action name="SettlementConfirmAction" class="com.internousdev.testsampleweb.action.SettlementConfirmAction" method="execute">
+		<result name="success">settlementConfirm.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+
+	<!-- SettlementCompleteAction -->
+	<action name="SettlementCompleteAction" class="com.internousdev.testsampleweb.action.SettlementCompleteAction" method="execute">
+		<result name="success">settlementComplete.jsp</result>
+		<result name="error">settlementConfirm.jsp</result>
+	</action>
+
+	<!-- CreateUserAction -->
+	<action name="CreateUserAction" class="com.internousdev.testsampleweb.action.CreateUserAction" method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<!-- CreateUserConfirmAction -->
+	<action name="CreateUserConfirmAction" class="com.internousdev.testsampleweb.action.CreateUserConfirmAction" method="execute">
+		<result name="success">createUserConfirm.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+	<!-- CreateUserCompleteAction -->
+	<action name="CreateUserCompleteAction" class="com.internousdev.testsampleweb.action.CreateUserCompleteAction" method="execute">
+		<result name="success">createUserComplete.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+	</package>
+
+</struts>

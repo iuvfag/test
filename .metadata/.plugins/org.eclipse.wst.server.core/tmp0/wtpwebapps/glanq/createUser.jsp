@@ -141,9 +141,12 @@
 					<tr>
 						<th scope="row">パスワード</th>
 						<td><s:password name="password" value="" label="パスワード" placeholder="パスワード" class="txt" /></td>
+							<!-- Chromeでオートコンプリート無効化するためのダミー -->
+							<s:password type="password" name="dummypass" style="top: -100px; left: -100px; position: fixed;" />
 					</tr>
 
 				</table>
+
 				<div class="submit_btn_box">
 					<div id=".contents-btn-set">
 						<s:submit value="登録" class="submit_btn" />

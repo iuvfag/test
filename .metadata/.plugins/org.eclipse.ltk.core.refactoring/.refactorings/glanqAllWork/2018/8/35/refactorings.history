@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;struts.xml&apos; to &apos;glanqAllWork/src&apos;&#x0D;&#x0A;- 元のプロジェクト: &apos;glanqAllWork&apos;&#x0D;&#x0A;- 宛先要素: &apos;glanqAllWork/src&apos;&#x0D;&#x0A;- オリジナル要素: &apos;struts.xml&apos;&#x0D;&#x0A;- リファクタリングされた要素の参照を更新" description="ファイルを移動する" destination="/src" element1="src/src/struts.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1535343141666" units="0" version="1.0"/>
+</session>
