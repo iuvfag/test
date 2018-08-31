@@ -1,0 +1,10 @@
+package com.internousdev.testsampleweb.dao;
+
+public class InquiryDAO {
+
+	//お問い合わせ情報をテーブルに格納するメソッド
+	public int registInquiry(String name, String qtype, String qbody){
+		DBConnector db = new DBConnector();
+	}
+
+}

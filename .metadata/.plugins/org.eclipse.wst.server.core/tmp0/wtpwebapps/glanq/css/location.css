@@ -89,6 +89,12 @@ h1{
 	margin-top: 10px;
 
 }
+td.description{
+	width: 125px;
+}
+td.property{
+	width: 250px;
+}
 
 #fadein_container {
 	animation: fadeIn 4s ease 0s 1 normal;

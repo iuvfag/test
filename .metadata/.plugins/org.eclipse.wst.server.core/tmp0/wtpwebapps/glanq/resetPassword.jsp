@@ -104,7 +104,7 @@
 	</div>
 
 </s:form>
-
+<div id="piston"></div>
 </div>
 
 <jsp:include page="footer.jsp"/>

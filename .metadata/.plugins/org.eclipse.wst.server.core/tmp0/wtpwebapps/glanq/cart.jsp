@@ -139,7 +139,7 @@
 				<div class="info_c">カートに情報はありません</div>
 			</s:else>
 
-
+<div id="piston"></div>
 		</div>
 	</s:else>
 

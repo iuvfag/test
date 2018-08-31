@@ -1,0 +1,17 @@
+package com.internousdev.testsampleweb.dao;
+
+import java.sql.Connection;
+
+import com.internousdev.testsampleweb.util.DBConnector;
+
+public class InquiryDAO {
+
+	//お問い合わせ情報をテーブルに格納するメソッド
+	public int registInquiry(String name, String qtype, String qbody){
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+
+		String sql = "INSERT INTO inquiry_info(name, qtype, qbody) VALUES(?, ?, ?)";
+	}
+
+}

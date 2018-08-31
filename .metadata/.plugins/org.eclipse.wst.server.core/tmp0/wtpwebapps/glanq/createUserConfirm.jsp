@@ -92,6 +92,7 @@
 
 				</s:form>
 			</div>
+			<div id="piston"></div>
 		</div>
 
 		<div id="footer">

@@ -24,7 +24,7 @@
 </div>
 <p>宛先情報の登録が完了しました。</p>
 </div>
-
+<div id="piston"></div>
 </div>
 
 <s:include value="footer.jsp"/>

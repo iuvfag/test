@@ -223,3 +223,10 @@ insert into m_category values
 (3,3,"家電・パソコン","家電・パソコンに関するカテゴリーが対象となります",now(),null),
 (4,4,"おもちゃ・ゲーム","おもちゃ・ゲームに関するカテゴリーが対象となります",now(),null),
 (5,5,"食材","食材に関するカテゴリーが対象となります",now(),null);
+
+create table inquiry_info(
+	id int primary key not null comment "ID",
+	name varchar(20) not null comment "名前",
+	qtype varchar(20) not null comment "質問の種類",
+	qbody varchar(255) not null comment "質問の内容"
+);

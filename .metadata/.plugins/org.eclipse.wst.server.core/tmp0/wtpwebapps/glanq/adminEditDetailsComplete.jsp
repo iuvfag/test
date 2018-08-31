@@ -24,6 +24,7 @@
 		商品情報の更新登録が完了しました。	<br>
 		</p>
 		</div>
+		<div id="piston"></div>
 </div>
 
 	<s:include value="footer.jsp"/>

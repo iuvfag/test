@@ -10,6 +10,7 @@
 
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -258,9 +259,39 @@ $(function(){
     });
 });
 
+jQuery(function($){
+	2
+	var movie = document.getElementById("homeAnime");
+	3
+	movie.controls = false;
+	4
+	});
 
+$(function(){
+    $('#move_target').on('click', function(){
+        var targetTop = $('#target_point').offset().top;
+        $('html,body').animate({
+            scrollTop: targetTop
+        }, 500);
+        return false;
+    });
+});
 
+$(function(){
+    $('#pagetop').on('click', function(){
+        $('html,body').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
 </script>
+<style type="text/css">
+#pagetop:link { color:#000; text-decoration:none }
+#pagetop:visited { color:#000; text-decoration:none }
+#pagetop:hover { color:#000; text-decoration:none }
+#pagetop:active { color:#000; text-decoration:none }
+</style>
 </head>
 
 <body>
@@ -269,11 +300,28 @@ $(function(){
 
 <div id="wrapper">
 
-<!-- 	gifファイルの埋め込み -->
-<div id="gif">
-<iframe src="https://publish.animatron.io/4ab47b5b5272616eb6ab368f?w=1066&h=600&a=1&r=1&c=0" width="1066" height="600" frameborder="0"></iframe>
+<div class="homebox">
+<div class="photo-show">
+    <a id="move_target" href="#target_point">
+       <img src="./images/OP1.jpg" width="1066px" height="600px">
+       <img src="./images/OP2.jpg" width="1066px" height="600px">
+       <img src="./images/OP3.jpg" width="1066px" height="600px">
+       <img src="./images/OP4.jpg" width="1066px" height="600px">
+       <img src="./images/OP5.jpg" width="1066px" height="600px">
+    </a>
+</div>
+<div class="text-show">
+     <a id="move_target" href="#target_point">
+        <span class="op1">Glare</span>
+        <span class="op2">Gladsome</span>
+        <span class="op3">Glamorous</span>
+        <span class="op4">ワンランク上のBBQを<br><br>体験してみませんか？</span>
+        <span class="op5">Welcome<br>to<br>GLANQ</span>
+     </a>
+</div>
 </div>
 
+<div id="target_point"></div>
 <div class="main">
 
 <div class="space1"></div>
@@ -384,8 +432,9 @@ GlanQでは3つのBBQ場と提携しており、<br>食材を各BBQ場に送り�
 
 
 </div>
+<div id="piston"></div>
 </div>
-
+    <div><a id="pagetop" href="#">ページTOPへ戻る</a></div>
 	<s:include value="footer.jsp" />
 
 </body>

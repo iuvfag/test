@@ -31,6 +31,7 @@
 	<s:submit value="再設定" class="submit_btn" />
 	</div>
 </s:form>
+<div id="piston"></div>
 	</div>
 <s:include value="footer.jsp"/>
 </body>

@@ -29,6 +29,13 @@
 
 }
 
+div#description{
+	max-width: 800px;
+	max-height: 300px;
+	word-wrap: break-word;
+	overflow-y: scroll;
+}
+
 /*ƒ{ƒ^ƒ“Šg‘åver*/
 .submit_btn_box1{
 	width : 500px;
@@ -97,12 +104,11 @@
 	vertical-align: center;
 }
 .pager2{
+	clear:both;
     width:100%;
-    padding-top:50px;
 	text-align:center;
 	color:blue;
-	position:relative;
-	bottom:50px;
+	padding-top:10px;
 }
 
 .txt{

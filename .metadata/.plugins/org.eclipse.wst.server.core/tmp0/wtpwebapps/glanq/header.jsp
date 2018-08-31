@@ -73,7 +73,11 @@ function goAdminAction(){
 <body>
 <header>
   <div id="header">
-       <div id="header-title"><a class="headerLogo" href="HomeAction">GLANQ</a></div>
+       <div id="header-title">
+       <s:if test="#session.status==1"><a class="headerLogo" href="GoAdminAction">GLANQ</a></s:if>
+       <s:else><a class="headerLogo" href="HomeAction">GLANQ</a></s:else>
+       </div>
+
        <input type="checkbox" class="check" id="checked">
 	          <label class="menu-btn" for="checked">
 		             <span class="bar top"></span>

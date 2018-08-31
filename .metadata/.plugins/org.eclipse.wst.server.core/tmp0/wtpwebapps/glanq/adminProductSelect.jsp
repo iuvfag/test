@@ -59,8 +59,7 @@
 </s:iterator>
 </div>
 
-<br>
-<br>
+<div id="piston"></div>
 
 </div>
  <s:include value="footer.jsp" />

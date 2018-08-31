@@ -89,6 +89,8 @@
     </s:else>
 </s:iterator>
 </div>
+<div id="piston"></div>
+
 
 <s:include value="footer.jsp"/>
 </body>

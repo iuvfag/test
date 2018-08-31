@@ -222,6 +222,7 @@ table#item_info th{
 	background-color: #ddffcc;
 }
 table#item_info td{
+	max-width: 290px;
 	border: 1px solid #ccc;
 	width: 100%;
 	text-align: left;
@@ -230,7 +231,9 @@ table#item_info td{
 	font-size: 14px;
 }
 div#description{
+	max-width: 290px;
 	max-height: 60px;
+	word-wrap: break-word;
 	overflow-y: scroll;
 }
 table#buy{

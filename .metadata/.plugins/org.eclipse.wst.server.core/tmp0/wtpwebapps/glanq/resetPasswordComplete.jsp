@@ -22,6 +22,7 @@
         </div>
 		<p>パスワード再設定が完了しました。</p>
 		</div>
+		<div id="piston"></div>
 </div>
 <s:include value="footer.jsp"/>
 </body>

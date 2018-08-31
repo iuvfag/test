@@ -1,0 +1,42 @@
+package com.internousdev.testsampleweb.dto;
+
+public class InquiryDTO {
+
+	private int id;
+	private String name;
+	private String qtype;
+	private String qbody;
+
+	public int getId(){
+		return id;
+	}
+
+	public void setId(int id){
+		this.id = id;
+	}
+
+	public String getName(){
+		return name;
+	}
+
+	public void setName(String name){
+		this.name = name;
+	}
+
+	public String getQtype(){
+		return qtype;
+	}
+
+	public void setQtype(String qtype){
+		this.qtype = qtype;
+	}
+
+	public String getQbody(){
+		return qbody;
+	}
+
+	public void setQbody(String qbody){
+		this.qbody = qbody;
+	}
+
+}

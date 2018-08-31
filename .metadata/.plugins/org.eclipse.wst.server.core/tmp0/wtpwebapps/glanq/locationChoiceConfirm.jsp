@@ -63,7 +63,7 @@
     <s:submit value="場所選択画面へ" class="submit_btn"/>
     </s:form>
     </div>
-
+<div id="piston"></div>
 </div>
 
 <s:include value="footer.jsp"/>

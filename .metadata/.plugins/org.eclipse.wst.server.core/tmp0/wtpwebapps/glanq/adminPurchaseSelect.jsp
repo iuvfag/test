@@ -54,7 +54,7 @@
 商品購入履歴情報はありません。
 </div>
 </s:else>
-
+<div id="piston"></div>
 </div>
 <s:include value="footer.jsp"/>
 

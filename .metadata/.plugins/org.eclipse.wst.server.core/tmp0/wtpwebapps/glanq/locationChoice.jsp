@@ -42,8 +42,8 @@
 	              </s:submit>
 	          </s:form>
               </td>
-              <td>会場名</td>
-              <td><s:property value="firstName"/></td>
+              <td class="description">会場名</td>
+              <td class="property"><s:property value="firstName"/></td>
           </tr>
           <tr>
               <td>会場名かな</td>
@@ -73,7 +73,7 @@
 
   </div>
 </s:iterator>
-
+<div id="piston"></div>
 </div>
 <!-- フッターをインクルード -->
 <jsp:include page="footer.jsp" />

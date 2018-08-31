@@ -119,6 +119,7 @@
 </div>
 </div>
 </s:form>
+<div id="piston"></div>
 </div>
 
 <s:include value="footer.jsp"/>

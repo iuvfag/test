@@ -30,7 +30,7 @@
 </tr>
 <tr>
     <th scope="row"><s:label value="商品詳細"/></th>
-    <td><s:property value="productDescription"/></td>
+    <td><div id="description"><s:property value="productDescription"/></div></td>
 </tr>
 <tr>
     <th scope="row"><s:label value="価格"/></th>
@@ -70,10 +70,10 @@
 <s:hidden name="releaseDate" value="%{releaseDate}"/>
 
 </s:form>
+<div id="piston"></div>
 </div>
 
-<br>
-<br>
+
 
 
     <s:include value="footer.jsp"/>

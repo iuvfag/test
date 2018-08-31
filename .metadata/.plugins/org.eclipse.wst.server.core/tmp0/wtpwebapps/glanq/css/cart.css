@@ -55,9 +55,9 @@ h2{
 }
 
 .info_c{
-width:99%;
+text-align:center;
 margin:0 auto;
-padding:20px;
+padding:20px 0px;
 font-size : 1.1em;
 font-weight:600;
 color: #ff0080;
@@ -69,7 +69,7 @@ background-color: #f5ffe6;
 }
 
 .error_c{
-width:99%;
+text-align:center;
 margin:0 auto;
 font-size : 1.1em;
 font-weight:600;

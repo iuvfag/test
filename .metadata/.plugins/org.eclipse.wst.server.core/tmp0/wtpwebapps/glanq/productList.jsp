@@ -93,12 +93,12 @@
 			</s:iterator>
 			</div>
 
-			<br>
-			<br>
+
 		</div>
 
 	</s:else>
 	</div>
+	<div id="piston"></div>
 </div>
 
 	<s:include value="footer.jsp" />

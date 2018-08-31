@@ -1,5 +1,10 @@
 @CHARSET "UTF-8";
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 /*ヘッダー*/
 #header {
 	position : fixed;
@@ -17,7 +22,7 @@
 /*サイトロゴ*/
 #header-title{
 	font-family: 'Mv Boli',cursive;
-	font-size:30px;
+	font-size:40px;
 	font-weight:800;
 	padding-left:20px;
 	padding-top:10px;
@@ -313,18 +318,166 @@ color:#000000;
 	background: #ffff80;
 }
 
+/*Home画面スライドショー*/
 
- /* スクロール追従フッター*/
+.homebox {
+    height: 600px;
+    position: relative;
+    width: 1066px;
+    margin: 0 auto;
+}
+
+.photo-show img {
+    animation: show 20s infinite;
+    -webkit-animation: show 20s infinite;
+    border-radius: 50%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    margin: 0 auto;
+}
+
+.text-show span{
+    margin:0;
+    padding:0;
+    animation: show 20s infinite;
+    -webkit-animation: show 20s infinite;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    text-align:center;
+}
+
+.op1{
+	top: 60%;
+    left: 50%;
+    -ms-transform: translate(-60%,-50%);
+    -webkit-transform: translate(-60%,-50%);
+    transform: translate(-60%,-50%);
+	color:#fff;
+	font-size:80px;
+    font-weight:900;
+    font-family: 'Mv Boli',cursive;
+}
+.op2{
+	top: 60%;
+    left: 50%;
+    -ms-transform: translate(-60%,-50%);
+    -webkit-transform: translate(-60%,-50%);
+    transform: translate(-60%,-50%);
+	color:#fff;
+	font-size:80px;
+    font-weight:900;
+    font-family: 'Mv Boli',cursive;
+}
+.op3{
+	top: 60%;
+    left: 50%;
+    -ms-transform: translate(-60%,-50%);
+    -webkit-transform: translate(-60%,-50%);
+    transform: translate(-60%,-50%);
+	color:#fff;
+	font-size:80px;
+    font-weight:900;
+    font-family: 'Mv Boli',cursive;
+}
+.op4{
+	top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+	color:#96e6a1;
+	font-size:50px;
+	font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+.op5{
+	top: 60%;
+    left: 50%;
+    -ms-transform: translate(-60%,-50%);
+    -webkit-transform: translate(-60%,-50%);
+    transform: translate(-60%,-50%);
+	color:#96e6a1;
+	font-size:80px;
+    font-weight:900;
+    font-family: 'Mv Boli',cursive;
+}
+
+.photo-show img:nth-of-type(1) {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+.photo-show img:nth-of-type(2) {
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+}
+
+.photo-show img:nth-of-type(3) {
+    animation-delay: 8s;
+    -webkit-animation-delay: 8s;
+}
+
+.photo-show img:nth-of-type(4) {
+    animation-delay: 12s;
+    -webkit-animation-delay: 12s;
+}
+
+.photo-show img:nth-of-type(5) {
+    animation-delay: 16s;
+    -webkit-animation-delay: 16s
+}
+
+.text-show .op1 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+.text-show .op2 {
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+}
+
+.text-show .op3 {
+    animation-delay: 8s;
+    -webkit-animation-delay: 8s;
+}
+
+.text-show .op4 {
+    animation-delay: 12s;
+    -webkit-animation-delay: 12s;
+}
+
+.text-show .op5 {
+    animation-delay: 16s;
+    -webkit-animation-delay: 16s
+}
+
+@keyframes show {
+    0% {opacity:0}
+    5% {opacity:1}
+    10% {opacity:1}
+    20% {opacity:0}
+ }
+
+@-webkit-keyframes show {
+    0% {opacity:0}
+    5% {opacity:1}
+    10% {opacity:1}
+    20% {opacity:0}
+}
+
+ /* フッター*/
+ #footer,#piston {
+  height: 40px;
+}
+
 #footer {
-	position : fixed;
-	text-align : center;
-	bottom : 0;
 	clear : both;
-	left : 0;
-
+	text-align : center;
+	padding-top:10px;
 	width : 100%;
 	font-weight:800;
-	padding : 10px;
 	color : #2a2a2a;
 	 background-image:linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
     font-family: 'Mv Boli',cursive;
@@ -680,8 +833,8 @@ section{
 	width:100%;
 	padding-top:100px;
 	margin:0 auto;
-	height: auto;
-	padding-bottom:150px;
+	min-height: calc(100% - 100px);
+	margin-bottom: -40px;
 }
 
 .txt {
